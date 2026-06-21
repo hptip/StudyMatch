@@ -1,0 +1,464 @@
+[
+  {
+    "created_at": "2026-06-21T03:04:12.840Z",
+    "id": "b711e14d-6160-48a3-b0fa-407fae663c6b",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T03:04:27.081Z",
+    "id": "e2fc1101-3158-43a9-88c5-99fa510e029e",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T03:06:10.327Z",
+    "id": "7c98abbb-1952-4f1c-a335-b98a530575c9",
+    "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "action": "login",
+    "detail": "binh@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T03:07:12.926Z",
+    "id": "7f43eae8-9b30-4fd7-8285-85acfa081c74",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T03:08:27.840Z",
+    "id": "529ac05b-b373-4208-b233-c552189a3a3f",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T03:08:50.920Z",
+    "id": "a594b7a5-1fc5-4c4b-b1bd-276621877414",
+    "user_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "action": "login",
+    "detail": "dung@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T03:24:18.042Z",
+    "id": "7f417215-e7ec-443d-b631-f3a15b250e57",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "login",
+    "detail": "admin@studymatch.vn"
+  },
+  {
+    "created_at": "2026-06-21T05:22:16.339Z",
+    "id": "bb683248-3238-4c69-9b6c-4e18f3de369e",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T05:23:03.581Z",
+    "id": "8bd3bce9-07aa-4522-858f-77a92a28eb54",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "action": "register",
+    "detail": "dch@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T05:24:34.830Z",
+    "id": "bcdfa0f3-e2b0-4600-80b0-39a8ac3a6e8f",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "action": "login",
+    "detail": "dch@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T05:25:17.149Z",
+    "id": "ab022360-11e0-482b-8c7a-4b0ee9f99613",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "login",
+    "detail": "admin@studymatch.vn"
+  },
+  {
+    "created_at": "2026-06-21T05:26:35.837Z",
+    "id": "ef4103c2-7558-4356-9185-7b87a8a3e657",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "action": "login",
+    "detail": "dch@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T05:27:06.536Z",
+    "id": "98eb0f97-0530-46cc-a36f-1ae1cbeee102",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "action": "login",
+    "detail": "dch@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T05:28:20.148Z",
+    "id": "9071f009-1f24-464f-b7a6-44f1fa362b42",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "action": "login",
+    "detail": "dch@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T05:31:35.992Z",
+    "id": "d2c3e2dd-ba60-4f50-9df1-fa9572d67869",
+    "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "action": "login",
+    "detail": "binh@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T05:31:53.501Z",
+    "id": "5eafe07d-c30f-494d-918f-c5cf9d43df96",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "action": "login",
+    "detail": "dch@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T05:33:36.295Z",
+    "id": "c979c9a0-9695-4e25-b427-53e90c4d0321",
+    "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "action": "login",
+    "detail": "binh@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T05:34:12.267Z",
+    "id": "da57e9ca-bbc6-4f30-9f9c-611f701434be",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T05:34:26.304Z",
+    "id": "0ac5f00b-98ea-40e1-b4e0-69e13b581961",
+    "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "action": "login",
+    "detail": "binh@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T05:35:12.063Z",
+    "id": "d8a9989f-886a-4b63-8cf4-d7f3119cce57",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T05:37:36.854Z",
+    "id": "b38d8610-888b-489a-9385-80e8fa6a722b",
+    "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "action": "login",
+    "detail": "binh@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T05:57:39.087Z",
+    "id": "08853e23-4246-470a-8de6-364163fea0e9",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T06:11:33.504Z",
+    "id": "bb23cba5-e953-414c-bea6-2165dbdf7639",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "login",
+    "detail": "admin@studymatch.vn"
+  },
+  {
+    "created_at": "2026-06-21T06:25:55.022Z",
+    "id": "de1cd98e-eba7-4120-8301-dca721365db2",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "login",
+    "detail": "admin@studymatch.vn"
+  },
+  {
+    "created_at": "2026-06-21T06:26:08.018Z",
+    "id": "1942b3d0-72b7-434f-bb29-d2b0d6123aec",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "login",
+    "detail": "admin@studymatch.vn"
+  },
+  {
+    "created_at": "2026-06-21T06:26:53.850Z",
+    "id": "f478b866-a94c-4be4-bf33-305a60b993f3",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "login",
+    "detail": "admin@studymatch.vn"
+  },
+  {
+    "created_at": "2026-06-21T06:26:53.877Z",
+    "id": "329431c5-46af-42e1-b7e8-e018f7fbba93",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "ban",
+    "detail": "Ban user: an@sv.edu.vn — Test ban"
+  },
+  {
+    "created_at": "2026-06-21T06:26:53.881Z",
+    "id": "395d9c54-a0e7-4fc7-9919-c02a5709e3c7",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "unban",
+    "detail": "Unban user: an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T06:27:02.958Z",
+    "id": "819d9759-e53b-49e3-bb31-604ae33e6911",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T06:28:22.837Z",
+    "id": "9b53bdc6-3aee-4675-ba05-33ea201888e4",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "login",
+    "detail": "admin@studymatch.vn"
+  },
+  {
+    "created_at": "2026-06-21T06:29:11.501Z",
+    "id": "60869fee-19ef-4bb0-9d69-60ea4881298b",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "action": "login",
+    "detail": "dch@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T06:29:33.469Z",
+    "id": "7256a6d9-2161-4ad0-a1a8-174f07a6ba19",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T06:30:07.971Z",
+    "id": "560ed3ce-5010-4711-a00b-7122a6144118",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "login",
+    "detail": "admin@studymatch.vn"
+  },
+  {
+    "created_at": "2026-06-21T06:39:51.840Z",
+    "id": "03eab81b-57c7-4c8e-b597-48f0273b6696",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "announcement",
+    "detail": "T"
+  },
+  {
+    "created_at": "2026-06-21T06:39:51.843Z",
+    "id": "a1da8f14-31b5-47b1-8867-be76dbc6d694",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "ban",
+    "detail": "Ban user: an@sv.edu.vn — test"
+  },
+  {
+    "created_at": "2026-06-21T06:43:08.295Z",
+    "id": "ddb72255-b883-40ba-8605-c3d14d973432",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "ban",
+    "detail": "Ban user: dch@gmail.com — cfhg"
+  },
+  {
+    "created_at": "2026-06-21T06:43:10.358Z",
+    "id": "d136498e-b3a4-433b-9a49-3a26976ccd8e",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "unban",
+    "detail": "Unban user: dch@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T06:43:27.814Z",
+    "id": "60c72291-49a1-4dff-ab97-43e30db1507d",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "unban",
+    "detail": "Unban user: an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T06:46:49.854Z",
+    "id": "7c311279-bbf7-4e44-836c-b27805955045",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "resolve_report",
+    "detail": "Report 397e6c7a-e68d-4808-b6cf-58b6755d48c4: resolved"
+  },
+  {
+    "created_at": "2026-06-21T06:47:23.293Z",
+    "id": "fda330b0-3186-41ce-ad0a-6690843e8101",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "announcement",
+    "detail": "Cảnh cáo"
+  },
+  {
+    "created_at": "2026-06-21T06:47:29.756Z",
+    "id": "f732478e-0b0d-4f54-a987-34ebd88589f2",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T07:17:44.444Z",
+    "id": "5594cd2a-ae5c-402b-9d78-e43141cb3e24",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T07:19:17.197Z",
+    "id": "156a4e84-1b53-411a-91af-2517036d44b7",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T07:30:45.053Z",
+    "id": "f22ed721-6539-4918-b6fc-8b66d367494d",
+    "user_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "action": "register",
+    "detail": "tdh@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T07:31:28.469Z",
+    "id": "cdd6696e-ed87-417f-939d-3aee0381d955",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T07:38:26.131Z",
+    "id": "66f6c30c-a160-48ac-b556-8c0987d8062c",
+    "user_id": "4727fcd7-ccaa-403d-93c1-73257cdad6a1",
+    "action": "register",
+    "detail": "pah@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T07:39:14.486Z",
+    "id": "77b80187-713f-4e76-bbf9-f754cac4aa36",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T07:45:06.699Z",
+    "id": "27e32437-95c1-4f21-9c5a-681883eeea55",
+    "user_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "action": "login",
+    "detail": "tdh@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T07:45:35.492Z",
+    "id": "7b166204-8b22-4fe5-ad28-b8632f84ad28",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T07:49:06.924Z",
+    "id": "b3a71729-eebc-495f-a2eb-9c164fdd159f",
+    "user_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "action": "login",
+    "detail": "tdh@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T07:49:41.447Z",
+    "id": "4228afd5-1b1d-4cf2-9867-7910fbe25621",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T07:51:23.706Z",
+    "id": "99afa1bb-16bd-4292-ba0e-36ecdf32e768",
+    "user_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "action": "login",
+    "detail": "tdh@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T07:51:49.546Z",
+    "id": "d4333f92-ca77-4838-8214-06a9afb34d32",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T07:52:23.977Z",
+    "id": "9015fc0e-de99-4432-982c-1892089cd15c",
+    "user_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "action": "login",
+    "detail": "tdh@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T07:53:42.550Z",
+    "id": "2b5348db-8a23-4b01-b980-ba276a195675",
+    "user_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "action": "login",
+    "detail": "tdh@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T07:54:52.915Z",
+    "id": "af13b508-3dac-4af8-8681-4fee76590538",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T07:55:25.060Z",
+    "id": "79d6efcb-2f3c-4a15-b308-62b94a6bd8be",
+    "user_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "action": "login",
+    "detail": "tdh@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T08:08:04.697Z",
+    "id": "be323839-4aed-48e5-80fc-a4f55c68baa8",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "login",
+    "detail": "admin@studymatch.vn"
+  },
+  {
+    "created_at": "2026-06-21T08:08:40.409Z",
+    "id": "f0bcbf91-ae2d-4122-a43c-c616615a9ecb",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "resolve_report",
+    "detail": "Report ab0acfe4-95a3-4215-b0d3-978e081252d0: resolved"
+  },
+  {
+    "created_at": "2026-06-21T08:13:56.714Z",
+    "id": "db73944b-a33a-4ebe-9b4d-ce8259dcf391",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "ban",
+    "detail": "Ban user: pah@gmail.com — ngu"
+  },
+  {
+    "created_at": "2026-06-21T08:14:00.072Z",
+    "id": "d5c72018-7649-4ab8-a4d3-0e71b2a4a352",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "unban",
+    "detail": "Unban user: pah@gmail.com"
+  },
+  {
+    "created_at": "2026-06-21T08:17:20.221Z",
+    "id": "910cffc1-dae4-41bc-8cb3-5915596d9632",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "announcement",
+    "detail": "Hệ thống bảo trì"
+  },
+  {
+    "created_at": "2026-06-21T08:22:00.853Z",
+    "id": "6f1253b4-e927-4bea-a731-efdcf93e0b8b",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "ban",
+    "detail": "Ban user: tdh@gmail.com — Ngu"
+  },
+  {
+    "created_at": "2026-06-21T08:22:10.159Z",
+    "id": "fc53d155-199a-48be-848e-4ddcc601d256",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "action": "ban",
+    "detail": "Ban user: dch@gmail.com — Ngu"
+  },
+  {
+    "created_at": "2026-06-21T08:23:18.597Z",
+    "id": "4e660cc3-0996-42b1-be4d-4470e1775c1e",
+    "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "action": "login",
+    "detail": "binh@sv.edu.vn"
+  },
+  {
+    "created_at": "2026-06-21T08:23:46.211Z",
+    "id": "90c4d257-c21a-4cad-a30c-c9d97cfce262",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "action": "login",
+    "detail": "an@sv.edu.vn"
+  }
+]

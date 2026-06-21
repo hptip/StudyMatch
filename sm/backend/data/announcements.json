@@ -1,0 +1,26 @@
+[
+  {
+    "created_at": "2026-06-21T02:53:44.941Z",
+    "id": "e6d4eb8e-c89a-4029-8d5b-8c85b17b262a",
+    "title": "🎉 Chào mừng đến StudyMatch!",
+    "body": "Nền tảng kết nối sinh viên học tập cùng nhau. Hãy cập nhật hồ sơ và bắt đầu ghép cặp!",
+    "type": "success",
+    "author_id": "6356324e-24f0-4cd2-8a56-c3063c20a628"
+  },
+  {
+    "created_at": "2026-06-21T06:39:51.838Z",
+    "id": "62268266-bbd1-4d41-84b5-17cc5833ef72",
+    "title": "T",
+    "body": "B",
+    "type": "info",
+    "author_id": "6356324e-24f0-4cd2-8a56-c3063c20a628"
+  },
+  {
+    "created_at": "2026-06-21T06:47:23.286Z",
+    "id": "3a0789c4-fc1e-47fb-9317-711791738886",
+    "title": "Cảnh cáo",
+    "body": "Cảnh cáo vi phạm",
+    "type": "warning",
+    "author_id": "6356324e-24f0-4cd2-8a56-c3063c20a628"
+  }
+]

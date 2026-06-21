@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin – Người dùng</title><link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="bg-grad"><div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div></div>
+<div class="app">
+  <aside class="sidebar"></aside>
+  <div class="main">
+    <div class="topbar">
+      <div><div class="topbar-title">👥 Quản lý người dùng</div></div>
+      <div class="topbar-actions">
+        <div class="search-bar" style="width:220px"><span>🔍</span><input id="search" placeholder="Tìm tên, email, MSSV..." oninput="applyFilter()"></div>
+        <select id="filter-role" class="form-control" style="width:130px" onchange="applyFilter()">
+          <option value="">Tất cả role</option>
+          <option value="student">Student</option><option value="moderator">Moderator</option>
+          <option value="admin">Admin</option>
+        </select>
+        <select id="filter-status" class="form-control" style="width:130px" onchange="applyFilter()">
+          <option value="">Tất cả</option><option value="active">Đang hoạt động</option><option value="banned">Bị khóa</option>
+        </select>
+      </div>
+    </div>
+    <div class="content">
+      <div id="users-wrap"><div class="spinner"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- User Detail Modal -->
+<div class="overlay" id="user-modal">
+  <div class="modal" style="max-width:580px">
+    <div class="modal-header">
+      <div class="modal-title" id="modal-title">Chi tiết người dùng</div>
+      <button class="modal-close" onclick="hideModal('user-modal')">✕</button>
+    </div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="/js/app.js"></script>
+<script>
+if (!Auth.guardAdmin()) {} else {
+  renderSidebar('admin-users');
+  let allUsers = [];
+  let currentUser = null;
+
+  async function load() {
+    try { currentUser = await api.get('/auth/me'); } catch { currentUser = Auth.user(); }
+    allUsers = await api.get('/admin/users');
+    applyFilter();
+  }
+
+  function applyFilter() {
+    const q = document.getElementById('search').value.toLowerCase();
+    const role = document.getElementById('filter-role').value;
+    const status = document.getElementById('filter-status').value;
+    let list = allUsers;
+    if (q) list = list.filter(u => (u.full_name||'').toLowerCase().includes(q)||(u.email||'').toLowerCase().includes(q)||(u.student_id||'').includes(q));
+    if (role) list = list.filter(u => u.role === role);
+    if (status === 'banned') list = list.filter(u => u.is_banned);
+    if (status === 'active') list = list.filter(u => !u.is_banned);
+    renderTable(list);
+  }
+
+  function renderTable(list) {
+    const el = document.getElementById('users-wrap');
+    if (!list.length) {
+      el.innerHTML = '<div class="empty"><div class="empty-icon">👥</div><h3>Không tìm thấy</h3></div>';
+      return;
+    }
+
+    const rows = list.map(u => {
+      const canOperate = u.role !== 'admin' && u.id !== currentUser?.id;
+
+      let actionBtns = '';
+      if (canOperate) {
+        const banBtn = u.is_banned
+          ? '<button class="btn btn-success btn-sm" onclick="unban(\'' + u.id + '\',\'' + escHtml(u.full_name) + '\')">🔓</button>'
+          : '<button class="btn btn-danger btn-sm" onclick="ban(\'' + u.id + '\',\'' + escHtml(u.full_name) + '\')">🔒</button>';
+        actionBtns = banBtn
+          + '<button class="btn btn-secondary btn-sm" onclick="changeRole(\'' + u.id + '\',\'' + u.role + '\')">🔄</button>'
+          + '<button class="btn btn-secondary btn-sm" onclick="resetPw(\'' + u.id + '\',\'' + escHtml(u.full_name) + '\')">🔐</button>';
+      } else if (u.id === currentUser?.id) {
+        actionBtns = '<span style="font-size:11px;color:var(--muted)">Tài khoản của bạn</span>';
+      } else {
+        actionBtns = '<span style="font-size:11px;color:var(--muted)">Admin</span>';
+      }
+
+      return '<tr>'
+        + '<td><div style="display:flex;align-items:center;gap:8px">'
+        + '<div class="av" style="width:30px;height:30px;font-size:10px;border-radius:50%">' + initials(u.full_name) + '</div>'
+        + '<span style="font-weight:600;font-size:13px">' + escHtml(u.full_name) + '</span>'
+        + '</div></td>'
+        + '<td style="font-size:12px;color:var(--muted)">' + escHtml(u.email) + '</td>'
+        + '<td style="font-size:12px">' + (u.student_id || '—') + '</td>'
+        + '<td style="font-size:12px">' + escHtml(u.faculty || '—') + '</td>'
+        + '<td>' + roleBadge(u.role) + ' ' + (u.is_volunteer ? '<span class="tag tag-purple" style="font-size:9px">TNV</span>' : '') + '</td>'
+        + '<td style="font-weight:700">' + (u.reputation_score || 50) + '</td>'
+        + '<td>' + (u.total_pairs || 0) + '</td>'
+        + '<td>' + parseFloat(u.teaching_rating || 0).toFixed(1) + '★</td>'
+        + '<td>' + (u.is_banned ? '<span class="tag tag-red">🔒 Bị khóa</span>' : '<span class="tag tag-teach">🟢 Active</span>') + '</td>'
+        + '<td><div style="display:flex;gap:4px;flex-wrap:wrap">'
+        + '<button class="btn btn-secondary btn-sm" onclick="openDetail(\'' + u.id + '\')">👁</button>'
+        + actionBtns
+        + '</div></td>'
+        + '</tr>';
+    });
+
+    el.innerHTML = '<div style="overflow-x:auto">'
+      + '<table class="tbl"><thead><tr>'
+      + '<th>Người dùng</th><th>Email</th><th>MSSV</th><th>Khoa</th>'
+      + '<th>Role</th><th>Uy tín</th><th>Cặp</th><th>Rating</th><th>Trạng thái</th><th>Thao tác</th>'
+      + '</tr></thead>'
+      + '<tbody>' + rows.join('') + '</tbody>'
+      + '</table></div>'
+      + '<div style="margin-top:12px;font-size:12px;color:var(--muted)">Hiển thị ' + list.length + ' / ' + allUsers.length + ' người dùng</div>';
+  }
+
+  async function openDetail(id) {
+    showModal('user-modal');
+    document.getElementById('modal-body').innerHTML = '<div class="spinner"></div>';
+    try {
+      const u = await api.get('/admin/users/' + id);
+      document.getElementById('modal-title').textContent = '👤 ' + u.full_name;
+      const teach = (u.skills || []).filter(s => s.type === 'teach');
+      const learn = (u.skills || []).filter(s => s.type === 'learn');
+      const canOperate = u.role !== 'admin' && u.id !== currentUser?.id;
+
+      let modalActions = '';
+      if (canOperate) {
+        if (!u.is_banned) modalActions += '<button class="btn btn-danger btn-sm" onclick="ban(\'' + u.id + '\',\'' + escHtml(u.full_name) + '\');hideModal(\'user-modal\')">🔒 Khóa TK</button>';
+        if (u.is_banned)  modalActions += '<button class="btn btn-success btn-sm" onclick="unban(\'' + u.id + '\',\'' + escHtml(u.full_name) + '\');hideModal(\'user-modal\')">🔓 Mở khóa</button>';
+        modalActions += '<button class="btn btn-secondary btn-sm" onclick="changeRole(\'' + u.id + '\',\'' + u.role + '\')">🔄 Đổi role</button>';
+        modalActions += '<button class="btn btn-secondary btn-sm" onclick="resetPw(\'' + u.id + '\',\'' + escHtml(u.full_name) + '\')">🔐 Reset mật khẩu</button>';
+      }
+
+      let warningBanner = '';
+      if (!canOperate) {
+        const msg = u.id === currentUser?.id ? 'Đây là tài khoản của bạn — không thể tự thao tác' : 'Tài khoản Admin — không thể thao tác';
+        warningBanner = '<div style="font-size:12px;color:var(--muted);background:rgba(255,255,255,.04);padding:8px 12px;border-radius:6px;margin-bottom:12px">⚠️ ' + msg + '</div>';
+      }
+
+      let teachHtml = '';
+      if (teach.length) {
+        teachHtml = '<div style="margin-bottom:10px"><div style="font-size:11px;color:var(--muted);margin-bottom:5px">✅ Có thể dạy</div><div style="display:flex;flex-wrap:wrap;gap:4px">'
+          + teach.map(s => '<span class="tag tag-teach" style="font-size:10px">' + escHtml(s.subject) + '</span>').join('')
+          + '</div></div>';
+      }
+      let learnHtml = '';
+      if (learn.length) {
+        learnHtml = '<div style="margin-bottom:14px"><div style="font-size:11px;color:var(--muted);margin-bottom:5px">📖 Muốn học</div><div style="display:flex;flex-wrap:wrap;gap:4px">'
+          + learn.map(s => '<span class="tag tag-learn" style="font-size:10px">' + escHtml(s.subject) + '</span>').join('')
+          + '</div></div>';
+      }
+      let banBanner = '';
+      if (u.is_banned) {
+        banBanner = '<div class="ann-banner ann-error" style="margin-bottom:12px">🔒 Bị khóa: ' + escHtml(u.ban_reason || 'Vi phạm quy định') + '</div>';
+      }
+
+      document.getElementById('modal-body').innerHTML =
+        '<div class="grid g3" style="margin-bottom:16px;text-align:center">'
+        + '<div style="background:rgba(255,255,255,.05);border-radius:8px;padding:10px"><div style="font-size:18px;font-weight:800">' + (u.reputation_score || 50) + '</div><div style="font-size:10px;color:var(--muted)">Uy tín</div></div>'
+        + '<div style="background:rgba(255,255,255,.05);border-radius:8px;padding:10px"><div style="font-size:18px;font-weight:800">' + (u.total_pairs || 0) + '</div><div style="font-size:10px;color:var(--muted)">Cặp đôi</div></div>'
+        + '<div style="background:rgba(255,255,255,.05);border-radius:8px;padding:10px"><div style="font-size:18px;font-weight:800">' + parseFloat(u.teaching_rating || 0).toFixed(1) + '★</div><div style="font-size:10px;color:var(--muted)">Rating</div></div>'
+        + '</div>'
+        + '<div style="font-size:12px;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px">'
+        + '<div><span style="color:var(--muted)">Email:</span> ' + escHtml(u.email) + '</div>'
+        + '<div><span style="color:var(--muted)">MSSV:</span> ' + (u.student_id || '—') + '</div>'
+        + '<div><span style="color:var(--muted)">Khoa:</span> ' + escHtml(u.faculty || '—') + '</div>'
+        + '<div><span style="color:var(--muted)">Năm:</span> ' + (u.year_of_study || '—') + '</div>'
+        + '<div><span style="color:var(--muted)">Role:</span> ' + u.role + '</div>'
+        + '<div><span style="color:var(--muted)">Đăng ký:</span> ' + fmt(u.created_at) + '</div>'
+        + '</div>'
+        + (u.bio ? '<div style="font-size:12px;color:var(--muted);background:rgba(255,255,255,.04);padding:8px;border-radius:6px;margin-bottom:14px">' + escHtml(u.bio) + '</div>' : '')
+        + teachHtml + learnHtml + banBanner + warningBanner
+        + '<div style="display:flex;gap:8px;flex-wrap:wrap">' + modalActions + '</div>';
+    } catch(e) {
+      document.getElementById('modal-body').innerHTML = '<p style="color:#f87171">' + e.message + '</p>';
+    }
+  }
+
+  async function ban(id, name) {
+    const reason = prompt('Lý do khóa tài khoản ' + name + ':');
+    if (!reason) return;
+    try { await api.put('/admin/users/' + id + '/ban', { reason }); Toast.success('Đã khóa ' + name); await load(); } catch(e) { Toast.error(e.message); }
+  }
+  async function unban(id, name) {
+    if (!confirm('Mở khóa tài khoản ' + name + '?')) return;
+    try { await api.put('/admin/users/' + id + '/unban'); Toast.success('Đã mở khóa ' + name); await load(); } catch(e) { Toast.error(e.message); }
+  }
+  async function changeRole(id, curRole) {
+    const roles = ['student','moderator'];
+    const nr = prompt('Đổi role (hiện tại: ' + curRole + ')\nNhập: student | moderator');
+    if (!nr || !roles.includes(nr)) return Toast.error('Role không hợp lệ');
+    try { await api.put('/admin/users/' + id + '/role', { role: nr }); Toast.success('Đã cập nhật role'); await load(); } catch(e) { Toast.error(e.message); }
+  }
+  async function resetPw(id, name) {
+    if (!confirm('Reset mật khẩu cho ' + name + '? Mật khẩu mới sẽ hiển thị.')) return;
+    try {
+      const r = await api.put('/admin/users/' + id + '/reset-password');
+      alert('Mật khẩu mới của ' + name + ':\n\n' + r.new_password + '\n\nHãy thông báo cho người dùng!');
+      Toast.success('Đã reset mật khẩu');
+    } catch(e) { Toast.error(e.message); }
+  }
+
+  window.load = load;
+  window.applyFilter = applyFilter;
+  window.renderTable = renderTable;
+  window.openDetail = openDetail;
+  window.ban = ban;
+  window.unban = unban;
+  window.changeRole = changeRole;
+  window.resetPw = resetPw;
+
+  load().catch(e => Toast.error(e.message));
+}
+</script>
+</body>
+</html>

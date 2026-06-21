@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StudyMatch – Hồ sơ</title><link rel="stylesheet" href="/css/style.css">
+<style>
+.prof-avatar{width:80px;height:80px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;border:3px solid rgba(124,58,237,.5);margin:0 auto 12px}
+.rep-bar{height:8px;background:rgba(255,255,255,.08);border-radius:4px;overflow:hidden;margin-top:6px}
+.rep-fill{height:100%;background:var(--grad);border-radius:4px;transition:width .6s}
+.skill-chip{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:20px;font-size:12px;font-weight:500;margin:3px}
+.skill-chip .rm{cursor:pointer;opacity:.5;margin-left:2px;font-size:14px;line-height:1}
+.skill-chip .rm:hover{opacity:1}
+.level-dots{display:flex;gap:3px;margin-left:4px}
+.ld{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.15);cursor:pointer;transition:background .15s}
+.ld.on{background:currentColor}
+</style>
+</head>
+<body>
+<div class="bg-grad"><div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div></div>
+<div class="app">
+  <aside class="sidebar"></aside>
+  <div class="main">
+    <div class="topbar">
+      <div><div class="topbar-title">👤 Hồ sơ của tôi</div><div class="topbar-sub">Cập nhật thông tin và kỹ năng</div></div>
+      <div class="topbar-actions"><button class="btn btn-primary" onclick="saveAll()">💾 Lưu tất cả</button></div>
+    </div>
+    <div class="content">
+      <div id="setup-banner" style="display:none" class="ann-banner ann-info" style="margin-bottom:16px">
+        👋 Chào mừng! Hãy hoàn thiện hồ sơ để bắt đầu ghép cặp học tập.
+      </div>
+
+      <div class="grid g2" style="margin-bottom:20px">
+        <!-- Thông tin cơ bản -->
+        <div class="card">
+          <div class="card-header"><div class="card-title">📝 Thông tin cơ bản</div></div>
+          <div style="text-align:center;margin-bottom:20px">
+            <div class="prof-avatar" id="av-display">?</div>
+            <div style="font-size:16px;font-weight:700" id="name-display">—</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:3px" id="rep-display">50 điểm uy tín</div>
+            <div class="rep-bar"><div class="rep-fill" id="rep-fill" style="width:5%"></div></div>
+            <div id="badges-display" style="margin-top:10px;display:flex;flex-wrap:wrap;justify-content:center;gap:4px"></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Họ và tên *</label>
+            <input type="text" id="p-name" class="form-control" placeholder="Nguyễn Văn A">
+          </div>
+          <div class="grid g2">
+            <div class="form-group">
+              <label class="form-label">MSSV</label>
+              <input type="text" id="p-sid" class="form-control" placeholder="SV001">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Năm học</label>
+              <select id="p-year" class="form-control">
+                <option value="">Chọn năm</option>
+                <option value="1">Năm 1</option><option value="2">Năm 2</option>
+                <option value="3">Năm 3</option><option value="4">Năm 4</option>
+                <option value="5">Năm 5+</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Khoa</label>
+            <select id="p-faculty" class="form-control">
+              <option value="">Chọn khoa</option>
+              <option>Khoa CNTT</option><option>Khoa Toán - Lý</option>
+              <option>Khoa Điện tử</option><option>Khoa Cơ khí</option>
+              <option>Khoa Kinh tế</option><option>Khoa Ngoại ngữ</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Giới thiệu bản thân</label>
+            <textarea id="p-bio" class="form-control" rows="3" placeholder="Vài dòng về bạn, sở thích học tập..."></textarea>
+          </div>
+        </div>
+
+        <!-- Bảo mật + Thống kê -->
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div class="card">
+            <div class="card-header"><div class="card-title">📊 Thống kê</div></div>
+            <div class="grid g2" id="stats-mini"></div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title">🔒 Bảo mật</div></div>
+            <div class="form-group">
+              <label class="form-label">Mật khẩu hiện tại</label>
+              <input type="password" id="pw-old" class="form-control" placeholder="••••••••">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mật khẩu mới</label>
+              <input type="password" id="pw-new" class="form-control" placeholder="Tối thiểu 6 ký tự">
+            </div>
+            <button class="btn btn-secondary btn-sm" onclick="changePw()">Đổi mật khẩu</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kỹ năng -->
+      <div class="card">
+        <div class="card-header"><div class="card-title">🎓 Kỹ năng học tập</div></div>
+
+        <!-- Volunteer Toggle -->
+        <div class="vol-toggle-wrap" id="vol-wrap" onclick="toggleVol()">
+          <div class="toggle-switch" id="vol-switch"><div class="toggle-knob"></div></div>
+          <div>
+            <div style="font-size:13px;font-weight:700">🙋 Chế độ Tình nguyện viên</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:2px" id="vol-desc">Tắt — Hiển thị cả môn dạy và muốn học</div>
+          </div>
+        </div>
+
+        <div class="grid g2">
+          <!-- Môn có thể dạy -->
+          <div>
+            <div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:10px;letter-spacing:.5px">✅ MÔN TÔI CÓ THỂ DẠY</div>
+            <div id="teach-list" style="min-height:40px;margin-bottom:12px"></div>
+            <div style="display:flex;gap:8px">
+              <input type="text" id="teach-input" class="form-control" placeholder="Nhập môn học..." list="subjects-list" style="flex:1">
+              <button class="btn btn-success btn-sm" onclick="addSkill('teach')">+ Thêm</button>
+            </div>
+          </div>
+
+          <!-- Môn muốn học (ẩn khi TNV) -->
+          <div id="learn-col">
+            <div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:10px;letter-spacing:.5px">📖 MÔN TÔI MUỐN HỌC</div>
+            <div id="learn-list" style="min-height:40px;margin-bottom:12px"></div>
+            <div style="display:flex;gap:8px">
+              <input type="text" id="learn-input" class="form-control" placeholder="Nhập môn học..." list="subjects-list" style="flex:1">
+              <button class="btn btn-primary btn-sm" onclick="addSkill('learn')">+ Thêm</button>
+            </div>
+          </div>
+        </div>
+        <datalist id="subjects-list" id="subjects-list"></datalist>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/app.js"></script>
+<script>
+Auth.guard();
+renderSidebar('profile');
+
+let teachSkills = [], learnSkills = [], isVol = false;
+const ALL_BADGES = {
+  first_pair:'🤝 Ghép đôi đầu tiên', five_pairs:'⭐ 5 lần ghép đôi',
+  top_rated:'🏆 Đánh giá cao', volunteer:'🙋 TNV',
+  rep_300:'💎 Tin tưởng', rep_1000:'🏅 Top Mentor', complete_10:'📚 Tích cực'
+};
+
+async function load() {
+  const [me, subjects] = await Promise.all([api.get('/auth/me'), api.get('/subjects')]);
+
+  // Fill form
+  document.getElementById('p-name').value = me.full_name || '';
+  document.getElementById('p-sid').value  = me.student_id || '';
+  document.getElementById('p-faculty').value = me.faculty || '';
+  const yr = document.getElementById('p-year');
+  if (me.year_of_study) yr.value = me.year_of_study;
+  document.getElementById('p-bio').value = me.bio || '';
+
+  // Avatar
+  document.getElementById('av-display').textContent = initials(me.full_name);
+  document.getElementById('name-display').textContent = me.full_name;
+  const rep = me.reputation_score || 50;
+  document.getElementById('rep-display').textContent = `💎 ${rep} điểm uy tín`;
+  document.getElementById('rep-fill').style.width = Math.min(rep/10, 100) + '%';
+
+  // Badges
+  const bw = document.getElementById('badges-display');
+  bw.innerHTML = (me.badge_ids||[]).map(b=>`<span class="tag tag-purple" style="font-size:10px">${ALL_BADGES[b]||b}</span>`).join('');
+
+  // Stats
+  const pairs = await api.get('/pairs/my/all');
+  document.getElementById('stats-mini').innerHTML = `
+    <div style="text-align:center;background:rgba(255,255,255,.04);border-radius:8px;padding:12px"><div style="font-size:22px;font-weight:800">${pairs.filter(p=>p.status==='active').length}</div><div style="font-size:11px;color:var(--muted)">Đang học</div></div>
+    <div style="text-align:center;background:rgba(255,255,255,.04);border-radius:8px;padding:12px"><div style="font-size:22px;font-weight:800">${pairs.filter(p=>p.status==='completed').length}</div><div style="font-size:11px;color:var(--muted)">Hoàn thành</div></div>
+    <div style="text-align:center;background:rgba(255,255,255,.04);border-radius:8px;padding:12px"><div style="font-size:22px;font-weight:800">${parseFloat(me.teaching_rating||0).toFixed(1)}★</div><div style="font-size:11px;color:var(--muted)">Rating</div></div>
+    <div style="text-align:center;background:rgba(255,255,255,.04);border-radius:8px;padding:12px"><div style="font-size:22px;font-weight:800">${me.profile_views||0}</div><div style="font-size:11px;color:var(--muted)">Lượt xem HĐ</div></div>
+  `;
+
+  // Skills
+  teachSkills = (me.skills||[]).filter(s=>s.type==='teach').map(s=>s.subject);
+  learnSkills  = (me.skills||[]).filter(s=>s.type==='learn').map(s=>s.subject);
+  isVol = !!me.is_volunteer;
+  updateVolUI();
+  renderSkills();
+
+  // Subjects datalist
+  const dl = document.getElementById('subjects-list');
+  dl.innerHTML = subjects.map(s=>`<option value="${s}">`).join('');
+
+  if (new URLSearchParams(location.search).get('setup') === '1')
+    document.getElementById('setup-banner').style.display = '';
+}
+
+function toggleVol() {
+  isVol = !isVol;
+  updateVolUI();
+}
+function updateVolUI() {
+  const sw = document.getElementById('vol-switch');
+  sw.classList.toggle('on', isVol);
+  document.getElementById('vol-desc').textContent = isVol
+    ? 'Bật — Chỉ hiển thị môn tôi có thể dạy (Tình nguyện viên)'
+    : 'Tắt — Hiển thị cả môn dạy và muốn học';
+  document.getElementById('learn-col').style.display = isVol ? 'none' : '';
+}
+
+function addSkill(type) {
+  const inp = document.getElementById(type + '-input');
+  const val = inp.value.trim();
+  if (!val) return;
+  const list = type === 'teach' ? teachSkills : learnSkills;
+  if (list.includes(val)) { Toast.info('Môn này đã có'); return; }
+  list.push(val);
+  inp.value = '';
+  renderSkills();
+}
+function removeSkill(type, subject) {
+  if (type === 'teach') teachSkills = teachSkills.filter(s=>s!==subject);
+  else learnSkills = learnSkills.filter(s=>s!==subject);
+  renderSkills();
+}
+function renderSkills() {
+  document.getElementById('teach-list').innerHTML = teachSkills.map(s=>`
+    <span class="skill-chip tag-teach" style="border:1px solid rgba(34,197,94,.3)">
+      ✅ ${escHtml(s)}
+      <span class="rm" onclick="removeSkill('teach','${escHtml(s)}')">×</span>
+    </span>`).join('') || '<span style="font-size:12px;color:var(--muted)">Chưa có môn nào</span>';
+  document.getElementById('learn-list').innerHTML = learnSkills.map(s=>`
+    <span class="skill-chip tag-learn" style="border:1px solid rgba(249,115,22,.3)">
+      📖 ${escHtml(s)}
+      <span class="rm" onclick="removeSkill('learn','${escHtml(s)}')">×</span>
+    </span>`).join('') || '<span style="font-size:12px;color:var(--muted)">Chưa có môn nào</span>';
+}
+
+async function saveAll() {
+  const full_name = document.getElementById('p-name').value.trim();
+  if (!full_name) return Toast.error('Họ tên không được để trống');
+  try {
+    await api.put('/users/profile/update', {
+      full_name, student_id: document.getElementById('p-sid').value.trim(),
+      faculty: document.getElementById('p-faculty').value,
+      year_of_study: +document.getElementById('p-year').value || null,
+      bio: document.getElementById('p-bio').value.trim(),
+      is_volunteer: isVol
+    });
+    const skills = [
+      ...teachSkills.map(s => ({ subject: s, type: 'teach' })),
+      ...(!isVol ? learnSkills.map(s => ({ subject: s, type: 'learn' })) : [])
+    ];
+    await api.post('/users/skills/update', { skills });
+    Toast.success('✅ Hồ sơ đã được lưu!');
+    await load();
+  } catch(e) { Toast.error(e.message); }
+}
+
+async function changePw() {
+  const current_password = document.getElementById('pw-old').value;
+  const new_password = document.getElementById('pw-new').value;
+  if (!current_password || !new_password) return Toast.error('Điền đủ thông tin');
+  try {
+    await api.put('/auth/change-password', { current_password, new_password });
+    Toast.success('Đổi mật khẩu thành công!');
+    document.getElementById('pw-old').value = '';
+    document.getElementById('pw-new').value = '';
+  } catch(e) { Toast.error(e.message); }
+}
+
+['teach-input','learn-input'].forEach(id => {
+  document.getElementById(id)?.addEventListener('keydown', e => {
+    if (e.key === 'Enter') addSkill(id.replace('-input',''));
+  });
+});
+
+load().catch(e => Toast.error(e.message));
+</script>
+</body>
+</html>

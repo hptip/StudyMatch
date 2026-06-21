@@ -1,0 +1,674 @@
+[
+  {
+    "created_at": "2026-06-21T03:05:19.917Z",
+    "id": "e31cdab6-f7fd-482b-b189-640d9c73c54a",
+    "user_id": "dc49af67-ae68-4511-b1f7-6da597f64649",
+    "type": "pair_request",
+    "title": "🤝 Yêu cầu ghép cặp mới",
+    "body": "Trần Văn An muốn ghép cặp học tập với bạn",
+    "ref_id": "47dc4100-e5e4-4477-846a-7eab13dd73c1",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T03:05:39.902Z",
+    "id": "cb6fd806-798b-4050-a0a8-5c633d829b2a",
+    "user_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "type": "pair_confirm",
+    "title": "✅ Bạn học đã xác nhận hoàn thành",
+    "body": "Trần Văn An đã xác nhận hoàn thành. Hãy xác nhận của bạn!",
+    "ref_id": "d4d19188-7d37-46b6-add4-ba051ea98427",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T03:06:19.611Z",
+    "id": "079e84aa-6b0e-49ec-933a-af8a693e43a0",
+    "user_id": "dc49af67-ae68-4511-b1f7-6da597f64649",
+    "type": "pair_accepted",
+    "title": "✅ Yêu cầu ghép cặp được chấp nhận!",
+    "body": "Lê Thị Bình đã chấp nhận ghép cặp với bạn. Hãy bắt đầu nhắn tin!",
+    "ref_id": "eca59fab-b125-4c2c-aba3-2cd1044a563d",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T03:09:07.606Z",
+    "id": "0b16bbfe-7d2e-4a06-8c3c-66ffe5f581b6",
+    "user_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "type": "pair_completed",
+    "title": "🎉 Ghép cặp hoàn thành!",
+    "body": "Bạn đã hoàn thành học tập. Hãy đánh giá nhau nhé!",
+    "ref_id": "d4d19188-7d37-46b6-add4-ba051ea98427",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T03:09:07.607Z",
+    "id": "93b869d9-acbf-413e-b1ac-ee02db3d29fe",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "pair_completed",
+    "title": "🎉 Ghép cặp hoàn thành!",
+    "body": "Bạn đã hoàn thành học tập. Hãy đánh giá nhau nhé!",
+    "ref_id": "d4d19188-7d37-46b6-add4-ba051ea98427",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T03:22:36.520Z",
+    "id": "e41995b4-fe3a-43fd-82b4-c21090d50849",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "badge",
+    "title": "🏅 Huy hiệu mới!",
+    "body": "Bạn vừa nhận huy hiệu: 💎 Được tin tưởng",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T03:22:36.523Z",
+    "id": "e013de8c-05a1-4c8b-a5c6-7ce5f565cfd2",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "review",
+    "title": "⭐ Bạn nhận được đánh giá mới",
+    "body": "Hoàng Thị Dung đã đánh giá bạn 5.0 sao",
+    "ref_id": "d4d19188-7d37-46b6-add4-ba051ea98427",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T05:29:47.733Z",
+    "id": "14ec2ab1-58a1-4c72-a743-b824e9385e22",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "type": "badge",
+    "title": "🏅 Huy hiệu mới!",
+    "body": "Bạn vừa nhận huy hiệu: 🙋 Tình nguyện viên",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T05:34:22.763Z",
+    "id": "fb7ee8bd-da27-4e59-815d-63b352a67816",
+    "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "type": "badge",
+    "title": "🏅 Huy hiệu mới!",
+    "body": "Bạn vừa nhận huy hiệu: 💎 Được tin tưởng",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T05:34:22.765Z",
+    "id": "15e7bea5-9594-43d0-9541-908d8da285b6",
+    "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "type": "review",
+    "title": "⭐ Bạn nhận được đánh giá mới",
+    "body": "Trần Văn An đã đánh giá bạn 5.0 sao",
+    "ref_id": "bbf406ff-0573-4366-a732-660f82a11735",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T05:35:07.451Z",
+    "id": "a440d56e-9aff-4f6e-8a71-57916d2e8ea0",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "review",
+    "title": "⭐ Bạn nhận được đánh giá mới",
+    "body": "Lê Thị Bình đã đánh giá bạn 5.0 sao",
+    "ref_id": "bbf406ff-0573-4366-a732-660f82a11735",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T05:36:32.582Z",
+    "id": "8d5659c4-4633-4cee-9c13-af668ed4579a",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "type": "pair_request",
+    "title": "🤝 Yêu cầu ghép cặp mới",
+    "body": "Trần Văn An muốn ghép cặp học tập với bạn",
+    "ref_id": "fafc59f9-0684-47b7-903d-fbe0c9f4cb21",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T05:36:34.293Z",
+    "id": "2d6253ac-8559-471a-b61f-9410bbd4c4f6",
+    "user_id": "4cb1148b-3fb5-4a63-bc43-b95c883ba437",
+    "type": "pair_request",
+    "title": "🤝 Yêu cầu ghép cặp mới",
+    "body": "Trần Văn An muốn ghép cặp học tập với bạn",
+    "ref_id": "69932c46-03f3-4a87-8ea4-a996e395b9a7",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T05:38:13.107Z",
+    "id": "02590b9c-5d8e-4a24-b770-5857fd2823b6",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "type": "report",
+    "title": "🚩 Báo cáo vi phạm mới",
+    "body": "Người dùng bị báo cáo: Lừa đảo",
+    "ref_id": "397e6c7a-e68d-4808-b6cf-58b6755d48c4",
+    "is_read": true,
+    "updated_at": "2026-06-21T06:46:30.716Z"
+  },
+  {
+    "created_at": "2026-06-21T05:57:23.863Z",
+    "id": "2adda519-633b-4c55-873e-a9253a84984f",
+    "user_id": "dc49af67-ae68-4511-b1f7-6da597f64649",
+    "type": "pair_confirm",
+    "title": "✅ Bạn học đã xác nhận hoàn thành",
+    "body": "Lê Thị Bình đã xác nhận hoàn thành. Hãy xác nhận của bạn!",
+    "ref_id": "eca59fab-b125-4c2c-aba3-2cd1044a563d",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T05:57:54.401Z",
+    "id": "e9227bfb-874d-4ba7-a8e1-673923d18d95",
+    "user_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "type": "badge",
+    "title": "🏅 Huy hiệu mới!",
+    "body": "Bạn vừa nhận huy hiệu: 🏆 Được đánh giá cao",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T05:57:54.401Z",
+    "id": "e7ae3aea-2a9c-4234-b06f-3a7e22fa328c",
+    "user_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "type": "review",
+    "title": "⭐ Bạn nhận được đánh giá mới",
+    "body": "Trần Văn An đã đánh giá bạn 5.0 sao",
+    "ref_id": "d4d19188-7d37-46b6-add4-ba051ea98427",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:26:53.882Z",
+    "id": "5daa0340-4372-4642-ad2e-9ba42979b486",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "system",
+    "title": "✅ Tài khoản đã được mở khóa",
+    "body": "Tài khoản của bạn đã được khôi phục",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:29:24.465Z",
+    "id": "d0869310-dc89-4633-92b2-a9cf902c80a7",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "pair_accepted",
+    "title": "✅ Yêu cầu ghép cặp được chấp nhận!",
+    "body": "Đinh Cao Hùng đã chấp nhận ghép cặp với bạn. Hãy bắt đầu nhắn tin!",
+    "ref_id": "fafc59f9-0684-47b7-903d-fbe0c9f4cb21",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:29:24.468Z",
+    "id": "1e8501a1-04c5-40a6-97c8-14ae2e2cbc77",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "type": "badge",
+    "title": "🏅 Huy hiệu mới!",
+    "body": "Bạn vừa nhận huy hiệu: 🤝 Ghép đôi đầu tiên",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:29:27.056Z",
+    "id": "954842bf-1889-4518-a518-7055e39bdc12",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "pair_confirm",
+    "title": "✅ Bạn học đã xác nhận hoàn thành",
+    "body": "Đinh Cao Hùng đã xác nhận hoàn thành. Hãy xác nhận của bạn!",
+    "ref_id": "fafc59f9-0684-47b7-903d-fbe0c9f4cb21",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:29:39.544Z",
+    "id": "082a0d86-4a4f-45b3-8ace-c7d309555929",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "pair_completed",
+    "title": "🎉 Ghép cặp hoàn thành!",
+    "body": "Bạn đã hoàn thành học tập. Hãy đánh giá nhau nhé!",
+    "ref_id": "fafc59f9-0684-47b7-903d-fbe0c9f4cb21",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:29:39.545Z",
+    "id": "862634c4-0fba-4bb7-a430-40e71896328d",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "type": "pair_completed",
+    "title": "🎉 Ghép cặp hoàn thành!",
+    "body": "Bạn đã hoàn thành học tập. Hãy đánh giá nhau nhé!",
+    "ref_id": "fafc59f9-0684-47b7-903d-fbe0c9f4cb21",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:29:44.809Z",
+    "id": "da020024-7d68-4bbb-8fb0-4f0356ec7c86",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "type": "badge",
+    "title": "🏅 Huy hiệu mới!",
+    "body": "Bạn vừa nhận huy hiệu: 🏆 Được đánh giá cao",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:29:44.810Z",
+    "id": "cfceec21-e329-4702-bb29-1eedcf7eeb77",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "type": "review",
+    "title": "⭐ Bạn nhận được đánh giá mới",
+    "body": "Trần Văn An đã đánh giá bạn 5.0 sao",
+    "ref_id": "fafc59f9-0684-47b7-903d-fbe0c9f4cb21",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:30:01.528Z",
+    "id": "e4f56053-8a05-4d03-b312-de6b28b3e074",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "type": "pair_request",
+    "title": "🤝 Yêu cầu ghép cặp mới",
+    "body": "Trần Văn An muốn ghép cặp học tập với bạn",
+    "ref_id": "a179e1e0-6eb0-4c7e-8881-ced592daffc1",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:39:51.839Z",
+    "id": "ebc9929e-48af-411c-ad84-0d34ea6334af",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "announcement",
+    "title": "📢 T",
+    "body": "B",
+    "ref_id": "62268266-bbd1-4d41-84b5-17cc5833ef72",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:39:51.839Z",
+    "id": "bbb40f77-154c-44b0-bfd4-0dd9fe028228",
+    "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "type": "announcement",
+    "title": "📢 T",
+    "body": "B",
+    "ref_id": "62268266-bbd1-4d41-84b5-17cc5833ef72",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:39:51.839Z",
+    "id": "3ba110e7-db8c-442e-8dcb-8bb35556229c",
+    "user_id": "dc49af67-ae68-4511-b1f7-6da597f64649",
+    "type": "announcement",
+    "title": "📢 T",
+    "body": "B",
+    "ref_id": "62268266-bbd1-4d41-84b5-17cc5833ef72",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:39:51.840Z",
+    "id": "83d2a0b2-1381-4335-93da-a44d065b3f15",
+    "user_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "type": "announcement",
+    "title": "📢 T",
+    "body": "B",
+    "ref_id": "62268266-bbd1-4d41-84b5-17cc5833ef72",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:39:51.840Z",
+    "id": "5d16ab24-65db-4e27-8193-0178139811dc",
+    "user_id": "4cb1148b-3fb5-4a63-bc43-b95c883ba437",
+    "type": "announcement",
+    "title": "📢 T",
+    "body": "B",
+    "ref_id": "62268266-bbd1-4d41-84b5-17cc5833ef72",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:39:51.840Z",
+    "id": "fbf11ab0-bbb0-4eef-b437-d78ffa676a86",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "type": "announcement",
+    "title": "📢 T",
+    "body": "B",
+    "ref_id": "62268266-bbd1-4d41-84b5-17cc5833ef72",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:43:10.359Z",
+    "id": "17499436-d3c6-4de9-8b50-b9e2a71b65a5",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "type": "system",
+    "title": "✅ Tài khoản đã được mở khóa",
+    "body": "Tài khoản của bạn đã được khôi phục",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:43:27.815Z",
+    "id": "b6c10dbf-aa76-47a8-a6ca-770d9657ac57",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "system",
+    "title": "✅ Tài khoản đã được mở khóa",
+    "body": "Tài khoản của bạn đã được khôi phục",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:47:23.287Z",
+    "id": "b54b91ef-49e9-412b-8abd-a679741429ed",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "announcement",
+    "title": "📢 Cảnh cáo",
+    "body": "Cảnh cáo vi phạm",
+    "ref_id": "3a0789c4-fc1e-47fb-9317-711791738886",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:47:23.288Z",
+    "id": "00862562-207d-4e14-bd23-18ef72ec538b",
+    "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "type": "announcement",
+    "title": "📢 Cảnh cáo",
+    "body": "Cảnh cáo vi phạm",
+    "ref_id": "3a0789c4-fc1e-47fb-9317-711791738886",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:47:23.289Z",
+    "id": "519a6d88-1f26-408d-941e-f04f73ba9f96",
+    "user_id": "dc49af67-ae68-4511-b1f7-6da597f64649",
+    "type": "announcement",
+    "title": "📢 Cảnh cáo",
+    "body": "Cảnh cáo vi phạm",
+    "ref_id": "3a0789c4-fc1e-47fb-9317-711791738886",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:47:23.289Z",
+    "id": "40cf2d35-8e06-4572-8011-c2815348c85b",
+    "user_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "type": "announcement",
+    "title": "📢 Cảnh cáo",
+    "body": "Cảnh cáo vi phạm",
+    "ref_id": "3a0789c4-fc1e-47fb-9317-711791738886",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:47:23.291Z",
+    "id": "e85713d2-1b8a-4f79-a284-542a69610d8b",
+    "user_id": "4cb1148b-3fb5-4a63-bc43-b95c883ba437",
+    "type": "announcement",
+    "title": "📢 Cảnh cáo",
+    "body": "Cảnh cáo vi phạm",
+    "ref_id": "3a0789c4-fc1e-47fb-9317-711791738886",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:47:23.291Z",
+    "id": "9b22f021-3f1d-4055-9f4e-28b15a5c0011",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "type": "announcement",
+    "title": "📢 Cảnh cáo",
+    "body": "Cảnh cáo vi phạm",
+    "ref_id": "3a0789c4-fc1e-47fb-9317-711791738886",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T06:47:41.048Z",
+    "id": "2e549043-ef75-4fe1-bd29-9f831d7df272",
+    "user_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "type": "pair_request",
+    "title": "🤝 Yêu cầu ghép cặp mới",
+    "body": "Trần Văn An muốn ghép cặp học tập với bạn",
+    "ref_id": "ee1fab48-a5d1-4da5-8a97-8bbb14652876",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T07:24:47.416Z",
+    "id": "3ef0907d-18a1-4d97-92d8-28522f00c458",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "badge",
+    "title": "🏅 Huy hiệu mới!",
+    "body": "Bạn vừa nhận huy hiệu: 🙋 Tình nguyện viên",
+    "is_read": true,
+    "updated_at": "2026-06-21T07:25:10.894Z"
+  },
+  {
+    "created_at": "2026-06-21T07:49:35.610Z",
+    "id": "2ae71ce5-bab7-4688-a97d-65c7fcb04cfc",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "pair_request",
+    "title": "🤝 Yêu cầu ghép cặp mới",
+    "body": "Đinh Cao Hùng muốn ghép cặp học tập với bạn",
+    "ref_id": "52562eee-acbe-4b50-918f-0189fb1809c1",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T07:49:49.121Z",
+    "id": "4a2448de-3a7b-4955-9dce-2c640cbc92f9",
+    "user_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "type": "pair_accepted",
+    "title": "✅ Yêu cầu ghép cặp được chấp nhận!",
+    "body": "Nguyễn Văn An đã chấp nhận ghép cặp với bạn. Hãy bắt đầu nhắn tin!",
+    "ref_id": "52562eee-acbe-4b50-918f-0189fb1809c1",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T07:49:49.123Z",
+    "id": "11deac20-bc95-4734-87ce-3c4564f47502",
+    "user_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "type": "badge",
+    "title": "🏅 Huy hiệu mới!",
+    "body": "Bạn vừa nhận huy hiệu: 🤝 Ghép đôi đầu tiên",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T07:50:14.748Z",
+    "id": "b719a9af-e228-4f1b-ba46-3eebbf24ef45",
+    "user_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "type": "pair_cancelled",
+    "title": "⚠️ Ghép cặp đã bị hủy",
+    "body": "Nguyễn Văn An đã hủy ghép cặp",
+    "ref_id": "52562eee-acbe-4b50-918f-0189fb1809c1",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T07:51:13.391Z",
+    "id": "c8bb7bb2-bbbb-4124-a4be-db824631aa0a",
+    "user_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "type": "pair_request",
+    "title": "🤝 Yêu cầu ghép cặp mới",
+    "body": "Nguyễn Văn An muốn ghép cặp học tập với bạn",
+    "ref_id": "bf88d730-e985-41a4-8a6b-6af4977f8a0d",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T07:51:33.051Z",
+    "id": "0caaad87-c624-46ec-83c4-634ca12a16a7",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "pair_accepted",
+    "title": "✅ Yêu cầu ghép cặp được chấp nhận!",
+    "body": "Đinh Cao Hùng đã chấp nhận ghép cặp với bạn. Hãy bắt đầu nhắn tin!",
+    "ref_id": "bf88d730-e985-41a4-8a6b-6af4977f8a0d",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T07:51:34.391Z",
+    "id": "48e546f7-1ab6-4c2e-9dab-05072d054000",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "pair_confirm",
+    "title": "✅ Bạn học đã xác nhận hoàn thành",
+    "body": "Đinh Cao Hùng đã xác nhận hoàn thành. Hãy xác nhận của bạn!",
+    "ref_id": "bf88d730-e985-41a4-8a6b-6af4977f8a0d",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T07:51:57.515Z",
+    "id": "c818c290-8986-443a-9fb0-e7f27cafe769",
+    "user_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "type": "pair_cancelled",
+    "title": "⚠️ Ghép cặp đã bị hủy",
+    "body": "Nguyễn Văn An đã hủy ghép cặp",
+    "ref_id": "bf88d730-e985-41a4-8a6b-6af4977f8a0d",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T07:53:29.855Z",
+    "id": "a4c8b080-6d36-495a-846f-9bab61d7a8cf",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "type": "pair_request",
+    "title": "🤝 Yêu cầu ghép cặp mới",
+    "body": "Đinh Cao Hùng muốn ghép cặp học tập với bạn",
+    "ref_id": "b32e8450-45da-4750-bb31-afb4a0b497bf",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T07:54:45.447Z",
+    "id": "37eed965-2d9b-4e24-af8d-8a427780e7f8",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "pair_request",
+    "title": "🤝 Yêu cầu ghép cặp mới",
+    "body": "Đinh Cao Hùng muốn ghép cặp học tập với bạn",
+    "ref_id": "65a84e3d-5de1-4ed7-9889-a73320dc02c4",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T07:55:09.738Z",
+    "id": "4dbc0e2a-176a-4444-be8a-c8a0d5df49d0",
+    "user_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "type": "pair_accepted",
+    "title": "✅ Yêu cầu ghép cặp được chấp nhận!",
+    "body": "Nguyễn Văn An đã chấp nhận ghép cặp với bạn. Hãy bắt đầu nhắn tin!",
+    "ref_id": "65a84e3d-5de1-4ed7-9889-a73320dc02c4",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T07:55:12.006Z",
+    "id": "121a5440-2746-4962-9133-e941959671c9",
+    "user_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "type": "pair_confirm",
+    "title": "✅ Bạn học đã xác nhận hoàn thành",
+    "body": "Nguyễn Văn An đã xác nhận hoàn thành. Hãy xác nhận của bạn!",
+    "ref_id": "65a84e3d-5de1-4ed7-9889-a73320dc02c4",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T07:55:31.177Z",
+    "id": "5d8c0bb8-fa08-43a6-9394-c0647fae5f45",
+    "user_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "type": "pair_completed",
+    "title": "🎉 Ghép cặp hoàn thành!",
+    "body": "Bạn đã hoàn thành học tập. Hãy đánh giá nhau nhé!",
+    "ref_id": "65a84e3d-5de1-4ed7-9889-a73320dc02c4",
+    "is_read": true,
+    "updated_at": "2026-06-21T08:01:33.167Z"
+  },
+  {
+    "created_at": "2026-06-21T07:55:31.178Z",
+    "id": "18b427bd-0979-44a4-b0aa-1f510be06c53",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "pair_completed",
+    "title": "🎉 Ghép cặp hoàn thành!",
+    "body": "Bạn đã hoàn thành học tập. Hãy đánh giá nhau nhé!",
+    "ref_id": "65a84e3d-5de1-4ed7-9889-a73320dc02c4",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T07:55:40.569Z",
+    "id": "aad2cf9f-c570-4d65-b668-da20b39ee437",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "type": "pair_cancelled",
+    "title": "⚠️ Ghép cặp đã bị hủy",
+    "body": "Đinh Cao Hùng đã hủy ghép cặp",
+    "ref_id": "b32e8450-45da-4750-bb31-afb4a0b497bf",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T07:57:13.842Z",
+    "id": "3cd21520-a2a4-40e1-8476-2af1ae22bf40",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "review",
+    "title": "⭐ Bạn nhận được đánh giá mới",
+    "body": "Đinh Cao Hùng đã đánh giá bạn 3.0 sao",
+    "ref_id": "65a84e3d-5de1-4ed7-9889-a73320dc02c4",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T08:06:02.114Z",
+    "id": "16764a97-a93f-40e3-aeb2-158207df9dd8",
+    "user_id": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "type": "report",
+    "title": "🚩 Báo cáo vi phạm mới",
+    "body": "Người dùng bị báo cáo: ấu dâm biến thái bệnh hoạn",
+    "ref_id": "ab0acfe4-95a3-4215-b0d3-978e081252d0",
+    "is_read": true,
+    "updated_at": "2026-06-21T08:08:21.222Z"
+  },
+  {
+    "created_at": "2026-06-21T08:14:00.073Z",
+    "id": "370ad75f-d118-449d-918b-ec1576c9956c",
+    "user_id": "4727fcd7-ccaa-403d-93c1-73257cdad6a1",
+    "type": "system",
+    "title": "✅ Tài khoản đã được mở khóa",
+    "body": "Tài khoản của bạn đã được khôi phục",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T08:17:20.208Z",
+    "id": "523b68b0-56ac-4aa6-93bf-45fd7633d946",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "type": "announcement",
+    "title": "📢 Hệ thống bảo trì",
+    "body": "Hệ thống sẽ bảo trì đến hết 21/6/2026",
+    "ref_id": "47cb4c17-67fe-4fd3-86d4-3354f10b23e5",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T08:17:20.210Z",
+    "id": "6f8ecea9-c369-4719-aa30-9e6ce805326d",
+    "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "type": "announcement",
+    "title": "📢 Hệ thống bảo trì",
+    "body": "Hệ thống sẽ bảo trì đến hết 21/6/2026",
+    "ref_id": "47cb4c17-67fe-4fd3-86d4-3354f10b23e5",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T08:17:20.211Z",
+    "id": "2718e38d-aa75-4c23-a8f9-f850a6f335ea",
+    "user_id": "dc49af67-ae68-4511-b1f7-6da597f64649",
+    "type": "announcement",
+    "title": "📢 Hệ thống bảo trì",
+    "body": "Hệ thống sẽ bảo trì đến hết 21/6/2026",
+    "ref_id": "47cb4c17-67fe-4fd3-86d4-3354f10b23e5",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T08:17:20.212Z",
+    "id": "66feeccf-f2d7-4975-be85-539b1b9acd9a",
+    "user_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "type": "announcement",
+    "title": "📢 Hệ thống bảo trì",
+    "body": "Hệ thống sẽ bảo trì đến hết 21/6/2026",
+    "ref_id": "47cb4c17-67fe-4fd3-86d4-3354f10b23e5",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T08:17:20.213Z",
+    "id": "e4df106d-c667-44e4-bd10-b3e3c1df8830",
+    "user_id": "4cb1148b-3fb5-4a63-bc43-b95c883ba437",
+    "type": "announcement",
+    "title": "📢 Hệ thống bảo trì",
+    "body": "Hệ thống sẽ bảo trì đến hết 21/6/2026",
+    "ref_id": "47cb4c17-67fe-4fd3-86d4-3354f10b23e5",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T08:17:20.215Z",
+    "id": "d7c8ce37-4307-4840-96f0-c53d9971999d",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "type": "announcement",
+    "title": "📢 Hệ thống bảo trì",
+    "body": "Hệ thống sẽ bảo trì đến hết 21/6/2026",
+    "ref_id": "47cb4c17-67fe-4fd3-86d4-3354f10b23e5",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T08:17:20.218Z",
+    "id": "08f733cf-65b8-4604-8e60-8ef97e50800d",
+    "user_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "type": "announcement",
+    "title": "📢 Hệ thống bảo trì",
+    "body": "Hệ thống sẽ bảo trì đến hết 21/6/2026",
+    "ref_id": "47cb4c17-67fe-4fd3-86d4-3354f10b23e5",
+    "is_read": false
+  },
+  {
+    "created_at": "2026-06-21T08:17:20.219Z",
+    "id": "8bc21d01-f971-49a1-bc15-c2333f08d4b5",
+    "user_id": "4727fcd7-ccaa-403d-93c1-73257cdad6a1",
+    "type": "announcement",
+    "title": "📢 Hệ thống bảo trì",
+    "body": "Hệ thống sẽ bảo trì đến hết 21/6/2026",
+    "ref_id": "47cb4c17-67fe-4fd3-86d4-3354f10b23e5",
+    "is_read": false
+  }
+]

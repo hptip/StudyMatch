@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin – Báo cáo vi phạm</title><link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="bg-grad"><div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div></div>
+<div class="app">
+  <aside class="sidebar"></aside>
+  <div class="main">
+    <div class="topbar">
+      <div><div class="topbar-title">🚩 Báo cáo vi phạm</div></div>
+      <div class="topbar-actions">
+        <select id="filter-st" class="form-control" style="width:150px" onchange="load()">
+          <option value="pending">⏳ Chờ xử lý</option>
+          <option value="resolved">✅ Đã xử lý</option>
+          <option value="dismissed">🚫 Bỏ qua</option>
+          <option value="">Tất cả</option>
+        </select>
+      </div>
+    </div>
+    <div class="content">
+      <div id="reports-wrap"><div class="spinner"></div></div>
+    </div>
+  </div>
+</div>
+<script src="/js/app.js"></script>
+<script>
+if (!Auth.guardAdmin()) {} else {
+  renderSidebar('admin-reports');
+  async function load() {
+    const st = document.getElementById('filter-st').value;
+    const list = await api.get('/admin/reports'+(st?'?status='+st:''));
+    const el = document.getElementById('reports-wrap');
+    if (!list.length) { el.innerHTML=`<div class="empty"><div class="empty-icon">🚩</div><h3>Không có báo cáo nào</h3></div>`; return; }
+    el.innerHTML = `<div style="display:flex;flex-direction:column;gap:12px">${list.map(r=>`
+      <div style="background:var(--card);border:1px solid ${r.status==='pending'?'rgba(234,179,8,.3)':'var(--border)'};border-radius:12px;padding:18px">
+        <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:12px">
+          <div style="font-size:24px">🚩</div>
+          <div style="flex:1">
+            <div style="font-size:14px;font-weight:700;margin-bottom:4px">${escHtml(r.reason)}</div>
+            ${r.detail?`<div style="font-size:12px;color:var(--muted);margin-bottom:8px">${escHtml(r.detail)}</div>`:''}
+            <div style="display:flex;gap:16px;font-size:12px;flex-wrap:wrap">
+              <span>🗣️ <strong>Người báo cáo:</strong> ${escHtml(r.reporter?.full_name||'?')}</span>
+              <span>👤 <strong>Bị báo cáo:</strong> ${escHtml(r.reported?.full_name||'?')}</span>
+              <span>📅 ${fmtTime(r.created_at)}</span>
+            </div>
+          </div>
+          <div>
+            ${r.status==='pending'
+              ? `<span class="tag tag-yellow">⏳ Chờ xử lý</span>`
+              : r.status==='resolved'
+              ? `<span class="tag tag-teach">✅ Đã xử lý</span>`
+              : `<span class="tag">🚫 Bỏ qua</span>`}
+          </div>
+        </div>
+        ${r.status==='pending'?`
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn btn-danger btn-sm" onclick="resolve('${r.id}','resolved')">✅ Xử lý (hành động đã thực hiện)</button>
+          <button class="btn btn-secondary btn-sm" onclick="resolve('${r.id}','dismissed')">🚫 Bỏ qua (không vi phạm)</button>
+          <a href="/admin/users.html" class="btn btn-ghost btn-sm">👥 Xem user</a>
+        </div>`:''}
+        ${r.action_note?`<div style="margin-top:8px;font-size:12px;color:var(--muted)">Ghi chú: ${escHtml(r.action_note)}</div>`:''}
+      </div>`).join('')}</div>`;
+  }
+  async function resolve(id, status) {
+    const note = prompt(`Ghi chú xử lý (tùy chọn):`)||'';
+    try { await api.put(`/admin/reports/${id}`, { status, action_note: note }); Toast.success('Đã cập nhật'); await load(); } catch(e) { Toast.error(e.message); }
+  }
+  window.load = load;
+  window.resolve = resolve;
+  load().catch(e=>Toast.error(e.message));
+}
+</script>
+</body>
+</html>

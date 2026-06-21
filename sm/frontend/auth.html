@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StudyMatch – Đăng nhập</title>
+<link rel="stylesheet" href="/css/style.css">
+<style>
+body{display:flex;align-items:center;justify-content:center;min-height:100vh}
+.auth-wrap{width:100%;max-width:440px;padding:20px;position:relative;z-index:1}
+.auth-card{background:rgba(12,5,30,.92);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:36px;backdrop-filter:blur(30px)}
+.auth-logo{text-align:center;margin-bottom:28px}
+.auth-logo h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:26px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.auth-logo p{font-size:13px;color:var(--muted);margin-top:5px}
+.auth-tabs{display:flex;background:rgba(255,255,255,.05);border-radius:10px;padding:4px;gap:4px;margin-bottom:24px}
+.auth-tab{flex:1;padding:9px;text-align:center;border-radius:7px;cursor:pointer;font-size:13px;font-weight:600;color:var(--muted);transition:all .25s}
+.auth-tab.active{background:var(--grad);color:#fff}
+.demo-box{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.25);border-radius:10px;padding:12px 14px;margin-bottom:20px;font-size:12px}
+.demo-box strong{color:#a78bfa}
+.demo-row{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
+.demo-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:4px 8px;font-size:11px;cursor:pointer;transition:all .2s}
+.demo-item:hover{background:rgba(124,58,237,.2);border-color:var(--purple)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.auth-footer{text-align:center;margin-top:18px;font-size:12px;color:var(--muted)}
+.auth-footer a{color:#a78bfa;text-decoration:none}
+.btn-full{width:100%;justify-content:center;padding:12px}
+</style>
+</head>
+<body>
+<div class="bg-grad"><div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div></div>
+<div class="auth-wrap">
+  <div class="auth-card">
+    <div class="auth-logo">
+      <div style="font-size:36px;margin-bottom:10px">📚</div>
+      <h1>StudyMatch</h1>
+      <p>Kết nối đúng người – Học đúng cách</p>
+    </div>
+    <div class="auth-tabs">
+      <div class="auth-tab active" id="tab-login" onclick="switchTab('login')">Đăng nhập</div>
+      <div class="auth-tab" id="tab-register" onclick="switchTab('register')">Đăng ký</div>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="form-login">
+      <div class="demo-box">
+        <strong>🎭 Tài khoản demo</strong> — mật khẩu: <strong>123456</strong>
+        <div class="demo-row">
+          <div class="demo-item" onclick="fillLogin('admin@studymatch.vn')">🛡️ Admin</div>
+          <div class="demo-item" onclick="fillLogin('mod@studymatch.vn')">🔰 Moderator</div>
+          <div class="demo-item" onclick="fillLogin('an@sv.edu.vn')">🎓 Sinh viên A</div>
+          <div class="demo-item" onclick="fillLogin('binh@sv.edu.vn')">🙋 TNV Bình</div>
+          <div class="demo-item" onclick="fillLogin('dung@sv.edu.vn')">🙋 TNV Dung</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input type="email" id="l-email" class="form-control" placeholder="email@example.com" value="an@sv.edu.vn">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Mật khẩu</label>
+        <input type="password" id="l-pass" class="form-control" placeholder="••••••••" value="123456">
+      </div>
+      <button class="btn btn-primary btn-full" onclick="doLogin()">Đăng nhập →</button>
+    </div>
+
+    <!-- REGISTER -->
+    <div id="form-register" style="display:none">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Họ và tên *</label>
+          <input type="text" id="r-name" class="form-control" placeholder="Nguyễn Văn A">
+        </div>
+        <div class="form-group">
+          <label class="form-label">MSSV</label>
+          <input type="text" id="r-sid" class="form-control" placeholder="SV001">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email *</label>
+        <input type="email" id="r-email" class="form-control" placeholder="email@sv.edu.vn">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Mật khẩu * (tối thiểu 6 ký tự)</label>
+        <input type="password" id="r-pass" class="form-control" placeholder="••••••••">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Khoa</label>
+          <select id="r-faculty" class="form-control">
+            <option value="">Chọn khoa</option>
+            <option>Khoa CNTT</option><option>Khoa Toán - Lý</option>
+            <option>Khoa Điện tử</option><option>Khoa Cơ khí</option>
+            <option>Khoa Kinh tế</option><option>Khoa Ngoại ngữ</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Năm học</label>
+          <select id="r-year" class="form-control">
+            <option value="">Chọn năm</option>
+            <option value="1">Năm 1</option><option value="2">Năm 2</option>
+            <option value="3">Năm 3</option><option value="4">Năm 4</option>
+            <option value="5">Năm 5+</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-full" onclick="doRegister()">Tạo tài khoản →</button>
+    </div>
+
+    <div class="auth-footer"><a href="/">← Về trang chủ</a></div>
+  </div>
+</div>
+<script src="/js/app.js"></script>
+<script>
+if (Auth.token()) location.href = '/dashboard.html';
+const tab = new URLSearchParams(location.search).get('tab');
+if (tab === 'register') switchTab('register');
+
+function switchTab(t) {
+  document.getElementById('form-login').style.display = t==='login' ? '' : 'none';
+  document.getElementById('form-register').style.display = t==='register' ? '' : 'none';
+  document.getElementById('tab-login').classList.toggle('active', t==='login');
+  document.getElementById('tab-register').classList.toggle('active', t==='register');
+}
+function fillLogin(email) {
+  document.getElementById('l-email').value = email;
+  document.getElementById('l-pass').value = '123456';
+}
+async function doLogin() {
+  const email = document.getElementById('l-email').value.trim();
+  const password = document.getElementById('l-pass').value;
+  if (!email||!password) return Toast.error('Vui lòng nhập đủ thông tin');
+  try {
+    const d = await api.post('/auth/login', { email, password });
+    Auth.save(d.token, d.user);
+    Toast.success('Đăng nhập thành công!');
+    setTimeout(() => location.href = ['admin','moderator'].includes(d.user.role) ? '/admin/index.html' : '/dashboard.html', 700);
+  } catch(e) { Toast.error(e.message); }
+}
+async function doRegister() {
+  const full_name = document.getElementById('r-name').value.trim();
+  const email = document.getElementById('r-email').value.trim();
+  const password = document.getElementById('r-pass').value;
+  const student_id = document.getElementById('r-sid').value.trim();
+  const faculty = document.getElementById('r-faculty').value;
+  const year_of_study = document.getElementById('r-year').value;
+  if (!full_name||!email||!password) return Toast.error('Vui lòng điền đủ thông tin bắt buộc (*)');
+  try {
+    const d = await api.post('/auth/register', { full_name, email, password, student_id, faculty, year_of_study });
+    Auth.save(d.token, d.user);
+    Toast.success('Đăng ký thành công!');
+    setTimeout(() => location.href = '/profile.html?setup=1', 700);
+  } catch(e) { Toast.error(e.message); }
+}
+document.addEventListener('keydown', e => { if (e.key==='Enter') { if (document.getElementById('form-login').style.display!=='none') doLogin(); else doRegister(); } });
+</script>
+</body>
+</html>

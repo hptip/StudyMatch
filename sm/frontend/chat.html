@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StudyMatch – Chat</title><link rel="stylesheet" href="/css/style.css">
+<style>
+.chat-layout{display:flex;height:calc(100vh - 57px);overflow:hidden}
+.conv-list{width:300px;min-width:300px;border-right:1px solid var(--border);display:flex;flex-direction:column}
+.conv-header{padding:14px 16px;border-bottom:1px solid var(--border)}
+.conv-items{overflow-y:auto;flex:1}
+.conv-item{padding:12px 16px;display:flex;gap:10px;cursor:pointer;transition:background .15s;border-bottom:1px solid rgba(255,255,255,.04);position:relative}
+.conv-item:hover,.conv-item.active{background:rgba(124,58,237,.1)}
+.conv-item .cname{font-size:13px;font-weight:600}
+.conv-item .clast{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px}
+.conv-item .ctime{font-size:10px;color:rgba(255,255,255,.3)}
+.unread-badge{background:var(--orange);color:#fff;border-radius:10px;padding:1px 6px;font-size:10px;font-weight:700;min-width:18px;text-align:center}
+.msg-area{flex:1;display:flex;flex-direction:column}
+.msg-header{padding:14px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px}
+.msg-list{flex:1;overflow-y:auto;padding:16px 20px;display:flex;flex-direction:column;gap:8px}
+.msg-bubble{max-width:68%;padding:9px 14px;border-radius:14px;font-size:13px;line-height:1.5;word-break:break-word}
+.mine{background:var(--grad);align-self:flex-end;border-bottom-right-radius:4px}
+.theirs{background:rgba(255,255,255,.08);border:1px solid var(--border);align-self:flex-start;border-bottom-left-radius:4px}
+.msg-time{font-size:10px;color:rgba(255,255,255,.3);margin-top:3px}
+.typing-tip{font-size:11px;color:var(--muted);padding:4px 20px;min-height:22px;font-style:italic}
+.msg-input-bar{padding:12px 16px;border-top:1px solid var(--border);display:flex;gap:10px;align-items:flex-end}
+.msg-input{flex:1;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:14px;padding:10px 14px;color:#fff;font-size:13px;font-family:'Inter',sans-serif;resize:none;outline:none;max-height:100px;transition:border-color .2s}
+.msg-input:focus{border-color:var(--purple)}
+.msg-input::placeholder{color:rgba(255,255,255,.25)}
+.chat-welcome{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="bg-grad"><div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div></div>
+<div class="app">
+  <aside class="sidebar"></aside>
+  <div class="main">
+    <div class="topbar" style="padding:10px 20px">
+      <div class="topbar-title">💬 Tin nhắn</div>
+      <a href="/matches.html" class="btn btn-primary btn-sm">🔗 Tìm bạn học</a>
+    </div>
+    <div class="chat-layout">
+      <!-- Conversations -->
+      <div class="conv-list">
+        <div class="conv-header">
+          <div class="search-bar"><span>🔍</span><input id="conv-search" placeholder="Tìm cuộc trò chuyện..." oninput="filterConvs()"></div>
+        </div>
+        <div class="conv-items" id="conv-items"><div class="spinner"></div></div>
+      </div>
+      <!-- Messages -->
+      <div class="msg-area" id="msg-area">
+        <div class="chat-welcome">
+          <div style="font-size:52px;margin-bottom:12px;opacity:.3">💬</div>
+          <div style="font-size:16px;font-weight:600;color:rgba(255,255,255,.5)">Chọn cuộc trò chuyện</div>
+          <div style="font-size:13px;margin-top:6px">hoặc <a href="/matches.html" style="color:#a78bfa">tìm bạn học mới</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script src="/js/app.js"></script>
+<script>
+Auth.guard();
+renderSidebar('chat');
+const ME = Auth.user();
+let socket, activePartner = null, allConvs = [], typingTimer;
+
+function initSocket() {
+  socket = io({ auth: { token: Auth.token() } });
+  socket.on('new_message', msg => {
+    loadConvs();
+    if (activePartner && (msg.sender_id === activePartner.id || msg.receiver_id === activePartner.id)) {
+      appendMsg(msg, false);
+      socket.emit('mark_read', { sender_id: msg.sender_id });
+    } else {
+      Toast.info(`💬 Tin nhắn từ ${msg.sender?.full_name || '...'}`);
+    }
+  });
+  socket.on('message_sent', msg => appendMsg(msg, true));
+  socket.on('typing', ({ from, name }) => {
+    if (activePartner?.id === from) {
+      const el = document.getElementById('typing-tip');
+      if (el) el.textContent = `${name} đang soạn...`;
+    }
+  });
+  socket.on('stop_typing', ({ from }) => {
+    if (activePartner?.id === from) {
+      const el = document.getElementById('typing-tip');
+      if (el) el.textContent = '';
+    }
+  });
+}
+
+async function loadConvs() {
+  allConvs = await api.get('/conversations');
+  renderConvs(allConvs);
+}
+
+function filterConvs() {
+  const q = document.getElementById('conv-search').value.toLowerCase();
+  renderConvs(allConvs.filter(c => (c.partner?.full_name||'').toLowerCase().includes(q)));
+}
+
+function renderConvs(list) {
+  const el = document.getElementById('conv-items');
+  if (!list.length) {
+    el.innerHTML = `<div class="empty" style="padding:30px 16px"><div class="empty-icon" style="font-size:32px">💬</div><p style="font-size:12px">Chưa có tin nhắn nào</p></div>`;
+    return;
+  }
+  el.innerHTML = list.map(c => {
+    const p = c.partner || {};
+    const last = c.last_message;
+    const isMe = last?.sender_id === ME?.id;
+    return `<div class="conv-item ${activePartner?.id===p.id?'active':''}" onclick="openChat(${JSON.stringify(p).replace(/"/g,'&quot;')})">
+      <div class="av" style="width:40px;height:40px;font-size:14px;border-radius:50%;flex-shrink:0">${initials(p.full_name)}</div>
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px">
+          <span class="cname">${escHtml(p.full_name||'')}</span>
+          <span class="ctime">${last ? timeAgo(last.created_at) : ''}</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span class="clast">${last ? (isMe?'Bạn: ':'')+escHtml(last.content) : 'Bắt đầu trò chuyện'}</span>
+          ${c.unread > 0 ? `<span class="unread-badge">${c.unread}</span>` : ''}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+async function openChat(partner) {
+  activePartner = partner;
+  document.querySelectorAll('.conv-item').forEach(el => el.classList.remove('active'));
+  socket?.emit('mark_read', { sender_id: partner.id });
+
+  document.getElementById('msg-area').innerHTML = `
+    <div class="msg-header">
+      <div class="av" style="width:38px;height:38px;font-size:13px;border-radius:50%">${initials(partner.full_name)}</div>
+      <div style="flex:1">
+        <div style="font-size:14px;font-weight:700">${escHtml(partner.full_name)}</div>
+        <div style="font-size:11px;color:var(--muted)">${escHtml(partner.faculty||'')}</div>
+      </div>
+      <a href="/matches.html" class="btn btn-secondary btn-sm" onclick="event.preventDefault();showProfile('${partner.id}')">👤 Hồ sơ</a>
+      <a href="/pairs.html" class="btn btn-ghost btn-sm">🤝 Cặp đôi</a>
+    </div>
+    <div class="msg-list" id="msg-list"><div class="spinner"></div></div>
+    <div class="typing-tip" id="typing-tip"></div>
+    <div class="msg-input-bar">
+      <textarea id="msg-input" class="msg-input" placeholder="Nhập tin nhắn..." rows="1"
+        onkeydown="handleKey(event)" oninput="handleTyping()"></textarea>
+      <button class="btn btn-primary" style="width:42px;height:42px;padding:0;justify-content:center;border-radius:50%;flex-shrink:0" onclick="sendMsg()">➤</button>
+    </div>`;
+
+  try {
+    const msgs = await api.get(`/messages/${partner.id}`);
+    const list = document.getElementById('msg-list');
+    if (!msgs.length) {
+      list.innerHTML = `<div style="text-align:center;color:var(--muted);padding:30px;font-size:13px">Bắt đầu trò chuyện với ${escHtml(partner.full_name)} 👋</div>`;
+    } else {
+      list.innerHTML = msgs.map(m => msgHtml(m, m.sender_id === ME?.id)).join('');
+      list.scrollTop = list.scrollHeight;
+    }
+  } catch(e) {}
+  renderConvs(allConvs);
+}
+
+function msgHtml(msg, isMe) {
+  return `<div style="display:flex;flex-direction:column;align-items:${isMe?'flex-end':'flex-start'}">
+    <div class="msg-bubble ${isMe?'mine':'theirs'}">${escHtml(msg.content||'').replace(/\n/g,'<br>')}</div>
+    <div class="msg-time">${fmtTime(msg.created_at)}</div>
+  </div>`;
+}
+
+function appendMsg(msg, isMe) {
+  const list = document.getElementById('msg-list');
+  if (!list) return;
+  const empty = list.querySelector('[style*="Bắt đầu trò chuyện"]');
+  if (empty) empty.remove();
+  list.insertAdjacentHTML('beforeend', msgHtml(msg, isMe));
+  list.scrollTop = list.scrollHeight;
+  loadConvs();
+}
+
+function sendMsg() {
+  const inp = document.getElementById('msg-input');
+  if (!inp || !inp.value.trim() || !activePartner) return;
+  socket?.emit('send_message', { receiver_id: activePartner.id, content: inp.value.trim() });
+  socket?.emit('stop_typing', { receiver_id: activePartner.id });
+  inp.value = ''; inp.style.height = 'auto';
+}
+function handleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMsg(); }
+}
+function handleTyping() {
+  const inp = document.getElementById('msg-input');
+  inp.style.height = 'auto'; inp.style.height = Math.min(inp.scrollHeight, 100) + 'px';
+  if (activePartner) {
+    socket?.emit('typing', { receiver_id: activePartner.id });
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(() => socket?.emit('stop_typing', { receiver_id: activePartner.id }), 1500);
+  }
+}
+
+// Auto-open from URL
+async function init() {
+  await loadConvs();
+  initSocket();
+  const pid = new URLSearchParams(location.search).get('partner');
+  if (pid) {
+    try {
+      const u = await api.get(`/users/${pid}`);
+      openChat(u);
+    } catch {}
+  }
+}
+init().catch(e=>Toast.error(e.message));
+</script>
+</body>
+</html>

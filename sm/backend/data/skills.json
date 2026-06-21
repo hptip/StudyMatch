@@ -1,0 +1,191 @@
+[
+  {
+    "created_at": "2026-06-21T02:53:44.935Z",
+    "id": "6ef01f55-48ac-4909-880f-8e33cb7b61a4",
+    "user_id": "dc49af67-ae68-4511-b1f7-6da597f64649",
+    "subject": "Ngôn ngữ lập trình C",
+    "type": "teach"
+  },
+  {
+    "created_at": "2026-06-21T02:53:44.936Z",
+    "id": "e847428b-499f-401a-ab8d-8b6f0c8e692c",
+    "user_id": "dc49af67-ae68-4511-b1f7-6da597f64649",
+    "subject": "Nhập môn Cơ sở dữ liệu",
+    "type": "teach"
+  },
+  {
+    "created_at": "2026-06-21T02:53:44.936Z",
+    "id": "d693adc7-a0f8-48c6-8b89-77b8d3c3360a",
+    "user_id": "dc49af67-ae68-4511-b1f7-6da597f64649",
+    "subject": "Lập trình hướng đối tượng C++",
+    "type": "learn"
+  },
+  {
+    "created_at": "2026-06-21T02:53:44.936Z",
+    "id": "e0361ef0-162e-45e6-9269-2e883a908525",
+    "user_id": "dc49af67-ae68-4511-b1f7-6da597f64649",
+    "subject": "Hệ quản trị Cơ sở dữ liệu",
+    "type": "learn"
+  },
+  {
+    "created_at": "2026-06-21T02:53:44.936Z",
+    "id": "97f3dcc4-b489-4ace-87ae-f37493c2386b",
+    "user_id": "dc49af67-ae68-4511-b1f7-6da597f64649",
+    "subject": "Kiến trúc máy tính",
+    "type": "learn"
+  },
+  {
+    "created_at": "2026-06-21T02:53:44.937Z",
+    "id": "479f9fe0-d5ea-486c-bd63-241de669f2a2",
+    "user_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "subject": "Học máy (Machine Learning)",
+    "type": "teach"
+  },
+  {
+    "created_at": "2026-06-21T02:53:44.937Z",
+    "id": "ab2a904c-7ece-4b66-aaee-eedc2373b8fc",
+    "user_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "subject": "Trí tuệ nhân tạo",
+    "type": "teach"
+  },
+  {
+    "created_at": "2026-06-21T02:53:44.937Z",
+    "id": "eb039af3-83cd-4a82-b39c-7aad57761d44",
+    "user_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "subject": "Khoa học dữ liệu và trí tuệ nhân tạo",
+    "type": "teach"
+  },
+  {
+    "created_at": "2026-06-21T02:53:44.937Z",
+    "id": "6f146277-55db-4f8d-b329-01aa09f3aae7",
+    "user_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "subject": "Kỹ thuật và công nghệ dữ liệu lớn",
+    "type": "teach"
+  },
+  {
+    "created_at": "2026-06-21T02:53:44.938Z",
+    "id": "92ecbf11-db04-4921-baf7-c775a3924a60",
+    "user_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "subject": "Lập trình trên môi trường Web",
+    "type": "learn"
+  },
+  {
+    "created_at": "2026-06-21T02:53:44.938Z",
+    "id": "051cd91f-ff61-4205-9eed-14d3e68188cf",
+    "user_id": "4cb1148b-3fb5-4a63-bc43-b95c883ba437",
+    "subject": "Toán đại cương",
+    "type": "learn"
+  },
+  {
+    "created_at": "2026-06-21T02:53:44.939Z",
+    "id": "ea2cd2da-3f2c-47e2-b7e2-d347c6a0f8cd",
+    "user_id": "4cb1148b-3fb5-4a63-bc43-b95c883ba437",
+    "subject": "Vật lý đại cương",
+    "type": "learn"
+  },
+  {
+    "created_at": "2026-06-21T02:53:44.939Z",
+    "id": "432a1a69-0484-4433-a86d-1ce6d5fc2b8e",
+    "user_id": "4cb1148b-3fb5-4a63-bc43-b95c883ba437",
+    "subject": "Ngôn ngữ lập trình C",
+    "type": "learn"
+  },
+  {
+    "created_at": "2026-06-21T02:53:44.939Z",
+    "id": "ef731f2c-93cc-4720-ac0c-4142bc1b9d91",
+    "user_id": "4cb1148b-3fb5-4a63-bc43-b95c883ba437",
+    "subject": "Tư tưởng Hồ Chí Minh",
+    "type": "learn"
+  },
+  {
+    "created_at": "2026-06-21T05:30:38.202Z",
+    "id": "d1fc5d83-2cac-4048-a322-d0a2bdee1ae5",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "subject": "Toán đại cương",
+    "type": "teach"
+  },
+  {
+    "created_at": "2026-06-21T05:30:38.203Z",
+    "id": "84e7f448-1e73-4a78-8706-d23d9112f834",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "subject": "Nhập môn tìm hiểu ngành Công nghệ thông tin",
+    "type": "teach"
+  },
+  {
+    "created_at": "2026-06-21T05:30:38.204Z",
+    "id": "135481fb-c92d-434e-b58c-95d5e8df4359",
+    "user_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "subject": "Tiếng Anh chuyên ngành",
+    "type": "learn"
+  },
+  {
+    "created_at": "2026-06-21T07:25:06.319Z",
+    "id": "83795c52-641d-479f-9900-8cf1caafb1b3",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "subject": "Lập trình Java",
+    "type": "teach"
+  },
+  {
+    "created_at": "2026-06-21T07:25:06.319Z",
+    "id": "968c01b2-e623-4f1e-b1fb-dfe0c5ced097",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "subject": "Lập trình hướng đối tượng C++",
+    "type": "teach"
+  },
+  {
+    "created_at": "2026-06-21T07:25:06.320Z",
+    "id": "bb37329f-f7f3-45d0-9546-d5af5012980e",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "subject": "Cấu trúc dữ liệu và giải thuật",
+    "type": "teach"
+  },
+  {
+    "created_at": "2026-06-21T07:25:06.320Z",
+    "id": "37b3286b-d0a1-4831-b04c-331357d42437",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "subject": "Toán chuyên ngành",
+    "type": "learn"
+  },
+  {
+    "created_at": "2026-06-21T07:25:06.321Z",
+    "id": "eb194f9c-5700-4f44-b796-72512353c866",
+    "user_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "subject": "Xác suất thống kê",
+    "type": "learn"
+  },
+  {
+    "created_at": "2026-06-21T08:23:34.994Z",
+    "id": "c8137a70-bae2-4992-a897-57cf158c331f",
+    "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "subject": "Toán đại cương",
+    "type": "teach"
+  },
+  {
+    "created_at": "2026-06-21T08:23:34.995Z",
+    "id": "f923ecbd-cbd7-4ebe-9f7d-71bcd3159018",
+    "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "subject": "Xác suất thống kê",
+    "type": "teach"
+  },
+  {
+    "created_at": "2026-06-21T08:23:34.995Z",
+    "id": "e629af02-1af1-4643-9ca7-ab1b2267bc42",
+    "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "subject": "Toán học rời rạc",
+    "type": "teach"
+  },
+  {
+    "created_at": "2026-06-21T08:23:34.997Z",
+    "id": "4bfb54d4-acb0-4861-9776-5ee3c4508820",
+    "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "subject": "Lập trình trên môi trường Web",
+    "type": "learn"
+  },
+  {
+    "created_at": "2026-06-21T08:23:34.997Z",
+    "id": "2f85bf6e-c537-4539-b745-138c0a953641",
+    "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "subject": "Khoa học dữ liệu và trí tuệ nhân tạo",
+    "type": "learn"
+  }
+]

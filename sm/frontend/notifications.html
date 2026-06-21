@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StudyMatch – Thông báo</title><link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="bg-grad"><div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div></div>
+<div class="app">
+  <aside class="sidebar"></aside>
+  <div class="main">
+    <div class="topbar">
+      <div><div class="topbar-title">🔔 Thông báo</div></div>
+      <div class="topbar-actions"><button class="btn btn-secondary btn-sm" onclick="readAll()">✅ Đánh dấu tất cả đã đọc</button></div>
+    </div>
+    <div class="content" style="max-width:680px">
+      <div id="notif-list"><div class="spinner"></div></div>
+    </div>
+  </div>
+</div>
+<script src="/js/app.js"></script>
+<script>
+Auth.guard(); renderSidebar('notifications');
+const icons = { pair_request:'🤝', pair_accepted:'✅', pair_rejected:'❌', pair_cancelled:'🚫', pair_completed:'🎉', pair_confirm:'☑️', review:'⭐', badge:'🏅', announcement:'📢', system:'🔔', report:'🚩' };
+const links = { pair_request:'/pairs.html', pair_accepted:'/pairs.html', pair_completed:'/pairs.html', review:'/pairs.html', badge:'/profile.html', announcement:'#' };
+
+async function load() {
+  const list = await api.get('/notifications');
+  const el = document.getElementById('notif-list');
+  if (!list.length) { el.innerHTML = `<div class="empty"><div class="empty-icon">🔔</div><h3>Chưa có thông báo</h3><p>Hoạt động và nhận thông báo tại đây</p></div>`; return; }
+  el.innerHTML = list.map(n=>`
+    <div style="display:flex;gap:12px;padding:14px 16px;border-radius:10px;background:${n.is_read?'rgba(255,255,255,.03)':'rgba(124,58,237,.08)'};border:1px solid ${n.is_read?'var(--border)':'rgba(124,58,237,.25)'};margin-bottom:8px;cursor:pointer;transition:all .2s"
+      onclick="goNotif('${n.id}','${links[n.type]||'#'}')">
+      <div style="font-size:22px;flex-shrink:0;margin-top:2px">${icons[n.type]||'🔔'}</div>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:13px;font-weight:${n.is_read?'500':'700'}">${escHtml(n.title)}</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:3px">${escHtml(n.body)}</div>
+        <div style="font-size:10px;color:rgba(255,255,255,.25);margin-top:5px">${timeAgo(n.created_at)}</div>
+      </div>
+      ${!n.is_read?`<div style="width:8px;height:8px;background:var(--purple);border-radius:50%;flex-shrink:0;margin-top:6px"></div>`:''}
+    </div>`).join('');
+}
+async function goNotif(id, href) {
+  await api.put(`/notifications/${id}/read`).catch(()=>{});
+  if (href && href !== '#') location.href = href;
+  load();
+}
+async function readAll() {
+  await api.put('/notifications/read-all');
+  Toast.success('Đã đọc tất cả thông báo');
+  load();
+}
+load().catch(e=>Toast.error(e.message));
+</script>
+</body>
+</html>

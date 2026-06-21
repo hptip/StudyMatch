@@ -1,0 +1,74 @@
+[
+  {
+    "created_at": "2026-06-21T03:22:36.513Z",
+    "id": "a26ff36d-9264-46ea-838e-d06a94bbafcd",
+    "pair_id": "d4d19188-7d37-46b6-add4-ba051ea98427",
+    "reviewer_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "reviewee_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "knowledge": 5,
+    "teaching": 5,
+    "attitude": 5,
+    "punctuality": 5,
+    "comment": ""
+  },
+  {
+    "created_at": "2026-06-21T05:34:22.759Z",
+    "id": "d959f7cb-33c8-4b4c-b0b5-f1ea22f3b7b0",
+    "pair_id": "bbf406ff-0573-4366-a732-660f82a11735",
+    "reviewer_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "reviewee_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "knowledge": 5,
+    "teaching": 5,
+    "attitude": 5,
+    "punctuality": 5,
+    "comment": "dạy hay"
+  },
+  {
+    "created_at": "2026-06-21T05:35:07.449Z",
+    "id": "5896207e-7915-4238-afae-d4f5b78f8d58",
+    "pair_id": "bbf406ff-0573-4366-a732-660f82a11735",
+    "reviewer_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "reviewee_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "knowledge": 5,
+    "teaching": 5,
+    "attitude": 5,
+    "punctuality": 5,
+    "comment": "dạy hay"
+  },
+  {
+    "created_at": "2026-06-21T05:57:54.396Z",
+    "id": "3b58da06-aa16-4bb6-a06d-fa01cd2ad577",
+    "pair_id": "d4d19188-7d37-46b6-add4-ba051ea98427",
+    "reviewer_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "reviewee_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "knowledge": 5,
+    "teaching": 5,
+    "attitude": 5,
+    "punctuality": 5,
+    "comment": ""
+  },
+  {
+    "created_at": "2026-06-21T06:29:44.806Z",
+    "id": "5a6851d1-81af-458f-9089-5e15a0314cf0",
+    "pair_id": "fafc59f9-0684-47b7-903d-fbe0c9f4cb21",
+    "reviewer_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "reviewee_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "knowledge": 5,
+    "teaching": 5,
+    "attitude": 5,
+    "punctuality": 5,
+    "comment": ""
+  },
+  {
+    "created_at": "2026-06-21T07:57:13.840Z",
+    "id": "8cf1ff31-cc59-4847-a764-b59040170f5e",
+    "pair_id": "65a84e3d-5de1-4ed7-9889-a73320dc02c4",
+    "reviewer_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "reviewee_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "knowledge": 4,
+    "teaching": 3,
+    "attitude": 4,
+    "punctuality": 1,
+    "comment": ""
+  }
+]

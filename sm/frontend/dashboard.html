@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StudyMatch – Tổng quan</title><link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="bg-grad"><div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div></div>
+<div class="app">
+  <aside class="sidebar"></aside>
+  <div class="main">
+    <div class="topbar">
+      <div><div class="topbar-title" id="greeting">Tổng quan</div><div class="topbar-sub">Chào mừng trở lại!</div></div>
+      <div class="topbar-actions">
+        <button class="btn-icon" onclick="location.href='/notifications.html'" title="Thông báo">🔔<span class="badge-dot" id="notif-dot" style="display:none"></span></button>
+        <a href="/matches.html" class="btn btn-primary btn-sm">🔗 Tìm bạn học</a>
+      </div>
+    </div>
+    <div class="content">
+      <div id="ann-wrap"></div>
+
+      <!-- Stats -->
+      <div class="grid g4" style="margin-bottom:20px" id="stats-row">
+        <div class="stat-card"><div class="stat-icon" style="background:rgba(124,58,237,.2)">🤝</div><div><div class="stat-val" id="st-pairs">—</div><div class="stat-lbl">Cặp đang học</div></div></div>
+        <div class="stat-card"><div class="stat-icon" style="background:rgba(34,197,94,.2)">🎓</div><div><div class="stat-val" id="st-done">—</div><div class="stat-lbl">Đã hoàn thành</div></div></div>
+        <div class="stat-card"><div class="stat-icon" style="background:rgba(249,115,22,.2)">⭐</div><div><div class="stat-val" id="st-rating">—</div><div class="stat-lbl">Đánh giá TB</div></div></div>
+        <div class="stat-card"><div class="stat-icon" style="background:rgba(234,179,8,.2)">💎</div><div><div class="stat-val" id="st-rep">—</div><div class="stat-lbl">Điểm uy tín</div></div></div>
+      </div>
+
+      <div class="grid g2" style="margin-bottom:20px">
+        <!-- Gợi ý ghép cặp -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">🔗 Gợi ý ghép cặp hôm nay</div>
+            <a href="/matches.html" class="btn btn-ghost btn-sm">Xem tất cả →</a>
+          </div>
+          <div id="suggest-list"><div class="spinner"></div></div>
+        </div>
+
+        <!-- Cặp đôi gần đây -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">🤝 Cặp của tôi</div>
+            <a href="/pairs.html" class="btn btn-ghost btn-sm">Quản lý →</a>
+          </div>
+          <div id="pairs-list"><div class="spinner"></div></div>
+        </div>
+      </div>
+
+      <div class="grid g2">
+        <!-- Huy hiệu -->
+        <div class="card">
+          <div class="card-header"><div class="card-title">🏅 Huy hiệu của tôi</div></div>
+          <div id="badges-wrap"><div class="spinner"></div></div>
+        </div>
+        <!-- Thống kê kỹ năng -->
+        <div class="card">
+          <div class="card-header"><div class="card-title">📋 Kỹ năng</div><a href="/profile.html" class="btn btn-ghost btn-sm">Cập nhật →</a></div>
+          <div id="skills-wrap"><div class="spinner"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/app.js"></script>
+<script>
+Auth.guard();
+renderSidebar('dashboard');
+loadAnnouncements('ann-wrap');
+
+const ALL_BADGES = {
+  first_pair:'🤝 Ghép đôi đầu tiên', five_pairs:'⭐ 5 lần ghép đôi',
+  top_rated:'🏆 Được đánh giá cao', volunteer:'🙋 Tình nguyện viên',
+  rep_300:'💎 Được tin tưởng', rep_1000:'🏅 Top Mentor', complete_10:'📚 Học tập tích cực'
+};
+
+async function load() {
+  const [me, pairs, suggests] = await Promise.all([
+    api.get('/auth/me'),
+    api.get('/pairs/my/all'),
+    api.get('/pairs/suggestions')
+  ]);
+
+  const u = Auth.user();
+  const h = new Date().getHours();
+  document.getElementById('greeting').textContent =
+    `${h<12?'Chào buổi sáng':h<18?'Chào buổi chiều':'Chào buổi tối'}, ${me.full_name.split(' ').pop()} 👋`;
+  if (me.unread_notifs > 0) document.getElementById('notif-dot').style.display = '';
+
+  // Stats
+  const active = pairs.filter(p=>p.status==='active').length;
+  const done   = pairs.filter(p=>p.status==='completed').length;
+  document.getElementById('st-pairs').textContent  = active;
+  document.getElementById('st-done').textContent   = done;
+  document.getElementById('st-rating').textContent = me.teaching_rating ? parseFloat(me.teaching_rating).toFixed(1)+'★' : '—';
+  document.getElementById('st-rep').textContent    = me.reputation_score || 50;
+
+  // Gợi ý
+  const sl = document.getElementById('suggest-list');
+  const top = suggests.filter(s => !s.pair_status).slice(0, 3);
+  sl.innerHTML = top.length ? top.map(s => `
+    <div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)">
+      <div class="av" style="width:38px;height:38px;font-size:13px;border-radius:50%">${initials(s.full_name)}</div>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:13px;font-weight:600">${escHtml(s.full_name)}</div>
+        <div style="font-size:11px;color:var(--muted)">${escHtml(s.faculty||'')} · ${s.match_score}% phù hợp</div>
+      </div>
+      <a href="/matches.html" class="btn btn-primary btn-sm">Xem</a>
+    </div>`).join('') : '<div class="empty"><div class="empty-icon">🔍</div><p>Cập nhật kỹ năng để nhận gợi ý</p></div>';
+
+  // Pairs
+  const pl = document.getElementById('pairs-list');
+  const recent = pairs.slice(0, 4);
+  pl.innerHTML = recent.length ? recent.map(p => `
+    <div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)">
+      <div class="av" style="width:38px;height:38px;font-size:13px;border-radius:50%">${initials(p.partner?.full_name)}</div>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:13px;font-weight:600">${escHtml(p.partner?.full_name||'')}</div>
+        <div style="margin-top:3px">${pairStatusBadge(p.status)}</div>
+      </div>
+      <a href="/pairs.html" class="btn btn-ghost btn-sm">Chi tiết</a>
+    </div>`).join('') : '<div class="empty"><div class="empty-icon">🤝</div><p>Chưa có cặp nào</p></div>';
+
+  // Badges
+  const bw = document.getElementById('badges-wrap');
+  const myBadges = me.badge_ids || [];
+  bw.innerHTML = myBadges.length ? `
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      ${myBadges.map(b=>`<span class="tag tag-purple">${ALL_BADGES[b]||b}</span>`).join('')}
+    </div>` : '<div class="empty" style="padding:20px"><div class="empty-icon">🏅</div><p>Hoàn thành hoạt động để nhận huy hiệu</p></div>';
+
+  // Skills
+  const sw = document.getElementById('skills-wrap');
+  const teach = (me.skills||[]).filter(s=>s.type==='teach');
+  const learn = (me.skills||[]).filter(s=>s.type==='learn');
+  sw.innerHTML = (teach.length||learn.length) ? `
+    ${teach.length?`<div style="margin-bottom:12px"><div style="font-size:11px;color:var(--muted);margin-bottom:6px;font-weight:600">✅ Tôi có thể dạy</div><div style="display:flex;flex-wrap:wrap;gap:5px">${teach.slice(0,4).map(s=>`<span class="tag tag-teach">${escHtml(s.subject)}</span>`).join('')}${teach.length>4?`<span class="tag" style="background:rgba(255,255,255,.06)">+${teach.length-4}</span>`:''}</div></div>`:''}
+    ${learn.length&&!me.is_volunteer?`<div><div style="font-size:11px;color:var(--muted);margin-bottom:6px;font-weight:600">📖 Tôi muốn học</div><div style="display:flex;flex-wrap:wrap;gap:5px">${learn.slice(0,4).map(s=>`<span class="tag tag-learn">${escHtml(s.subject)}</span>`).join('')}${learn.length>4?`<span class="tag" style="background:rgba(255,255,255,.06)">+${learn.length-4}</span>`:''}</div></div>`:''}
+  ` : '<div class="empty" style="padding:20px"><div class="empty-icon">📋</div><p>Chưa có kỹ năng nào</p><a href="/profile.html" class="btn btn-primary btn-sm" style="margin-top:10px">Cập nhật ngay</a></div>';
+}
+
+load().catch(e => Toast.error('Lỗi tải dữ liệu: ' + e.message));
+</script>
+</body>
+</html>

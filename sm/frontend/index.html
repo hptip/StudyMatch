@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StudyMatch – Kết nối học tập thông minh</title>
+<link rel="stylesheet" href="/css/style.css">
+<style>
+body{overflow:hidden}
+.landing{height:100vh;display:flex;flex-direction:column;position:relative;z-index:1}
+.lnav{display:flex;align-items:center;justify-content:space-between;padding:22px 52px;position:relative}
+.lnav-logo{font-family:'Montserrat',sans-serif;font-weight:900;font-size:22px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+.lnav-links{display:flex;gap:32px;list-style:none}
+.lnav-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+.lnav-links a:hover{color:#fff}
+.lnav-actions{display:flex;gap:10px}
+.hero{flex:1;display:flex;align-items:center;padding:0 52px;gap:60px}
+.hero-left{max-width:520px}
+.hero-eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.hero-eyebrow::before{content:'';width:24px;height:2px;background:var(--grad);display:inline-block;border-radius:1px}
+.hero-h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(48px,6.5vw,84px);line-height:.92;letter-spacing:-2px;margin-bottom:22px}
+.hero-h1 .g1{display:block;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-h1 .g2{display:block;color:#fff}
+.hero-desc{font-size:14px;line-height:1.85;color:rgba(255,255,255,.55);max-width:400px;margin-bottom:32px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:32px;margin-top:44px}
+.stat-item .n{font-size:26px;font-weight:800}
+.stat-item .l{font-size:11px;color:rgba(255,255,255,.4);margin-top:2px}
+.hero-right{flex:1;display:flex;justify-content:center;align-items:center;position:relative}
+.preview-wrap{position:relative}
+.preview-card{background:rgba(8,3,22,.85);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:22px;width:300px;backdrop-filter:blur(20px)}
+.preview-nums{display:flex;justify-content:flex-end;gap:14px;margin-bottom:14px}
+.preview-nums span{font-family:'Montserrat',sans-serif;font-size:32px;font-weight:900;color:rgba(255,255,255,.15)}
+.preview-nums span.a{color:#fff}
+.preview-img{width:100%;height:130px;background:linear-gradient(135deg,#0d0620,#1e0f45);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:36px;margin-bottom:14px;position:relative;overflow:hidden}
+.preview-img::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 60%,rgba(124,58,237,.2),transparent 70%)}
+.preview-lbl{font-size:13px;font-weight:700;margin-bottom:5px;letter-spacing:.5px}
+.preview-desc{font-size:11px;color:rgba(255,255,255,.45);margin-bottom:14px;line-height:1.6}
+.preview-action{display:flex}
+.preview-action .pa-main{flex:1;background:var(--purple);border:none;color:#fff;padding:9px;border-radius:7px 0 0 7px;font-size:11px;font-weight:700;cursor:pointer;letter-spacing:1px;text-transform:uppercase;font-family:'Inter',sans-serif}
+.preview-action .pa-arr{width:38px;background:var(--pink);border:none;color:#fff;border-radius:0 7px 7px 0;font-size:16px;cursor:pointer}
+.bottom-dots{display:flex;justify-content:center;gap:7px;padding-bottom:28px}
+.bdot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .3s}
+.bdot.a{width:20px;border-radius:3px;background:var(--purple)}
+</style>
+</head>
+<body>
+<div class="bg-grad"><div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div></div>
+<div class="landing">
+  <nav class="lnav">
+    <a href="/" class="lnav-logo">StudyMatch</a>
+    <ul class="lnav-links">
+      <li><a href="#features">Tính năng</a></li>
+      <li><a href="/auth.html">Tài khoản</a></li>
+      <li><a href="#about">Về chúng tôi</a></li>
+    </ul>
+    <div class="lnav-actions">
+      <a href="/auth.html" class="btn btn-secondary btn-sm">Đăng nhập</a>
+      <a href="/auth.html?tab=register" class="btn btn-primary btn-sm">Đăng ký miễn phí</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Nền tảng học tập cộng đồng</div>
+      <h1 class="hero-h1">
+        <span class="g1">STUDY</span>
+        <span class="g2">MATCH</span>
+      </h1>
+      <p class="hero-desc">Kết nối sinh viên có kỹ năng bổ trợ nhau. Thuật toán ghép cặp thông minh giúp bạn tìm đúng người — học đúng cách.</p>
+      <div class="hero-btns">
+        <a href="/auth.html?tab=register" class="btn btn-primary btn-lg">🚀 Bắt đầu ngay</a>
+        <a href="/auth.html" class="btn btn-secondary btn-lg">Đăng nhập</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><div class="n" id="s-users">—</div><div class="l">Sinh viên</div></div>
+        <div class="stat-item"><div class="n" id="s-pairs">—</div><div class="l">Cặp học</div></div>
+        <div class="stat-item"><div class="n" id="s-vols">—</div><div class="l">Tình nguyện viên</div></div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="preview-wrap">
+        <div class="preview-card">
+          <div class="preview-nums">
+            <span id="pnum-a" class="a">01</span><span id="pnum-b">02</span>
+          </div>
+          <div class="preview-img" id="prev-icon">🔗</div>
+          <div class="preview-lbl" id="prev-lbl">Ghép cặp thông minh</div>
+          <div class="preview-desc" id="prev-desc">Thuật toán AI tính điểm phù hợp dựa trên môn học, khoa, và đánh giá. Tìm bạn học lý tưởng trong vài giây.</div>
+          <div class="preview-action">
+            <button class="pa-main" onclick="location.href='/auth.html'">Khám phá ngay</button>
+            <button class="pa-arr" onclick="nextSlide()">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-dots" id="dots"></div>
+</div>
+
+<script>
+if (localStorage.getItem('sm_token')) location.href = '/dashboard.html';
+
+const slides = [
+  { num:'01', next:'02', icon:'🔗', lbl:'Ghép cặp thông minh', desc:'Thuật toán AI tính điểm phù hợp dựa trên môn học, khoa, và đánh giá. Tìm bạn học lý tưởng trong vài giây.' },
+  { num:'02', next:'03', icon:'💬', lbl:'Chat thời gian thực', desc:'Nhắn tin trực tiếp với Socket.io. Đàm thoại, thảo luận và chia sẻ kiến thức ngay lập tức.' },
+  { num:'03', next:'04', icon:'🤝', lbl:'Cơ chế ghép cặp 2 phía', desc:'Gửi lời mời, đối tác xác nhận, cùng học rồi xác nhận hoàn thành. Đánh giá chỉ sau khi hoàn thành.' },
+  { num:'04', next:'05', icon:'🏆', lbl:'Điểm uy tín & Huy hiệu', desc:'Tích lũy điểm qua từng cặp học thành công. Nhận huy hiệu và leo bảng xếp hạng cộng đồng.' },
+];
+let cur = 0;
+
+const dotsEl = document.getElementById('dots');
+slides.forEach((_, i) => { const d = document.createElement('span'); d.className='bdot'+(i===0?' a':''); d.onclick=()=>goSlide(i); dotsEl.appendChild(d); });
+
+function goSlide(i) {
+  cur = i;
+  const s = slides[i];
+  document.getElementById('pnum-a').textContent = s.num;
+  document.getElementById('pnum-b').textContent = s.next;
+  document.getElementById('prev-icon').textContent = s.icon;
+  document.getElementById('prev-lbl').textContent = s.lbl;
+  document.getElementById('prev-desc').textContent = s.desc;
+  document.querySelectorAll('.bdot').forEach((d,j) => d.classList.toggle('a', j===i));
+}
+function nextSlide() { goSlide((cur+1)%slides.length); }
+setInterval(nextSlide, 4000);
+
+fetch('/api/stats-public').then(r=>r.json()).then(d=>{
+  document.getElementById('s-users').textContent = (d.total_users||0)+'+';
+  document.getElementById('s-pairs').textContent = (d.completed_pairs||0)+'+';
+  document.getElementById('s-vols').textContent  = (d.volunteers||0)+'+';
+}).catch(()=>{});
+</script>
+</body>
+</html>

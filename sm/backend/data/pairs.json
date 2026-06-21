@@ -1,0 +1,141 @@
+[
+  {
+    "created_at": "2026-06-21T02:53:44.940Z",
+    "id": "bbf406ff-0573-4366-a732-660f82a11735",
+    "requester_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "target_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "status": "completed",
+    "message": "Mình muốn ghép cặp học Toán với bạn!",
+    "requester_confirmed": true,
+    "target_confirmed": true,
+    "completed_at": "2026-06-21T02:53:44.940Z"
+  },
+  {
+    "created_at": "2026-06-21T02:53:44.940Z",
+    "id": "d4d19188-7d37-46b6-add4-ba051ea98427",
+    "requester_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "target_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "status": "completed",
+    "message": "Mình dạy ML, bạn dạy Java nhé!",
+    "requester_confirmed": true,
+    "target_confirmed": true,
+    "completed_at": "2026-06-21T03:09:07.603Z",
+    "updated_at": "2026-06-21T03:09:07.603Z"
+  },
+  {
+    "created_at": "2026-06-21T02:53:44.940Z",
+    "id": "eca59fab-b125-4c2c-aba3-2cd1044a563d",
+    "requester_id": "dc49af67-ae68-4511-b1f7-6da597f64649",
+    "target_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "status": "active",
+    "message": "Bạn có thể dạy mình Toán được không?",
+    "requester_confirmed": false,
+    "target_confirmed": true,
+    "completed_at": null,
+    "updated_at": "2026-06-21T05:57:23.861Z"
+  },
+  {
+    "created_at": "2026-06-21T03:05:19.916Z",
+    "id": "47dc4100-e5e4-4477-846a-7eab13dd73c1",
+    "requester_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "target_id": "dc49af67-ae68-4511-b1f7-6da597f64649",
+    "status": "pending",
+    "message": "",
+    "requester_confirmed": false,
+    "target_confirmed": false,
+    "completed_at": null
+  },
+  {
+    "created_at": "2026-06-21T05:36:32.581Z",
+    "id": "fafc59f9-0684-47b7-903d-fbe0c9f4cb21",
+    "requester_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "target_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "status": "completed",
+    "message": "",
+    "requester_confirmed": true,
+    "target_confirmed": true,
+    "completed_at": "2026-06-21T06:29:39.542Z",
+    "updated_at": "2026-06-21T06:29:39.542Z"
+  },
+  {
+    "created_at": "2026-06-21T05:36:34.292Z",
+    "id": "69932c46-03f3-4a87-8ea4-a996e395b9a7",
+    "requester_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "target_id": "4cb1148b-3fb5-4a63-bc43-b95c883ba437",
+    "status": "pending",
+    "message": "",
+    "requester_confirmed": false,
+    "target_confirmed": false,
+    "completed_at": null
+  },
+  {
+    "created_at": "2026-06-21T06:30:01.527Z",
+    "id": "a179e1e0-6eb0-4c7e-8881-ced592daffc1",
+    "requester_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "target_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "status": "pending",
+    "message": "",
+    "requester_confirmed": false,
+    "target_confirmed": false,
+    "completed_at": null
+  },
+  {
+    "created_at": "2026-06-21T06:47:41.047Z",
+    "id": "ee1fab48-a5d1-4da5-8a97-8bbb14652876",
+    "requester_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "target_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "status": "pending",
+    "message": "",
+    "requester_confirmed": false,
+    "target_confirmed": false,
+    "completed_at": null
+  },
+  {
+    "created_at": "2026-06-21T07:49:35.609Z",
+    "id": "52562eee-acbe-4b50-918f-0189fb1809c1",
+    "requester_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "target_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "status": "cancelled",
+    "message": "ghép đi",
+    "requester_confirmed": false,
+    "target_confirmed": false,
+    "completed_at": null,
+    "updated_at": "2026-06-21T07:50:14.746Z"
+  },
+  {
+    "created_at": "2026-06-21T07:51:13.390Z",
+    "id": "bf88d730-e985-41a4-8a6b-6af4977f8a0d",
+    "requester_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "target_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "status": "cancelled",
+    "message": "",
+    "requester_confirmed": false,
+    "target_confirmed": true,
+    "completed_at": null,
+    "updated_at": "2026-06-21T07:51:57.512Z"
+  },
+  {
+    "created_at": "2026-06-21T07:53:29.854Z",
+    "id": "b32e8450-45da-4750-bb31-afb4a0b497bf",
+    "requester_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "target_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "status": "cancelled",
+    "message": "",
+    "requester_confirmed": false,
+    "target_confirmed": false,
+    "completed_at": null,
+    "updated_at": "2026-06-21T07:55:40.568Z"
+  },
+  {
+    "created_at": "2026-06-21T07:54:45.446Z",
+    "id": "65a84e3d-5de1-4ed7-9889-a73320dc02c4",
+    "requester_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "target_id": "8dcd5ae3-efe5-4d73-b2bd-8d81c0410853",
+    "status": "completed",
+    "message": "",
+    "requester_confirmed": true,
+    "target_confirmed": true,
+    "completed_at": "2026-06-21T07:55:31.175Z",
+    "updated_at": "2026-06-21T07:55:31.175Z"
+  }
+]

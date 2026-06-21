@@ -1,0 +1,28 @@
+[
+  {
+    "created_at": "2026-06-21T05:38:13.105Z",
+    "id": "397e6c7a-e68d-4808-b6cf-58b6755d48c4",
+    "reporter_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
+    "reported_id": "350025f9-3dd4-4037-90c1-0a75394126f3",
+    "reason": "Lừa đảo",
+    "detail": "",
+    "status": "resolved",
+    "action_note": "Đã cảnh cáo",
+    "resolved_by": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "resolved_at": "2026-06-21T06:46:49.854Z",
+    "updated_at": "2026-06-21T06:46:49.854Z"
+  },
+  {
+    "created_at": "2026-06-21T08:06:02.113Z",
+    "id": "ab0acfe4-95a3-4215-b0d3-978e081252d0",
+    "reporter_id": "8fee1758-4acb-4c74-bd96-39ffae52f5a7",
+    "reported_id": "a57e4376-e14c-414b-880d-309b12663db1",
+    "reason": "ấu dâm biến thái bệnh hoạn",
+    "detail": "",
+    "status": "resolved",
+    "action_note": "",
+    "resolved_by": "6356324e-24f0-4cd2-8a56-c3063c20a628",
+    "resolved_at": "2026-06-21T08:08:40.408Z",
+    "updated_at": "2026-06-21T08:08:40.408Z"
+  }
+]

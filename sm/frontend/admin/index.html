@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin – Dashboard</title><link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="bg-grad"><div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div></div>
+<div class="app">
+  <aside class="sidebar"></aside>
+  <div class="main">
+    <div class="topbar">
+      <div><div class="topbar-title">📊 Admin Dashboard</div><div class="topbar-sub" id="welcome-sub">Tổng quan hệ thống</div></div>
+      <div class="topbar-actions">
+        <button class="btn btn-secondary btn-sm" onclick="load()">🔄 Làm mới</button>
+        <button class="btn btn-primary btn-sm" onclick="location.href='/admin/announcements.html'">📢 Gửi thông báo</button>
+      </div>
+    </div>
+    <div class="content">
+      <!-- Stats -->
+      <div class="grid g4" style="margin-bottom:20px">
+        <div class="stat-card"><div class="stat-icon" style="background:rgba(59,130,246,.2)">👥</div><div><div class="stat-val" id="s-users">—</div><div class="stat-lbl">Tổng người dùng</div></div></div>
+        <div class="stat-card"><div class="stat-icon" style="background:rgba(34,197,94,.2)">🤝</div><div><div class="stat-val" id="s-pairs">—</div><div class="stat-lbl">Cặp hoàn thành</div></div></div>
+        <div class="stat-card"><div class="stat-icon" style="background:rgba(234,179,8,.2)">🚩</div><div><div class="stat-val" id="s-reports">—</div><div class="stat-lbl">Báo cáo chờ xử lý</div></div></div>
+        <div class="stat-card"><div class="stat-icon" style="background:rgba(124,58,237,.2)">🙋</div><div><div class="stat-val" id="s-vols">—</div><div class="stat-lbl">Tình nguyện viên</div></div></div>
+      </div>
+
+      <div class="grid g4" style="margin-bottom:24px">
+        <div class="stat-card"><div class="stat-icon" style="background:rgba(16,185,129,.2)">🟢</div><div><div class="stat-val" id="s-active">—</div><div class="stat-lbl">Đang hoạt động</div></div></div>
+        <div class="stat-card"><div class="stat-icon" style="background:rgba(239,68,68,.2)">🔴</div><div><div class="stat-val" id="s-banned">—</div><div class="stat-lbl">Tài khoản bị khóa</div></div></div>
+        <div class="stat-card"><div class="stat-icon" style="background:rgba(249,115,22,.2)">📅</div><div><div class="stat-val" id="s-today">—</div><div class="stat-lbl">Đăng ký hôm nay</div></div></div>
+        <div class="stat-card"><div class="stat-icon" style="background:rgba(168,85,247,.2)">🔑</div><div><div class="stat-val" id="s-logins">—</div><div class="stat-lbl">Đăng nhập hôm nay</div></div></div>
+      </div>
+
+      <div class="grid g2">
+        <!-- Quick Actions -->
+        <div class="card">
+          <div class="card-header"><div class="card-title">⚡ Thao tác nhanh</div></div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <a href="/admin/users.html" class="btn btn-secondary" style="justify-content:flex-start">👥 Quản lý người dùng</a>
+            <a href="/admin/pairs.html" class="btn btn-secondary" style="justify-content:flex-start">🤝 Quản lý cặp đôi</a>
+            <a href="/admin/reports.html" class="btn btn-secondary" style="justify-content:flex-start">🚩 Xem báo cáo vi phạm <span id="rep-badge" class="nav-badge" style="margin-left:auto"></span></a>
+            <a href="/admin/announcements.html" class="btn btn-secondary" style="justify-content:flex-start">📢 Tạo thông báo hệ thống</a>
+            <a href="/admin/logs.html" class="btn btn-secondary" style="justify-content:flex-start">📋 Nhật ký hoạt động</a>
+          </div>
+        </div>
+        <!-- Recent Logs -->
+        <div class="card">
+          <div class="card-header"><div class="card-title">📋 Hoạt động gần đây</div><a href="/admin/logs.html" class="btn btn-ghost btn-sm">Xem tất cả →</a></div>
+          <div id="recent-logs"><div class="spinner"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/app.js"></script>
+<script>
+if (!Auth.guardAdmin()) {} else {
+  renderSidebar('admin-dash');
+  const u = Auth.user();
+  document.getElementById('welcome-sub').textContent = `Xin chào, ${u?.full_name} — ${u?.role === 'admin' ? '🛡️ Admin' : '🔰 Moderator'}`;
+  const logAction = { register:'✍️ Đăng ký', login:'🔑 Đăng nhập', ban:'🔒 Khóa TK', unban:'🔓 Mở khóa', change_role:'🔄 Đổi role', announcement:'📢 Thông báo', resolve_report:'✅ Xử lý BC', reset_password:'🔐 Reset pass' };
+
+  async function load() {
+    const s = await api.get('/admin/stats');
+    document.getElementById('s-users').textContent  = s.total_users;
+    document.getElementById('s-pairs').textContent  = s.completed_pairs;
+    document.getElementById('s-reports').textContent = s.pending_reports;
+    document.getElementById('s-vols').textContent   = s.volunteers;
+    document.getElementById('s-active').textContent = s.active_users;
+    document.getElementById('s-banned').textContent = s.banned_users;
+    document.getElementById('s-today').textContent  = s.new_today;
+    document.getElementById('s-logins').textContent = s.logins_today;
+    const rb = document.getElementById('rep-badge');
+    if (rb) rb.textContent = s.pending_reports || '';
+
+    const logs = s.recent_logs || [];
+    document.getElementById('recent-logs').innerHTML = logs.length ? logs.slice(0,10).map(l=>`
+      <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04)">
+        <span style="font-size:16px">${logAction[l.action]?.split(' ')[0]||'📝'}</span>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:12px;font-weight:600">${logAction[l.action]||l.action}</div>
+          <div style="font-size:11px;color:var(--muted)">${escHtml(l.user?.full_name||'System')} · ${escHtml(l.detail||'')}</div>
+        </div>
+        <div style="font-size:10px;color:rgba(255,255,255,.25);flex-shrink:0">${timeAgo(l.created_at)}</div>
+      </div>`).join('') : '<div style="color:var(--muted);font-size:13px">Chưa có hoạt động</div>';
+  }
+  window.load = load;
+  load().catch(e=>Toast.error(e.message));
+}
+</script>
+</body>
+</html>

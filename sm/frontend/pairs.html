@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>StudyMatch – Cặp của tôi</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .pair-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      transition: border-color .2s
+    }
+
+    .pair-card:hover {
+      border-color: rgba(255, 255, 255, .2)
+    }
+
+    .confirm-bar {
+      background: rgba(124, 58, 237, .1);
+      border: 1px solid rgba(124, 58, 237, .3);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 12px;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px
+    }
+
+    .review-stars-input {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 4px
+    }
+
+    .rs {
+      font-size: 24px;
+      cursor: pointer;
+      color: rgba(255, 255, 255, .15);
+      transition: color .15s
+    }
+
+    .rs.on {
+      color: #f59e0b
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-grad">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+  </div>
+  <div class="app">
+    <aside class="sidebar"></aside>
+    <div class="main">
+      <div class="topbar">
+        <div>
+          <div class="topbar-title">🤝 Cặp của tôi</div>
+          <div class="topbar-sub">Quản lý các ghép cặp học tập</div>
+        </div>
+        <div class="topbar-actions"><a href="/matches.html" class="btn btn-primary btn-sm">+ Tìm cặp mới</a></div>
+      </div>
+      <div class="content">
+        <div class="tabs">
+          <button class="tab active" onclick="switchTab('all',this)">Tất cả</button>
+          <button class="tab" onclick="switchTab('pending',this)">⏳ Chờ xác nhận</button>
+          <button class="tab" onclick="switchTab('active',this)">✅ Đang học</button>
+          <button class="tab" onclick="switchTab('completed',this)">🎓 Hoàn thành</button>
+          <button class="tab" onclick="switchTab('cancelled',this)">🚫 Đã hủy</button>
+        </div>
+        <div id="pairs-wrap">
+          <div class="spinner"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Review Modal -->
+  <div class="overlay" id="review-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title">⭐ Đánh giá bạn học</div>
+        <button class="modal-close" onclick="hideModal('review-modal')">✕</button>
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:18px">Đánh giá <strong id="rv-name"
+          style="color:#fff"></strong></p>
+      <input type="hidden" id="rv-pair-id">
+      <div class="form-group">
+        <label class="form-label">📚 Kiến thức chuyên môn</label>
+        <div class="review-stars-input" id="rs-knowledge">
+          <span class="rs" data-v="1" onclick="setStars('knowledge',1)">★</span>
+          <span class="rs" data-v="2" onclick="setStars('knowledge',2)">★</span>
+          <span class="rs" data-v="3" onclick="setStars('knowledge',3)">★</span>
+          <span class="rs" data-v="4" onclick="setStars('knowledge',4)">★</span>
+          <span class="rs" data-v="5" onclick="setStars('knowledge',5)">★</span>
+        </div>
+        <input type="hidden" id="rv-knowledge" value="0">
+      </div>
+      <div class="form-group">
+        <label class="form-label">🎓 Khả năng truyền đạt</label>
+        <div class="review-stars-input" id="rs-teaching">
+          <span class="rs" data-v="1" onclick="setStars('teaching',1)">★</span>
+          <span class="rs" data-v="2" onclick="setStars('teaching',2)">★</span>
+          <span class="rs" data-v="3" onclick="setStars('teaching',3)">★</span>
+          <span class="rs" data-v="4" onclick="setStars('teaching',4)">★</span>
+          <span class="rs" data-v="5" onclick="setStars('teaching',5)">★</span>
+        </div>
+        <input type="hidden" id="rv-teaching" value="0">
+      </div>
+      <div class="form-group">
+        <label class="form-label">😊 Thái độ &amp; nhiệt tình</label>
+        <div class="review-stars-input" id="rs-attitude">
+          <span class="rs" data-v="1" onclick="setStars('attitude',1)">★</span>
+          <span class="rs" data-v="2" onclick="setStars('attitude',2)">★</span>
+          <span class="rs" data-v="3" onclick="setStars('attitude',3)">★</span>
+          <span class="rs" data-v="4" onclick="setStars('attitude',4)">★</span>
+          <span class="rs" data-v="5" onclick="setStars('attitude',5)">★</span>
+        </div>
+        <input type="hidden" id="rv-attitude" value="0">
+      </div>
+      <div class="form-group">
+        <label class="form-label">⏰ Trách nhiệm &amp; nghiêm túc</label>
+        <div class="review-stars-input" id="rs-punctuality">
+          <span class="rs" data-v="1" onclick="setStars('punctuality',1)">★</span>
+          <span class="rs" data-v="2" onclick="setStars('punctuality',2)">★</span>
+          <span class="rs" data-v="3" onclick="setStars('punctuality',3)">★</span>
+          <span class="rs" data-v="4" onclick="setStars('punctuality',4)">★</span>
+          <span class="rs" data-v="5" onclick="setStars('punctuality',5)">★</span>
+        </div>
+        <input type="hidden" id="rv-punctuality" value="0">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Nhận xét (tùy chọn)</label>
+        <textarea id="rv-comment" class="form-control" rows="3" placeholder="Chia sẻ trải nghiệm học tập..."></textarea>
+      </div>
+      <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="submitReview()">⭐ Gửi đánh
+        giá</button>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+  <script>
+    Auth.guard();
+    renderSidebar('pairs');
+
+    let curTab = 'all', allPairs = [];
+
+    async function load() {
+      allPairs = await api.get('/pairs/my/all');
+      render();
+    }
+
+    function switchTab(tab, btn) {
+      curTab = tab;
+      document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      render();
+    }
+
+    function render() {
+      const list = curTab === 'all' ? allPairs : allPairs.filter(p => p.status === curTab);
+      const el = document.getElementById('pairs-wrap');
+      if (!list.length) {
+        el.innerHTML = `<div class="empty"><div class="empty-icon">🤝</div><h3>Không có cặp nào</h3>
+      <p>Hãy tìm và gửi yêu cầu ghép cặp</p>
+      <a href="/matches.html" class="btn btn-primary" style="margin-top:12px">🔗 Tìm bạn học</a></div>`;
+        return;
+      }
+      el.innerHTML = `<div style="display:flex;flex-direction:column;gap:14px">${list.map(p => pairCard(p)).join('')}</div>`;
+    }
+
+    function pairCard(p) {
+      const partner = p.partner || {};
+      const teach = (p.partner_skills || []).filter(s => s.type === 'teach').slice(0, 3);
+      const mc = p.my_confirmed, tc = p.their_confirmed;
+
+      let actions = '';
+      if (p.status === 'pending' && !p.is_requester) {
+        actions = `
+      <button class="btn btn-success btn-sm" onclick="acceptPair('${p.id}')">✅ Chấp nhận</button>
+      <button class="btn btn-danger btn-sm" onclick="rejectPair('${p.id}')">❌ Từ chối</button>`;
+      } else if (p.status === 'pending' && p.is_requester) {
+        actions = `<button class="btn btn-danger btn-sm" onclick="cancelPair('${p.id}')">🚫 Hủy yêu cầu</button>`;
+      } else if (p.status === 'active') {
+        actions = `
+      <a href="/chat.html?partner=${partner.id}" class="btn btn-secondary btn-sm">💬 Nhắn tin</a>
+      <button class="btn btn-danger btn-sm" onclick="cancelPair('${p.id}')">🚫 Hủy cặp</button>`;
+      } else if (p.status === 'completed' && p.can_review) {
+        actions = `<button class="btn btn-primary btn-sm" onclick="openReview('${p.id}','${escHtml(partner.full_name)}')">⭐ Đánh giá</button>`;
+      }
+      if (p.status === 'active') {
+        actions += `<button class="btn btn-success btn-sm" onclick="confirmComplete('${p.id}')" ${mc ? 'disabled style="opacity:.5"' : ''}>
+      ${mc ? '✅ Bạn đã xác nhận' : '🎓 Xác nhận hoàn thành'}
+    </button>`;
+      }
+
+      return `<div class="pair-card">
+    <div style="display:flex;align-items:center;gap:14px">
+      <div class="av" style="width:50px;height:50px;font-size:18px;border-radius:50%;flex-shrink:0">${initials(partner.full_name)}</div>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:15px;font-weight:700">${escHtml(partner.full_name || '')}</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px">${escHtml(partner.faculty || '')}${partner.year_of_study ? ' · Năm ' + partner.year_of_study : ''}</div>
+        <div style="margin-top:6px;display:flex;align-items:center;gap:8px">
+          ${pairStatusBadge(p.status)}
+          ${p.is_requester ? '<span style="font-size:10px;color:var(--muted)">Bạn đã gửi yêu cầu</span>' : '<span style="font-size:10px;color:var(--muted)">Gửi cho bạn</span>'}
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end">
+        ${actions}
+      </div>
+    </div>
+
+    ${teach.length ? `<div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:4px">
+      ${teach.map(s => `<span class="tag tag-teach" style="font-size:10px">✅ ${escHtml(s.subject)}</span>`).join('')}
+    </div>`: ''}
+
+    ${p.message ? `<div style="margin-top:10px;font-size:12px;color:rgba(255,255,255,.5);background:rgba(255,255,255,.04);padding:8px 10px;border-radius:6px">
+      💬 "${escHtml(p.message)}"
+    </div>`: ''}
+
+    ${p.status === 'active' ? `<div class="confirm-bar">
+      <span>🎓 Xác nhận hoàn thành học (cần cả 2 phía)</span>
+      <div style="display:flex;gap:10px;font-size:12px">
+        <span>${mc ? '✅ Bạn' : '⬜ Bạn'}</span>
+        <span>${tc ? '✅ Bạn kia' : '⬜ Bạn kia'}</span>
+      </div>
+    </div>`: ''}
+
+    ${p.status === 'completed' ? `<div style="margin-top:10px;display:flex;gap:10px;font-size:12px;color:var(--muted)">
+      <span>📅 Hoàn thành: ${fmt(p.completed_at)}</span>
+      ${p.my_review ? '<span style="color:#4ade80">✅ Đã đánh giá</span>' : p.can_review ? '<span style="color:#fbbf24">⚠️ Chưa đánh giá</span>' : ''}
+    </div>`: ''}
+
+    <div style="margin-top:8px;font-size:11px;color:rgba(255,255,255,.25)">Tạo lúc ${fmtTime(p.created_at)}</div>
+  </div>`;
+    }
+
+    async function acceptPair(id) {
+      try { await api.put(`/pairs/${id}/accept`); Toast.success('✅ Đã chấp nhận ghép cặp!'); await load(); } catch (e) { Toast.error(e.message); }
+    }
+    async function rejectPair(id) {
+      if (!confirm('Từ chối yêu cầu ghép cặp này?')) return;
+      try { await api.put(`/pairs/${id}/reject`); Toast.success('Đã từ chối'); await load(); } catch (e) { Toast.error(e.message); }
+    }
+    async function cancelPair(id) {
+      if (!confirm('Hủy ghép cặp này? Hành động không thể hoàn tác.')) return;
+      try { await api.put(`/pairs/${id}/cancel`); Toast.success('Đã hủy ghép cặp'); await load(); } catch (e) { Toast.error(e.message); }
+    }
+    async function confirmComplete(id) {
+      try {
+        const r = await api.put(`/pairs/${id}/confirm-complete`);
+        Toast.success(r.status === 'completed' ? '🎉 Cả 2 đã xác nhận — Hoàn thành!' : '✅ Đã xác nhận. Chờ bạn kia xác nhận!');
+        await load();
+      } catch (e) { Toast.error(e.message); }
+    }
+
+    function openReview(pairId, name) {
+      document.getElementById('rv-pair-id').value = pairId;
+      document.getElementById('rv-name').textContent = name;
+      document.getElementById('rv-comment').value = '';
+      ['knowledge', 'teaching', 'attitude', 'punctuality'].forEach(k => setStars(k, 0));
+      showModal('review-modal');
+    }
+    function setStars(field, val) {
+      document.getElementById('rv-' + field).value = val;
+      document.querySelectorAll(`#rs-${field} .rs`).forEach((el, i) => el.classList.toggle('on', i < val));
+    }
+    async function submitReview() {
+      const pair_id = document.getElementById('rv-pair-id').value;
+      const knowledge = +document.getElementById('rv-knowledge').value;
+      const teaching = +document.getElementById('rv-teaching').value;
+      const attitude = +document.getElementById('rv-attitude').value;
+      const punctuality = +document.getElementById('rv-punctuality').value;
+      const comment = document.getElementById('rv-comment').value.trim();
+      if (!knowledge || !teaching || !attitude || !punctuality) return Toast.error('Vui lòng chấm đủ 4 tiêu chí');
+      try {
+        await api.post(`/pairs/${pair_id}/review`, { knowledge, teaching, attitude, punctuality, comment });
+        Toast.success('⭐ Đánh giá thành công!');
+        hideModal('review-modal');
+        await load();
+      } catch (e) { Toast.error(e.message); }
+    }
+
+    load().catch(e => Toast.error(e.message));
+  </script>
+</body>
+
+</html>

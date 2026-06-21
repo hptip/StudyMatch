@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StudyMatch – Ghép cặp</title><link rel="stylesheet" href="/css/style.css">
+<style>
+.match-layout{display:flex;height:calc(100vh - 57px);overflow:hidden}
+.match-list{flex:1;overflow-y:auto;padding:20px 24px}
+.detail-panel{width:380px;min-width:380px;border-left:1px solid var(--border);overflow-y:auto;background:rgba(0,0,0,.2);backdrop-filter:blur(10px);transition:transform .3s}
+.detail-panel.hidden{display:none}
+.score-ring{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;position:relative;background:conic-gradient(var(--purple) var(--p,0%),rgba(255,255,255,.08) 0%)}
+.score-ring::before{content:'';position:absolute;inset:8px;border-radius:50%;background:#0d0620}
+.score-ring span{position:relative;z-index:1}
+.vol-tag{display:inline-flex;align-items:center;gap:4px;font-size:10px;padding:2px 7px;border-radius:10px;background:rgba(124,58,237,.2);border:1px solid rgba(124,58,237,.4);color:#a78bfa;font-weight:700}
+.times-badge{display:inline-flex;align-items:center;gap:3px;font-size:10px;color:#a78bfa;margin-top:4px}
+</style>
+</head>
+<body>
+<div class="bg-grad"><div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div></div>
+<div class="app">
+  <aside class="sidebar"></aside>
+  <div class="main">
+    <div class="topbar">
+      <div><div class="topbar-title">🔗 Ghép cặp thông minh</div><div class="topbar-sub">Tìm bạn học phù hợp nhất</div></div>
+      <div class="topbar-actions">
+        <select id="filter-fac" class="form-control" style="width:160px" onchange="applyFilter()">
+          <option value="">Tất cả khoa</option>
+          <option>Khoa CNTT</option><option>Khoa Toán - Lý</option>
+          <option>Khoa Điện tử</option><option>Khoa Cơ khí</option>
+        </select>
+        <select id="filter-vol" class="form-control" style="width:150px" onchange="applyFilter()">
+          <option value="">Tất cả</option>
+          <option value="true">Tình nguyện viên</option>
+        </select>
+      </div>
+    </div>
+    <div class="match-layout">
+      <!-- LIST -->
+      <div class="match-list">
+        <div class="tabs">
+          <button class="tab active" onclick="switchTab('all',this)">🔗 Gợi ý ({n})</button>
+          <button class="tab" onclick="switchTab('vol',this)">🙋 Tình nguyện viên</button>
+        </div>
+        <div style="margin-bottom:16px">
+          <div class="search-bar"><span>🔍</span><input id="search" placeholder="Tìm theo tên, môn học..." oninput="applyFilter()"></div>
+        </div>
+        <div id="list-wrap"><div class="spinner"></div></div>
+      </div>
+
+      <!-- DETAIL PANEL -->
+      <div class="detail-panel hidden" id="detail-panel">
+        <div style="padding:20px">
+          <div style="display:flex;justify-content:flex-end;margin-bottom:16px">
+            <button class="btn btn-ghost btn-sm" onclick="closeDetail()">✕ Đóng</button>
+          </div>
+          <div id="detail-content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Send Request Modal -->
+<div class="overlay" id="req-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">🤝 Gửi yêu cầu ghép cặp</div>
+      <button class="modal-close" onclick="hideModal('req-modal')">✕</button>
+    </div>
+    <div style="margin-bottom:16px;font-size:13px;color:var(--muted)">Gửi lời mời đến <strong id="req-name" style="color:#fff"></strong></div>
+    <div id="req-times-info" style="display:none;margin-bottom:12px;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.3);border-radius:8px;padding:8px 12px;font-size:12px;color:#a78bfa"></div>
+    <div class="form-group">
+      <label class="form-label">Lời nhắn (tùy chọn)</label>
+      <textarea id="req-msg" class="form-control" rows="3" placeholder="Giới thiệu bản thân hoặc môn học muốn trao đổi..."></textarea>
+    </div>
+    <input type="hidden" id="req-target-id">
+    <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="sendRequest()">📨 Gửi yêu cầu</button>
+  </div>
+</div>
+
+<script src="/js/app.js"></script>
+<script>
+Auth.guard();
+renderSidebar('matches');
+
+var allSuggestions = [], allVols = [], curTab = 'all', selectedId = null;
+
+async function loadData() {
+  var results = await Promise.all([
+    api.get('/pairs/suggestions'),
+    api.get('/pairs/volunteers/list')
+  ]);
+  allSuggestions = results[0];
+  allVols = results[1];
+  document.querySelector('.tab').textContent = '🔗 Gợi ý (' + allSuggestions.length + ')';
+  applyFilter();
+}
+
+function switchTab(tab, btn) {
+  curTab = tab;
+  document.querySelectorAll('.tab').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  applyFilter();
+}
+
+function applyFilter() {
+  var q = document.getElementById('search').value.toLowerCase();
+  var fac = document.getElementById('filter-fac').value;
+  var onlyVol = document.getElementById('filter-vol').value === 'true';
+  var list = curTab === 'vol' ? allVols : allSuggestions;
+  if (q) list = list.filter(function(u) {
+    return (u.full_name||'').toLowerCase().includes(q) ||
+      (u.skills||[]).some(function(s) { return s.subject.toLowerCase().includes(q); });
+  });
+  if (fac) list = list.filter(function(u) { return u.faculty === fac; });
+  if (onlyVol) list = list.filter(function(u) { return u.is_volunteer; });
+  renderList(list);
+}
+
+function renderList(list) {
+  var el = document.getElementById('list-wrap');
+  if (!list.length) {
+    el.innerHTML = '<div class="empty"><div class="empty-icon">🔍</div><h3>Không tìm thấy</h3><p>Thử thay đổi bộ lọc hoặc cập nhật kỹ năng</p></div>';
+    return;
+  }
+  el.innerHTML = '<div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px">'
+    + list.map(function(u) { return matchCard(u); }).join('')
+    + '</div>';
+}
+
+function matchCard(u) {
+  var teach = (u.skills||[]).filter(function(s){return s.type==='teach';}).slice(0,3);
+  var score = u.match_score;
+  var tc = u.times_completed || 0;
+
+  // pair_status is null when no active/pending pair exists (can send new request)
+  var actionBtn;
+  if (!u.pair_status) {
+    var label = tc > 0 ? '🤝 Ghép lại' : '🤝 Gửi yêu cầu';
+    actionBtn = '<button class="btn btn-primary btn-sm" onclick="event.stopPropagation();openReqModal(\'' + u.id + '\',\'' + escHtml(u.full_name) + '\',' + tc + ')">' + label + '</button>';
+  } else {
+    var labels = {pending:'⏳ Đang chờ',active:'✅ Đang ghép'};
+    actionBtn = '<span class="pair-status pair-' + u.pair_status + '" style="font-size:10px">' + (labels[u.pair_status]||u.pair_status) + '</span>';
+  }
+
+  var timesHtml = tc > 0 ? '<div class="times-badge">🔁 Đã ghép ' + tc + ' lần</div>' : '';
+
+  return '<div class="match-card ' + (selectedId===u.id?'selected':'') + '" onclick="showDetail(\'' + u.id + '\')">'
+    + '<div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:12px">'
+    + '<div class="av" style="width:46px;height:46px;font-size:16px;border-radius:50%;flex-shrink:0">' + initials(u.full_name) + '</div>'
+    + '<div style="flex:1;min-width:0">'
+    + '<div style="font-size:14px;font-weight:700;margin-bottom:2px">' + escHtml(u.full_name) + '</div>'
+    + '<div style="font-size:11px;color:var(--muted)">' + escHtml(u.faculty||'Chưa cập nhật') + ' · Năm ' + (u.year_of_study||'?') + '</div>'
+    + (u.is_volunteer ? '<span class="vol-tag" style="margin-top:4px">🙋 TNV</span>' : '')
+    + timesHtml
+    + '</div>'
+    + (score!=null ? '<div class="score-ring" style="--p:'+score+'%"><span>'+score+'%</span></div>' : '')
+    + '</div>'
+    + (teach.length ? '<div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px">' + teach.map(function(s){return '<span class="tag tag-teach" style="font-size:10px">✅ '+escHtml(s.subject)+'</span>';}).join('') + '</div>' : '')
+    + '<div style="display:flex;align-items:center;justify-content:space-between">'
+    + starsHtml(u.teaching_rating)
+    + actionBtn
+    + '</div>'
+    + '</div>';
+}
+
+async function showDetail(id) {
+  selectedId = id;
+  applyFilter();
+  var panel = document.getElementById('detail-panel');
+  panel.classList.remove('hidden');
+  var el = document.getElementById('detail-content');
+  el.innerHTML = '<div class="spinner"></div>';
+  try {
+    var u = await api.get('/users/' + id);
+    var teach = (u.skills||[]).filter(function(s){return s.type==='teach';});
+    var learn = (u.skills||[]).filter(function(s){return s.type==='learn';});
+    var reviews = u.reviews||[];
+    var sug = allSuggestions.find(function(s){return s.id===id;});
+    var pairStatus = sug ? sug.pair_status : null;
+    var tc = sug ? (sug.times_completed || 0) : 0;
+
+    var actionBtns = '';
+    if (!pairStatus) {
+      var btnLabel = tc > 0 ? '🤝 Ghép cặp lại' : '🤝 Gửi yêu cầu ghép cặp';
+      actionBtns = '<button class="btn btn-primary" style="flex:1;justify-content:center" onclick="openReqModal(\'' + u.id + '\',\'' + escHtml(u.full_name) + '\',' + tc + ')">' + btnLabel + '</button>'
+        + '<a href="/chat.html?partner=' + u.id + '" class="btn btn-secondary" style="justify-content:center">💬 Nhắn tin</a>';
+    } else {
+      actionBtns = '<div style="font-size:13px;text-align:center">' + pairStatusBadge(pairStatus) + '</div>'
+        + '<a href="/chat.html?partner=' + u.id + '" class="btn btn-secondary" style="justify-content:center;margin-top:8px">💬 Nhắn tin</a>'
+        + '<a href="/pairs.html" class="btn btn-ghost" style="justify-content:center">🤝 Xem cặp đôi</a>';
+    }
+
+    var timesInfo = '';
+    if (tc > 0) {
+      timesInfo = '<div style="background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.3);border-radius:8px;padding:10px 14px;font-size:12px;margin-bottom:16px;text-align:center">'
+        + '🔁 Bạn đã ghép cặp thành công với người này <strong style="color:#a78bfa">' + tc + ' lần</strong> trước đây'
+        + '</div>';
+    }
+
+    var teachHtml = '';
+    if (teach.length) {
+      teachHtml = '<div style="margin-bottom:14px">'
+        + '<div style="font-size:11px;font-weight:700;color:var(--muted);letter-spacing:1px;margin-bottom:7px">✅ CÓ THỂ DẠY</div>'
+        + '<div style="display:flex;flex-wrap:wrap;gap:5px">' + teach.map(function(s){return '<span class="tag tag-teach">'+escHtml(s.subject)+'</span>';}).join('') + '</div>'
+        + '</div>';
+    }
+    var learnHtml = '';
+    if (!u.is_volunteer && learn.length) {
+      learnHtml = '<div style="margin-bottom:18px">'
+        + '<div style="font-size:11px;font-weight:700;color:var(--muted);letter-spacing:1px;margin-bottom:7px">📖 MUỐN HỌC</div>'
+        + '<div style="display:flex;flex-wrap:wrap;gap:5px">' + learn.map(function(s){return '<span class="tag tag-learn">'+escHtml(s.subject)+'</span>';}).join('') + '</div>'
+        + '</div>';
+    }
+    var reviewsHtml = '';
+    if (reviews.length) {
+      reviewsHtml = '<div class="divider"></div>'
+        + '<div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:12px">ĐÁNH GIÁ GẦN ĐÂY</div>'
+        + reviews.slice(0,3).map(function(r) {
+          var avg = ((+r.knowledge + +r.teaching + +r.attitude + +r.punctuality)/4);
+          return '<div style="background:rgba(255,255,255,.04);border-radius:8px;padding:10px;margin-bottom:8px">'
+            + '<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">'
+            + '<div class="av" style="width:26px;height:26px;font-size:9px;border-radius:50%">' + initials(r.reviewer?.full_name) + '</div>'
+            + '<span style="font-size:12px;font-weight:600">' + escHtml(r.reviewer?.full_name||'') + '</span>'
+            + starsHtml(avg)
+            + '</div>'
+            + (r.comment ? '<div style="font-size:12px;color:var(--muted)">' + escHtml(r.comment) + '</div>' : '')
+            + '</div>';
+        }).join('');
+    }
+
+    el.innerHTML =
+      '<div style="text-align:center;margin-bottom:20px">'
+      + '<div class="av" style="width:64px;height:64px;font-size:22px;border-radius:50%;margin:0 auto 12px">' + initials(u.full_name) + '</div>'
+      + '<div style="font-size:18px;font-weight:700">' + escHtml(u.full_name) + '</div>'
+      + '<div style="font-size:12px;color:var(--muted);margin-top:4px">' + escHtml(u.faculty||'') + (u.year_of_study ? ' · Năm '+u.year_of_study : '') + '</div>'
+      + (u.is_volunteer ? '<span class="vol-tag" style="margin-top:6px">🙋 Tình nguyện viên</span>' : '')
+      + (u.bio ? '<p style="font-size:12px;color:rgba(255,255,255,.55);margin-top:10px;line-height:1.6">' + escHtml(u.bio) + '</p>' : '')
+      + '</div>'
+      + '<div class="grid g3" style="margin-bottom:18px;text-align:center">'
+      + '<div style="background:rgba(255,255,255,.05);border-radius:10px;padding:12px"><div style="font-size:20px;font-weight:800">' + parseFloat(u.teaching_rating||0).toFixed(1) + '</div><div style="font-size:10px;color:var(--muted)">Rating</div></div>'
+      + '<div style="background:rgba(255,255,255,.05);border-radius:10px;padding:12px"><div style="font-size:20px;font-weight:800">' + (u.reputation_score||50) + '</div><div style="font-size:10px;color:var(--muted)">Uy tín</div></div>'
+      + '<div style="background:rgba(255,255,255,.05);border-radius:10px;padding:12px"><div style="font-size:20px;font-weight:800">' + (u.total_pairs||0) + '</div><div style="font-size:10px;color:var(--muted)">Cặp đôi</div></div>'
+      + '</div>'
+      + timesInfo
+      + teachHtml + learnHtml
+      + '<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px">' + actionBtns + '</div>'
+      + '<button class="btn btn-danger btn-sm" onclick="reportUser(\'' + u.id + '\',\'' + escHtml(u.full_name) + '\')">🚩 Báo cáo vi phạm</button>'
+      + reviewsHtml;
+  } catch(e) {
+    el.innerHTML = '<div class="empty"><p>' + e.message + '</p></div>';
+  }
+}
+
+function closeDetail() {
+  selectedId = null;
+  document.getElementById('detail-panel').classList.add('hidden');
+  applyFilter();
+}
+
+function openReqModal(id, name, timesCompleted) {
+  document.getElementById('req-target-id').value = id;
+  document.getElementById('req-name').textContent = name;
+  document.getElementById('req-msg').value = '';
+  var infoEl = document.getElementById('req-times-info');
+  if (timesCompleted && timesCompleted > 0) {
+    infoEl.style.display = 'block';
+    infoEl.innerHTML = '🔁 Bạn đã ghép cặp với <strong>' + name + '</strong> thành công <strong>' + timesCompleted + ' lần</strong> trước đây';
+  } else {
+    infoEl.style.display = 'none';
+  }
+  showModal('req-modal');
+}
+
+async function sendRequest() {
+  var target_id = document.getElementById('req-target-id').value;
+  var message = document.getElementById('req-msg').value.trim();
+  try {
+    await api.post('/pairs/request', { target_id: target_id, message: message });
+    Toast.success('✅ Đã gửi yêu cầu ghép cặp!');
+    hideModal('req-modal');
+    await loadData();
+    if (selectedId) showDetail(selectedId);
+  } catch(e) { Toast.error(e.message); }
+}
+
+function reportUser(id, name) {
+  var reason = prompt('Lý do báo cáo ' + name + ':\n(Spam / Thông tin sai / Hành vi không phù hợp / Lừa đảo)');
+  if (!reason) return;
+  api.post('/reports', { reported_id: id, reason: reason, detail: '' })
+    .then(function() { Toast.success('Đã gửi báo cáo. Chúng tôi sẽ xem xét sớm.'); })
+    .catch(function(e) { Toast.error(e.message); });
+}
+
+loadData().catch(function(e) { Toast.error(e.message); });
+</script>
+</body>
+</html>
