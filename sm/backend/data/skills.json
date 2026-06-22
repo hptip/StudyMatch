@@ -187,5 +187,2861 @@
     "user_id": "b57bfdca-ed4b-4fe6-b26c-cd8628ae9c9f",
     "subject": "Khoa học dữ liệu và trí tuệ nhân tạo",
     "type": "learn"
+  },
+  {
+    "id": "17c385ac-7ff9-4760-8f3c-42907afeefdc",
+    "user_id": "0aa3b9a2-bbac-475d-8e33-4afcf699194b",
+    "subject": "Cấu trúc dữ liệu và giải thuật",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "9197d68b-543d-4a4d-aabc-5ee0f23f95c6",
+    "user_id": "0aa3b9a2-bbac-475d-8e33-4afcf699194b",
+    "subject": "Ngôn ngữ lập trình C",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "ba5c07a9-5e52-45c7-bda2-789d2f1c65cb",
+    "user_id": "0aa3b9a2-bbac-475d-8e33-4afcf699194b",
+    "subject": "Học máy (Machine Learning)",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "f838556a-8e54-4b5b-bf9e-500e146ffca0",
+    "user_id": "0aa3b9a2-bbac-475d-8e33-4afcf699194b",
+    "subject": "Tiếng Anh chuyên ngành",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "a3ab7070-3d12-4938-b42e-8f982a061720",
+    "user_id": "29d741da-1c8d-4b04-92b5-3d5f3c6a5fca",
+    "subject": "Kỹ thuật và công nghệ dữ liệu lớn",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "6315a5db-f6ba-4fba-862c-c49d079ddcd3",
+    "user_id": "29d741da-1c8d-4b04-92b5-3d5f3c6a5fca",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "d391cbd8-77dd-46ff-80ee-c14a0d4d2e33",
+    "user_id": "29d741da-1c8d-4b04-92b5-3d5f3c6a5fca",
+    "subject": "Hệ quản trị Cơ sở dữ liệu",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "3cad9f36-385c-41b0-a9db-08e0f4997d2d",
+    "user_id": "29d741da-1c8d-4b04-92b5-3d5f3c6a5fca",
+    "subject": "An toàn và bảo mật hệ thống thông tin",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "68ecf88f-aabe-4c76-bc39-ef7dcbff4ccb",
+    "user_id": "3567fb20-a595-4f3e-9aba-ba63f117201f",
+    "subject": "Toán học rời rạc",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "9e7259c4-8b6b-4206-92ea-a06bfad79d2a",
+    "user_id": "3567fb20-a595-4f3e-9aba-ba63f117201f",
+    "subject": "Khoa học dữ liệu và trí tuệ nhân tạo",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "8a437e79-ca72-4189-a036-ab302a7472f6",
+    "user_id": "3567fb20-a595-4f3e-9aba-ba63f117201f",
+    "subject": "Kỹ thuật và công nghệ dữ liệu lớn",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "25af719d-1f7c-4708-9a7a-906e9cec6bd0",
+    "user_id": "3567fb20-a595-4f3e-9aba-ba63f117201f",
+    "subject": "Nhập môn Cơ sở dữ liệu",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "a93e19cd-04c0-4883-9a94-b7ff851b29d4",
+    "user_id": "1c21898a-f3ce-4d5d-8997-b51cdec66037",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "7cf55041-37b6-4034-9564-eb00f9b10b37",
+    "user_id": "1c21898a-f3ce-4d5d-8997-b51cdec66037",
+    "subject": "Cấu trúc dữ liệu và giải thuật",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "6b6535dd-2c38-42b9-92cb-c5d21e91d906",
+    "user_id": "1c21898a-f3ce-4d5d-8997-b51cdec66037",
+    "subject": "Học máy (Machine Learning)",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "e36594b4-d66c-4480-b0f5-0a1335c37a87",
+    "user_id": "1c21898a-f3ce-4d5d-8997-b51cdec66037",
+    "subject": "Lập trình trực quan C#",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "b780d834-4e76-43d0-adcd-8fca85cb5926",
+    "user_id": "58f575fc-dd65-48e3-8066-f64f1f444401",
+    "subject": "Triết học Mác - Lênin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "de6dfa94-90eb-4629-9ddc-8c03e171ce30",
+    "user_id": "58f575fc-dd65-48e3-8066-f64f1f444401",
+    "subject": "Toán đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "5d5d9227-ab7c-438d-a489-37cda9e0e792",
+    "user_id": "58f575fc-dd65-48e3-8066-f64f1f444401",
+    "subject": "Quản lý dự án phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "000ed977-c56a-4611-ad54-c81e7e0cead0",
+    "user_id": "58f575fc-dd65-48e3-8066-f64f1f444401",
+    "subject": "Vật lý đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "b2681905-5f95-4911-8468-31ee8e2089a8",
+    "user_id": "58f575fc-dd65-48e3-8066-f64f1f444401",
+    "subject": "Cấu trúc dữ liệu và giải thuật",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "86c7187e-c906-4525-bbd1-fc645624f387",
+    "user_id": "19215452-7dfc-407b-a4e2-5231ac551d63",
+    "subject": "Tư tưởng Hồ Chí Minh",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "0c51c5b4-b10b-4d42-929c-a4b6a6135379",
+    "user_id": "19215452-7dfc-407b-a4e2-5231ac551d63",
+    "subject": "Quản lý dự án",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "1f9814be-4561-43eb-be27-bbf792c17afa",
+    "user_id": "19215452-7dfc-407b-a4e2-5231ac551d63",
+    "subject": "Khoa học dữ liệu và trí tuệ nhân tạo",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "26a755e2-c89f-4de4-8a86-f29346924886",
+    "user_id": "19215452-7dfc-407b-a4e2-5231ac551d63",
+    "subject": "Kinh tế chính trị Mác - Lênin",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "4cdefc3b-8ef2-41b6-b62f-c8fae73e0c1a",
+    "user_id": "19215452-7dfc-407b-a4e2-5231ac551d63",
+    "subject": "Toán chuyên ngành",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "e8b8641a-bfaf-4765-918f-65488f1e184a",
+    "user_id": "9f9fae28-1204-4a12-b602-4e3f842862ab",
+    "subject": "Nhập môn mạng máy tính",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "ae51b8df-893a-48e7-b4d8-3fa7c88206ff",
+    "user_id": "9f9fae28-1204-4a12-b602-4e3f842862ab",
+    "subject": "Kiến trúc và thiết kế phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "d895a6ac-0800-4598-857f-a6ccde5c7de9",
+    "user_id": "9f9fae28-1204-4a12-b602-4e3f842862ab",
+    "subject": "Kiến trúc máy tính",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "c924719d-6595-4f2c-8292-5f5d333aace9",
+    "user_id": "8e795a32-acaf-4356-afd6-118e356428e8",
+    "subject": "Chủ nghĩa xã hội khoa học",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "0c7f1f2a-8cff-47df-a5f8-20069895522a",
+    "user_id": "8e795a32-acaf-4356-afd6-118e356428e8",
+    "subject": "Nhập môn mạng máy tính",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "ac5fdb49-0017-4f49-bfbf-38430044164a",
+    "user_id": "8e795a32-acaf-4356-afd6-118e356428e8",
+    "subject": "Lập trình Game",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "135d1e31-3653-4f20-ae10-3380b0c96c85",
+    "user_id": "adda3452-1126-4076-8df4-376c1a02febe",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "c24a9e5d-dbbf-426e-98ac-f2009dcdfb4e",
+    "user_id": "adda3452-1126-4076-8df4-376c1a02febe",
+    "subject": "Lập trình trực quan C#",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "6b68d699-c2d1-4b22-a8ea-60b1e3958df4",
+    "user_id": "adda3452-1126-4076-8df4-376c1a02febe",
+    "subject": "Hệ trợ giúp quyết định",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "158befd2-a23c-4c89-b541-ba47ee1a7d4e",
+    "user_id": "52920ed3-b467-4af5-af6b-a0213ff9b2dd",
+    "subject": "Vật lý đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "57b8b8eb-1697-44c2-82bb-ac2ef82cc8e6",
+    "user_id": "52920ed3-b467-4af5-af6b-a0213ff9b2dd",
+    "subject": "Công nghệ phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "201b3d9f-62b2-4c1a-9858-ae8e5198da0d",
+    "user_id": "52920ed3-b467-4af5-af6b-a0213ff9b2dd",
+    "subject": "Lập trình trên môi trường Web",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "9922ea36-49bb-4c9d-a145-a899dad341d0",
+    "user_id": "dda05e38-1369-4602-abc0-448f230ea2ec",
+    "subject": "Tiếng Anh nâng cao",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "ced63d56-48ca-45fe-8281-f4cf8a39d9ea",
+    "user_id": "dda05e38-1369-4602-abc0-448f230ea2ec",
+    "subject": "Kiến trúc máy tính",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "a0d6aec2-340b-41d1-a82c-fbc7a7157d34",
+    "user_id": "dda05e38-1369-4602-abc0-448f230ea2ec",
+    "subject": "Lập trình trực quan C#",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "e2583754-45e9-4e44-aaf4-ba3a1295de6d",
+    "user_id": "dda05e38-1369-4602-abc0-448f230ea2ec",
+    "subject": "Kỹ thuật và công nghệ dữ liệu lớn",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "f480cb28-48f7-415c-8002-84582fd6ba1b",
+    "user_id": "dda05e38-1369-4602-abc0-448f230ea2ec",
+    "subject": "Thiết kế UI/UX",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "6d80c4db-9aa7-44c0-b7a9-a4f56b9d6402",
+    "user_id": "dda05e38-1369-4602-abc0-448f230ea2ec",
+    "subject": "Quản lý dự án",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "347ce483-0391-44bd-ac09-caa334f49640",
+    "user_id": "006c733b-a608-40fa-946c-94a74d05a44a",
+    "subject": "Vật lý đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "897dfd23-b311-49b3-b986-49078149b65d",
+    "user_id": "006c733b-a608-40fa-946c-94a74d05a44a",
+    "subject": "An toàn và bảo mật hệ thống thông tin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "e0aeb073-3290-4381-90dd-7a7d4db3a289",
+    "user_id": "006c733b-a608-40fa-946c-94a74d05a44a",
+    "subject": "Trí tuệ nhân tạo",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "b46bdbd8-2b10-4aa5-8572-1ae0e4654adf",
+    "user_id": "006c733b-a608-40fa-946c-94a74d05a44a",
+    "subject": "Tiếng Anh chuyên ngành",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "a3f194b5-ace2-4e1d-8a14-c27edc95e906",
+    "user_id": "006c733b-a608-40fa-946c-94a74d05a44a",
+    "subject": "Nhập môn mạng máy tính",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "b0767362-917d-4000-bc53-914aa217547e",
+    "user_id": "337a7212-ddfa-4827-90dc-1e3000d79aaa",
+    "subject": "Toán học rời rạc",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "8c7c0089-c85e-4f55-923f-f7837ef5c1cf",
+    "user_id": "337a7212-ddfa-4827-90dc-1e3000d79aaa",
+    "subject": "Quản lý dự án",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "7eb2a643-ec00-4d09-a5ca-16301f961548",
+    "user_id": "337a7212-ddfa-4827-90dc-1e3000d79aaa",
+    "subject": "Quản lý dự án phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "2000261c-2a03-4f2a-9b6a-e49fd1657a14",
+    "user_id": "337a7212-ddfa-4827-90dc-1e3000d79aaa",
+    "subject": "Toán đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "0a8c32e1-fc2d-4df6-bde6-f14812ebe931",
+    "user_id": "337a7212-ddfa-4827-90dc-1e3000d79aaa",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "ace23141-1471-4b3c-8a50-d1b356d8048a",
+    "user_id": "3ed9372f-e649-44a4-85e0-44cc282365c6",
+    "subject": "Tư tưởng Hồ Chí Minh",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "4bad1399-4dca-4cfd-b568-344bb78c0a9a",
+    "user_id": "3ed9372f-e649-44a4-85e0-44cc282365c6",
+    "subject": "Quản lý dự án",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "e20b1365-c513-4469-ad9e-96d548155d63",
+    "user_id": "425c6b33-694f-4665-a959-4f82f22e9a7a",
+    "subject": "Điện toán đám mây",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "df383ce5-ccbf-45a8-9735-7a82f6cd193f",
+    "user_id": "425c6b33-694f-4665-a959-4f82f22e9a7a",
+    "subject": "Kiến trúc và thiết kế phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "367dc0bd-7b78-4cdf-a838-db08f2339946",
+    "user_id": "425c6b33-694f-4665-a959-4f82f22e9a7a",
+    "subject": "Thiết kế UI/UX",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "f9a7435e-39bf-4de2-9f1b-a242fc0bff49",
+    "user_id": "425c6b33-694f-4665-a959-4f82f22e9a7a",
+    "subject": "Kiến trúc máy tính",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "7c9434c9-29f7-48b6-ad0d-45566adf6078",
+    "user_id": "98f7776e-4cf3-448a-88bf-b3bc2bfce460",
+    "subject": "Vật lý đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "dc68fcc8-cd7b-4c43-a67a-c16e2ebcdeaf",
+    "user_id": "98f7776e-4cf3-448a-88bf-b3bc2bfce460",
+    "subject": "An toàn và bảo mật hệ thống thông tin",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "4f47b880-9d38-49f3-a5bb-4c6fb7c2cd6f",
+    "user_id": "af7920c7-08ff-4f70-a702-7a960128d6ea",
+    "subject": "Tiếng Anh cơ bản",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "de4d08fa-89ef-4f10-8e6e-9bb995303600",
+    "user_id": "af7920c7-08ff-4f70-a702-7a960128d6ea",
+    "subject": "Lập trình trực quan C#",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "99ded497-94a8-49ea-9f8c-717465a11cb1",
+    "user_id": "af7920c7-08ff-4f70-a702-7a960128d6ea",
+    "subject": "Điện toán đám mây",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "a76e199d-6bd8-4692-ab92-1044139a18ea",
+    "user_id": "af7920c7-08ff-4f70-a702-7a960128d6ea",
+    "subject": "Triết học Mác - Lênin",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "59e0cafa-9e5e-4e3c-ad92-c27b24442ef3",
+    "user_id": "af7920c7-08ff-4f70-a702-7a960128d6ea",
+    "subject": "Hệ trợ giúp quyết định",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "8c1cfd47-9029-4cc3-9031-8c8ca5235d38",
+    "user_id": "70fd268a-c10d-42e5-87f0-44fcfba28ab0",
+    "subject": "Nhập môn mạng máy tính",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "aad4c38c-f355-4cf3-b86c-2583be3f7ddb",
+    "user_id": "70fd268a-c10d-42e5-87f0-44fcfba28ab0",
+    "subject": "Triết học Mác - Lênin",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "aeb39a07-2b08-472a-bccb-e8be0720d937",
+    "user_id": "70fd268a-c10d-42e5-87f0-44fcfba28ab0",
+    "subject": "Lịch sử Đảng cộng sản Việt Nam",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "a22a7913-a8b6-478e-b199-ab0c0a9c29db",
+    "user_id": "3aa5241c-f971-4df7-8bcb-fe2ee325e071",
+    "subject": "Tư duy hệ thống",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "6af26ad0-02bf-4eb4-b7a0-574d863ffb1a",
+    "user_id": "3aa5241c-f971-4df7-8bcb-fe2ee325e071",
+    "subject": "Quản lý dự án phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "8bb60ea4-954a-4d04-b591-6a4d479789a8",
+    "user_id": "3aa5241c-f971-4df7-8bcb-fe2ee325e071",
+    "subject": "Toán đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "b9dea6b0-fb4e-4dce-ba56-58cc95fe9433",
+    "user_id": "3aa5241c-f971-4df7-8bcb-fe2ee325e071",
+    "subject": "Nhập môn mạng máy tính",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "da9f2d45-9387-4dd1-a6e7-90e1d60f0138",
+    "user_id": "3aa5241c-f971-4df7-8bcb-fe2ee325e071",
+    "subject": "Tiếng Anh chuyên ngành",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "749bf695-0bbd-4c45-9b8b-e118d6b8f9ff",
+    "user_id": "fa403bd0-e6df-4913-9411-ee2d7d60e1dd",
+    "subject": "Triết học Mác - Lênin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "de903197-90ae-449e-ad45-92d604843571",
+    "user_id": "fa403bd0-e6df-4913-9411-ee2d7d60e1dd",
+    "subject": "Lập trình trên môi trường Web",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "48872956-c36c-4392-95c5-f51f70f90f12",
+    "user_id": "fa403bd0-e6df-4913-9411-ee2d7d60e1dd",
+    "subject": "Chủ nghĩa xã hội khoa học",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "96ecf471-eaa9-437f-b926-d7251c61bcda",
+    "user_id": "abbf1d33-2574-4339-b7f7-617729fa7d77",
+    "subject": "Toán đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "55e82af6-d5e9-4bc3-aa8f-4fba1bfe61a8",
+    "user_id": "abbf1d33-2574-4339-b7f7-617729fa7d77",
+    "subject": "Kiểm thử phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "52258aae-d5e3-48ed-9cef-0cdb7a4f70e3",
+    "user_id": "abbf1d33-2574-4339-b7f7-617729fa7d77",
+    "subject": "Kỹ thuật và công nghệ dữ liệu lớn",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "43d805cd-e264-4cc2-b00a-e3bde221dfd9",
+    "user_id": "abbf1d33-2574-4339-b7f7-617729fa7d77",
+    "subject": "Công nghệ phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "26711501-70af-4b27-a8bd-5f8511ffb418",
+    "user_id": "abbf1d33-2574-4339-b7f7-617729fa7d77",
+    "subject": "Trí tuệ nhân tạo",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "b4fd4847-9949-4e06-b110-5d2d20ae0599",
+    "user_id": "02c18200-2034-41e4-b2d7-c5caaf101fd3",
+    "subject": "Quản lý dự án phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "87ca8be1-92dd-433f-a58a-a4ae5a2b0310",
+    "user_id": "02c18200-2034-41e4-b2d7-c5caaf101fd3",
+    "subject": "Lịch sử Đảng cộng sản Việt Nam",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "b3ba6316-3f39-4e13-8358-ebac4011f6b4",
+    "user_id": "02c18200-2034-41e4-b2d7-c5caaf101fd3",
+    "subject": "Lập trình trên môi trường Web",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "217a87e1-8ba6-4a04-acf4-38b23dc827c8",
+    "user_id": "02c18200-2034-41e4-b2d7-c5caaf101fd3",
+    "subject": "Quản lý dự án",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "ed867a05-1c8d-4d13-b900-0b9b1c3bf8ee",
+    "user_id": "1f6717c4-4a52-42c4-ad52-2185bfc5a4c2",
+    "subject": "Kinh tế chính trị Mác - Lênin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "a85011c6-9523-4ce3-aa7b-ea0ff9cd0be9",
+    "user_id": "1f6717c4-4a52-42c4-ad52-2185bfc5a4c2",
+    "subject": "Hệ trợ giúp quyết định",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "48642636-1e96-41ab-9ff4-1a31d1f5bb89",
+    "user_id": "1f6717c4-4a52-42c4-ad52-2185bfc5a4c2",
+    "subject": "Cấu trúc dữ liệu và giải thuật",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "9939dea0-ba55-495c-ae39-0bd8f05bc76a",
+    "user_id": "1f6717c4-4a52-42c4-ad52-2185bfc5a4c2",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "1f0901c2-3931-4eb9-866e-c145a6b5fbe9",
+    "user_id": "1f6717c4-4a52-42c4-ad52-2185bfc5a4c2",
+    "subject": "An toàn và bảo mật hệ thống thông tin",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "4cc21b82-06ad-4924-9ad3-7c639c582b9c",
+    "user_id": "1f6717c4-4a52-42c4-ad52-2185bfc5a4c2",
+    "subject": "Nhập môn tìm hiểu ngành Công nghệ thông tin",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "2343a772-9864-4f4d-a907-150634de8f84",
+    "user_id": "ae761b55-7311-4c99-811a-6716d6a6a831",
+    "subject": "Lập trình di động",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "28128529-a2a2-4382-9bd7-d9e3cd39b3f9",
+    "user_id": "ae761b55-7311-4c99-811a-6716d6a6a831",
+    "subject": "Tiếng Anh cơ bản",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "ab3ec826-a108-4405-804f-e6c4cdcd4177",
+    "user_id": "ae761b55-7311-4c99-811a-6716d6a6a831",
+    "subject": "Lịch sử Đảng cộng sản Việt Nam",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "b18e78e3-ba6d-4f26-a827-2c32f5e144d0",
+    "user_id": "ae761b55-7311-4c99-811a-6716d6a6a831",
+    "subject": "Toán học rời rạc",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "48ad75b8-ab66-44e6-a45e-0eeac81806c2",
+    "user_id": "ae761b55-7311-4c99-811a-6716d6a6a831",
+    "subject": "Lập trình trên môi trường Web",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "fabc3d15-5f89-4742-9767-463c97bf89ff",
+    "user_id": "12a7bf88-004e-4b03-a37c-3b1b33533204",
+    "subject": "Tư duy hệ thống",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "63bb7054-3194-466b-96a1-cb4e37d6b7ee",
+    "user_id": "12a7bf88-004e-4b03-a37c-3b1b33533204",
+    "subject": "Nhập môn Cơ sở dữ liệu",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "464c1681-aa74-4e95-bb69-06849db04d01",
+    "user_id": "12a7bf88-004e-4b03-a37c-3b1b33533204",
+    "subject": "Kiến trúc máy tính",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "d620bf83-cbcd-47be-b09c-fb67f17b0359",
+    "user_id": "12a7bf88-004e-4b03-a37c-3b1b33533204",
+    "subject": "Kỹ năng mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "992e2f86-712c-4694-8a1d-c22feaf69e14",
+    "user_id": "06e2fde6-286c-403c-8d39-149356a259de",
+    "subject": "Công nghệ phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "79986fb5-4aa2-4bf4-a086-be057a2f7d25",
+    "user_id": "06e2fde6-286c-403c-8d39-149356a259de",
+    "subject": "Kiến trúc máy tính",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "21fab0e1-028c-4cf9-b899-1d457c49ae1c",
+    "user_id": "23559dff-c9f6-4594-a518-2c07d3b6110e",
+    "subject": "Phân tích và thiết kế hệ thống thông tin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "ab36582f-c27e-4ad3-968d-aee147fa104f",
+    "user_id": "23559dff-c9f6-4594-a518-2c07d3b6110e",
+    "subject": "Lập trình trực quan C#",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "b5543059-3931-445e-b652-b320419738e7",
+    "user_id": "23559dff-c9f6-4594-a518-2c07d3b6110e",
+    "subject": "Kỹ thuật và công nghệ dữ liệu lớn",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "36953501-1da0-4f7f-a2af-aa2579918f1d",
+    "user_id": "7bf1afd6-1188-49e9-9550-fbaefa44af61",
+    "subject": "Hệ quản trị Cơ sở dữ liệu",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "564c3dd6-6e87-4902-96cd-1f4c3a2da9da",
+    "user_id": "7bf1afd6-1188-49e9-9550-fbaefa44af61",
+    "subject": "Điện toán đám mây",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "794d3912-b34b-45bd-a9c2-e9acb149ec56",
+    "user_id": "659a6ece-e05b-4f9e-981d-3f3c7220d07a",
+    "subject": "Phân tích và thiết kế hệ thống thông tin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "6de278cc-3cd1-40eb-a71e-8f5b8768ecb8",
+    "user_id": "659a6ece-e05b-4f9e-981d-3f3c7220d07a",
+    "subject": "Nhập môn Xử lý ảnh",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "54e7a3a6-4726-4067-9ecb-9e8191216cb4",
+    "user_id": "659a6ece-e05b-4f9e-981d-3f3c7220d07a",
+    "subject": "Triết học Mác - Lênin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "02a34a2c-8fce-4242-b006-db1c4b3f599f",
+    "user_id": "659a6ece-e05b-4f9e-981d-3f3c7220d07a",
+    "subject": "Hệ trợ giúp quyết định",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.549Z"
+  },
+  {
+    "id": "6599703e-ae7a-4516-bc76-3ae9e1a28f15",
+    "user_id": "8b612a5b-a953-46eb-8c98-17d758354aa3",
+    "subject": "Tin học",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "d9b2ce40-5aff-4d34-a40d-b3270c37bc33",
+    "user_id": "8b612a5b-a953-46eb-8c98-17d758354aa3",
+    "subject": "Chủ nghĩa xã hội khoa học",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "dec43fdf-9ff6-42c8-a3f3-196e5b43ef94",
+    "user_id": "e38818e3-6f50-4ab0-af90-169fd272aa99",
+    "subject": "Tư tưởng Hồ Chí Minh",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "53508776-d612-4fcf-b5eb-9fce7fd47501",
+    "user_id": "e38818e3-6f50-4ab0-af90-169fd272aa99",
+    "subject": "Ngôn ngữ lập trình C",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "98a3cef0-55fd-4301-bb85-0f45124342ee",
+    "user_id": "e38818e3-6f50-4ab0-af90-169fd272aa99",
+    "subject": "Quản lý dự án",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "cdc81ba9-24c0-48b5-bdaa-44022ae4598c",
+    "user_id": "e38818e3-6f50-4ab0-af90-169fd272aa99",
+    "subject": "Học máy (Machine Learning)",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "85b22593-c37f-42de-9ff4-baa686207267",
+    "user_id": "f26c80f3-7b9c-4103-afbf-7cedfe7f6b50",
+    "subject": "Điện toán đám mây",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "300d0a1d-28ff-4b54-9ff7-8f9ac054de6b",
+    "user_id": "f26c80f3-7b9c-4103-afbf-7cedfe7f6b50",
+    "subject": "Toán đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "3601d8a2-a0e0-49e9-8b88-a660e60acc96",
+    "user_id": "6d6b054e-8cbb-454c-882b-0d5ebc14978f",
+    "subject": "Tư tưởng Hồ Chí Minh",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "6da6b3aa-7440-48ca-a430-82ecf0051f95",
+    "user_id": "6d6b054e-8cbb-454c-882b-0d5ebc14978f",
+    "subject": "Chủ nghĩa xã hội khoa học",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "75493955-7d9e-4574-9a27-8ad35dff87d5",
+    "user_id": "6d6b054e-8cbb-454c-882b-0d5ebc14978f",
+    "subject": "Vật lý đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "2bcb9151-336f-4d76-b5ab-38adec49b31e",
+    "user_id": "6d6b054e-8cbb-454c-882b-0d5ebc14978f",
+    "subject": "Tiếng Anh chuyên ngành",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "109cd57d-87d2-4961-9556-eb1397cd971f",
+    "user_id": "f7d608e6-4968-4fbf-8584-4f211507afce",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "a3e7a648-9027-4a16-99d8-665c55ffb2d4",
+    "user_id": "f7d608e6-4968-4fbf-8584-4f211507afce",
+    "subject": "Công nghệ phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "5273a446-0104-43fa-9833-0f0d3d98df6f",
+    "user_id": "f7d608e6-4968-4fbf-8584-4f211507afce",
+    "subject": "Tư tưởng Hồ Chí Minh",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "7e231f6e-01a2-4398-b73a-b09610fed2fd",
+    "user_id": "f7d608e6-4968-4fbf-8584-4f211507afce",
+    "subject": "Nhập môn Xử lý ảnh",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "1abef286-cb79-483d-9656-2288b2c208ed",
+    "user_id": "f7d608e6-4968-4fbf-8584-4f211507afce",
+    "subject": "Lập trình di động",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "a0e4d479-7663-4c76-9773-705f746d1422",
+    "user_id": "0f998ac4-dbf8-4908-a682-79dd1c51fa4e",
+    "subject": "Cấu trúc dữ liệu và giải thuật",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "2444d20c-56a8-4962-8617-4df0b8bde9c9",
+    "user_id": "0f998ac4-dbf8-4908-a682-79dd1c51fa4e",
+    "subject": "Tiếng Anh cơ bản",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "5b707666-7f81-46da-9967-8779919047ba",
+    "user_id": "0f998ac4-dbf8-4908-a682-79dd1c51fa4e",
+    "subject": "Toán chuyên ngành",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "84cc0e71-2d4c-42f4-8876-307f2d26327b",
+    "user_id": "0f998ac4-dbf8-4908-a682-79dd1c51fa4e",
+    "subject": "Điện toán đám mây",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "c80def45-1ba4-4a8d-a535-9f50dc005980",
+    "user_id": "bc59a592-ee14-4b6d-bc42-46a2b134bc09",
+    "subject": "Kỹ năng mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "b6c6a5ce-9a18-45c5-919e-191fd4a5d014",
+    "user_id": "bc59a592-ee14-4b6d-bc42-46a2b134bc09",
+    "subject": "Kiến trúc và thiết kế phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "6a4e9031-19d1-42e7-b640-188fc59d45ed",
+    "user_id": "bc59a592-ee14-4b6d-bc42-46a2b134bc09",
+    "subject": "Kinh tế chính trị Mác - Lênin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "8e1f9a41-0105-401e-9515-53f3c99f71fd",
+    "user_id": "bc59a592-ee14-4b6d-bc42-46a2b134bc09",
+    "subject": "Lập trình di động",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "b9190d87-ef78-43ca-abdd-f41314153fea",
+    "user_id": "bc59a592-ee14-4b6d-bc42-46a2b134bc09",
+    "subject": "Kiểm thử phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "bfa9f483-df75-431d-95af-3da8faa2c338",
+    "user_id": "bc59a592-ee14-4b6d-bc42-46a2b134bc09",
+    "subject": "Nhập môn Cơ sở dữ liệu",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "f4a86ed2-597b-459f-b59d-ab887cf47113",
+    "user_id": "28d8952f-44ab-41e5-b752-6cc523a256d8",
+    "subject": "Kỹ thuật và công nghệ dữ liệu lớn",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "4ab663d8-0ee0-436b-b82e-fc613d651555",
+    "user_id": "28d8952f-44ab-41e5-b752-6cc523a256d8",
+    "subject": "Toán học rời rạc",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "b478ee86-2f16-41b7-a02b-290a6b6aefba",
+    "user_id": "28d8952f-44ab-41e5-b752-6cc523a256d8",
+    "subject": "Nhập môn mạng máy tính",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "5af9c7ea-38d6-453f-a974-e83cd111b0be",
+    "user_id": "28d8952f-44ab-41e5-b752-6cc523a256d8",
+    "subject": "Nhập môn Xử lý ảnh",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "d2a52eaa-5e98-44f4-a967-031627267415",
+    "user_id": "28d8952f-44ab-41e5-b752-6cc523a256d8",
+    "subject": "Lập trình hướng đối tượng C++",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "9ded681a-37ae-49e6-9bb5-551cad750e11",
+    "user_id": "ecee6836-41f8-4635-959d-6c83ff73a1f2",
+    "subject": "Lập trình trên môi trường Web",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "4fa08f05-9ef0-4799-a529-1d9843af9ea1",
+    "user_id": "ecee6836-41f8-4635-959d-6c83ff73a1f2",
+    "subject": "Kỹ thuật và công nghệ dữ liệu lớn",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "56d1c184-0314-4d73-8f4a-bc4888c40aac",
+    "user_id": "ecee6836-41f8-4635-959d-6c83ff73a1f2",
+    "subject": "Hệ trợ giúp quyết định",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "8859ceb9-470f-4bc0-90ed-23b813e00ca0",
+    "user_id": "fb3f9b33-eae6-4c5a-ab40-8f3695a21ec4",
+    "subject": "Công nghệ phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "738e962e-edc2-475e-b4c0-d3be110f83df",
+    "user_id": "fb3f9b33-eae6-4c5a-ab40-8f3695a21ec4",
+    "subject": "Lập trình hướng đối tượng C++",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "f276331d-d7d0-4fc5-b218-03df55e6e9b9",
+    "user_id": "fb3f9b33-eae6-4c5a-ab40-8f3695a21ec4",
+    "subject": "Cấu trúc dữ liệu và giải thuật",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "7f373ecd-996d-41fd-be5b-7e34f33125da",
+    "user_id": "fb3f9b33-eae6-4c5a-ab40-8f3695a21ec4",
+    "subject": "Tiếng Anh chuyên ngành",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "b1f26a07-ec05-41de-99fa-2abef4ef4636",
+    "user_id": "aa369b61-2b5e-4c59-bc64-389102905cac",
+    "subject": "Lập trình Java",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "376cf9b4-1819-4088-a9ed-8dda2fab1cff",
+    "user_id": "aa369b61-2b5e-4c59-bc64-389102905cac",
+    "subject": "Quản lý dự án",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "f4641aeb-a51b-4d87-a4fe-8d16f9c12df6",
+    "user_id": "aa369b61-2b5e-4c59-bc64-389102905cac",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "5cea50a3-cd39-4c9e-81d0-eff2924daa43",
+    "user_id": "d454b895-438c-42bf-922a-57e02ad1c51a",
+    "subject": "Lập trình trên môi trường Web",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "1db95f61-70d7-478d-8099-9f7ea7d3cd4e",
+    "user_id": "d454b895-438c-42bf-922a-57e02ad1c51a",
+    "subject": "Tiếng Anh chuyên ngành",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "cedd5758-e1c9-4f84-9b5a-e6bfc62e5b38",
+    "user_id": "d454b895-438c-42bf-922a-57e02ad1c51a",
+    "subject": "Quản lý dự án",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "4d7ef349-99ba-4539-8e86-245263b7149e",
+    "user_id": "cb9187fd-457c-4229-96c2-a02fa8a5a0af",
+    "subject": "Tiếng Anh chuyên ngành",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "15a02b84-af33-4410-9446-386bd07749d6",
+    "user_id": "cb9187fd-457c-4229-96c2-a02fa8a5a0af",
+    "subject": "Khoa học dữ liệu và trí tuệ nhân tạo",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "f042966c-0f0d-45ec-a19d-b08a2973bcb3",
+    "user_id": "cb9187fd-457c-4229-96c2-a02fa8a5a0af",
+    "subject": "Vật lý đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "97c0bdae-3bd8-4d31-ade4-cd70786d9e53",
+    "user_id": "cb9187fd-457c-4229-96c2-a02fa8a5a0af",
+    "subject": "Chủ nghĩa xã hội khoa học",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "1c593b37-0211-4cdc-9f7c-fef5f63f2a09",
+    "user_id": "e1534c51-c46c-43eb-8068-d84dd30e5d15",
+    "subject": "Chủ nghĩa xã hội khoa học",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "cd2ccedf-fbb6-4f8c-aea0-0124b9613ef5",
+    "user_id": "e1534c51-c46c-43eb-8068-d84dd30e5d15",
+    "subject": "Cấu trúc dữ liệu và giải thuật",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "4a243c06-7f8e-41b4-a262-1527f54f0640",
+    "user_id": "e1534c51-c46c-43eb-8068-d84dd30e5d15",
+    "subject": "An toàn và bảo mật hệ thống thông tin",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "2b108fb2-3fc6-4a0e-b450-9260beba180e",
+    "user_id": "d114bc85-171c-4ad0-be00-1d999450fe11",
+    "subject": "Nhập môn mạng máy tính",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "9c96d07e-b747-4bda-b4c9-2971392e579e",
+    "user_id": "d114bc85-171c-4ad0-be00-1d999450fe11",
+    "subject": "Lập trình Java",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "eecdad9e-80e4-41cb-aa0b-6f04b77d933e",
+    "user_id": "d114bc85-171c-4ad0-be00-1d999450fe11",
+    "subject": "Học máy (Machine Learning)",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "360be3b4-630a-4b90-82a8-4bdbd9a8473a",
+    "user_id": "d114bc85-171c-4ad0-be00-1d999450fe11",
+    "subject": "Kỹ năng mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "473557f4-0bd4-40d1-8e5b-0a6e389810a0",
+    "user_id": "48bea886-91e9-494e-9552-79ad853b9795",
+    "subject": "Toán học rời rạc",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "a39c57cc-14cd-42f7-a7bd-973e2dd0ae93",
+    "user_id": "48bea886-91e9-494e-9552-79ad853b9795",
+    "subject": "Toán đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "aa80fd69-854d-4f95-aeef-54dc03ea8416",
+    "user_id": "48bea886-91e9-494e-9552-79ad853b9795",
+    "subject": "Điện toán đám mây",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "f63ba9aa-5dfc-4545-8922-423607718143",
+    "user_id": "48bea886-91e9-494e-9552-79ad853b9795",
+    "subject": "Kiến trúc và thiết kế phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "6fbfd1a8-ebdb-42aa-80dc-40990a46ff5b",
+    "user_id": "48bea886-91e9-494e-9552-79ad853b9795",
+    "subject": "Học máy (Machine Learning)",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "e0a8fd75-02a3-4585-a3c7-a592ab9779ac",
+    "user_id": "5ea720ea-a607-458b-9e78-f5cbea60bb6e",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "7c55fe92-c783-4bd6-bb82-1090682229e3",
+    "user_id": "5ea720ea-a607-458b-9e78-f5cbea60bb6e",
+    "subject": "Triết học Mác - Lênin",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "15f3a6e0-d2f0-40a5-aa13-14018a53a744",
+    "user_id": "5ea720ea-a607-458b-9e78-f5cbea60bb6e",
+    "subject": "Vật lý đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "6f631a34-b3eb-4227-9788-fcfe7c90be37",
+    "user_id": "143fd8b3-cd98-4fca-9176-eadbf184e57f",
+    "subject": "Kiến trúc và thiết kế phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "2d2edbbd-5e9f-4d40-9824-f99ed497d2e4",
+    "user_id": "143fd8b3-cd98-4fca-9176-eadbf184e57f",
+    "subject": "Lập trình Game",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "b82740da-6775-4f47-a2cb-661e019c238d",
+    "user_id": "143fd8b3-cd98-4fca-9176-eadbf184e57f",
+    "subject": "Quản lý dự án phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "cf13a5ea-3789-44c0-8768-1a6f9033ac97",
+    "user_id": "143fd8b3-cd98-4fca-9176-eadbf184e57f",
+    "subject": "Kỹ thuật và công nghệ dữ liệu lớn",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "8795d4da-b5b0-48ab-834c-f88b45032edf",
+    "user_id": "4fdd8c7e-22fc-45f6-8110-69a003575390",
+    "subject": "Học máy (Machine Learning)",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "018156d2-040c-4caf-aa70-25faaf084be7",
+    "user_id": "4fdd8c7e-22fc-45f6-8110-69a003575390",
+    "subject": "Lập trình Java",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "a97b1abd-dea2-480d-82a4-87fe8e71c0ac",
+    "user_id": "4fdd8c7e-22fc-45f6-8110-69a003575390",
+    "subject": "Hệ quản trị Cơ sở dữ liệu",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "6055b823-9518-4672-bc1c-3791b539b112",
+    "user_id": "e52ccfef-34c2-4a38-aab3-ccce14847b02",
+    "subject": "Học máy (Machine Learning)",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "1769ec97-dd64-4928-9695-5e3854f300c9",
+    "user_id": "e52ccfef-34c2-4a38-aab3-ccce14847b02",
+    "subject": "Lập trình trên môi trường Web",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "75507080-4bee-4664-847d-8062b88c5651",
+    "user_id": "b2c43a08-72ff-4d32-90aa-d09dc396dbf2",
+    "subject": "Điện toán đám mây",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "a2c8d820-1c55-4feb-add3-43d02af2c055",
+    "user_id": "b2c43a08-72ff-4d32-90aa-d09dc396dbf2",
+    "subject": "Học máy (Machine Learning)",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "b580c9ee-426b-46c4-a10b-e9d5534d72ff",
+    "user_id": "b2c43a08-72ff-4d32-90aa-d09dc396dbf2",
+    "subject": "Ngôn ngữ lập trình C",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "5fbd125e-7583-4fc7-87ec-4a5d30e14ebc",
+    "user_id": "b2c43a08-72ff-4d32-90aa-d09dc396dbf2",
+    "subject": "Lập trình Game",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "a69f6675-5bc5-47da-b9f2-70115e18bfbb",
+    "user_id": "cb67be6e-52ed-494d-9f5f-d9a2652c46ca",
+    "subject": "Lập trình hướng đối tượng C++",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "3d180f90-bcff-4182-aa3b-ffd2ec47f5ac",
+    "user_id": "cb67be6e-52ed-494d-9f5f-d9a2652c46ca",
+    "subject": "Phân tích và thiết kế hệ thống thông tin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "c24f23fa-bd08-4118-a3f5-0feb0976c659",
+    "user_id": "cb67be6e-52ed-494d-9f5f-d9a2652c46ca",
+    "subject": "Lập trình trực quan C#",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "8237ad3f-09ad-466e-8edd-e4bf732f7bcc",
+    "user_id": "cb67be6e-52ed-494d-9f5f-d9a2652c46ca",
+    "subject": "Hệ trợ giúp quyết định",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "ab92d096-0a59-4878-9c95-0a3178b7c6f6",
+    "user_id": "d6b6309e-0d0d-40b2-95ec-897bc37497d0",
+    "subject": "Lập trình Game",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "33d8b10b-1441-42cb-960f-cb990fe3c308",
+    "user_id": "d6b6309e-0d0d-40b2-95ec-897bc37497d0",
+    "subject": "Quản lý dự án",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "7fe7c7f0-0cae-4463-9c7b-bc7e86a9feaa",
+    "user_id": "d6b6309e-0d0d-40b2-95ec-897bc37497d0",
+    "subject": "Toán chuyên ngành",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "a408394d-40e0-41cd-bf46-845f46ee1739",
+    "user_id": "d6b6309e-0d0d-40b2-95ec-897bc37497d0",
+    "subject": "Hệ quản trị Cơ sở dữ liệu",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "804ec80e-8cb4-4f73-a67d-166e2fb7caee",
+    "user_id": "a6426351-e834-49a4-8f94-5ef509dff8ae",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "f7fac354-6359-48ec-80c8-dfd443f1775c",
+    "user_id": "a6426351-e834-49a4-8f94-5ef509dff8ae",
+    "subject": "Tin học",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "19d54ef5-43a8-44bb-bfa3-bae84d825f49",
+    "user_id": "a6426351-e834-49a4-8f94-5ef509dff8ae",
+    "subject": "Toán học rời rạc",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "146fd847-e12c-4bb1-9993-ee4a3d181be6",
+    "user_id": "a6426351-e834-49a4-8f94-5ef509dff8ae",
+    "subject": "Nhập môn mạng máy tính",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "639337f5-c91d-42c9-9290-53e4b1652bdb",
+    "user_id": "6fa33c8b-da57-4d1c-ba16-3846fc692519",
+    "subject": "Hệ trợ giúp quyết định",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "54e664f5-2459-43da-be36-0031beb4ed96",
+    "user_id": "6fa33c8b-da57-4d1c-ba16-3846fc692519",
+    "subject": "Toán chuyên ngành",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "4109f7a2-05af-4d96-8c82-b00954c6574a",
+    "user_id": "6fa33c8b-da57-4d1c-ba16-3846fc692519",
+    "subject": "Lập trình hướng đối tượng C++",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "efe23634-9908-4199-af5e-e61bedce0b71",
+    "user_id": "6fa33c8b-da57-4d1c-ba16-3846fc692519",
+    "subject": "Nhập môn Cơ sở dữ liệu",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "07834212-8cb9-435a-94f7-d4bb804711ac",
+    "user_id": "6fa33c8b-da57-4d1c-ba16-3846fc692519",
+    "subject": "Kiểm thử phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "c8e267f6-6017-43b2-8976-62696af55700",
+    "user_id": "a570dde7-f108-4c5c-994d-83482720d725",
+    "subject": "Quản lý dự án phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "2d0140b5-9515-44d4-b62c-bf71f7df6c53",
+    "user_id": "a570dde7-f108-4c5c-994d-83482720d725",
+    "subject": "Tư tưởng Hồ Chí Minh",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "10c37580-53a5-4ad8-810d-63b99fa22be8",
+    "user_id": "a570dde7-f108-4c5c-994d-83482720d725",
+    "subject": "Hệ quản trị Cơ sở dữ liệu",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "bdb43014-b6f0-4ff8-98aa-0964fe756a6f",
+    "user_id": "a570dde7-f108-4c5c-994d-83482720d725",
+    "subject": "Kỹ năng mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "b480cbb7-81f4-452b-97cb-0c25aa84c23a",
+    "user_id": "a570dde7-f108-4c5c-994d-83482720d725",
+    "subject": "Lập trình trực quan C#",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "5ed2d8a0-c2aa-41b8-99f7-6b659bce8ace",
+    "user_id": "a570dde7-f108-4c5c-994d-83482720d725",
+    "subject": "Lập trình Game",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "236b7492-1e4f-4083-a80d-bb1cbac153b9",
+    "user_id": "fa399c05-1af6-4f94-af03-3f11dcf0a36c",
+    "subject": "Vật lý đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "5966635f-d97e-45db-97e2-3b458e5135a9",
+    "user_id": "fa399c05-1af6-4f94-af03-3f11dcf0a36c",
+    "subject": "Kỹ năng mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "6702a580-efc5-41ad-9170-da1ae8e4ab7d",
+    "user_id": "fa399c05-1af6-4f94-af03-3f11dcf0a36c",
+    "subject": "Lập trình Java",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "781d103b-0f87-42a3-8593-8c56d95e717e",
+    "user_id": "fa399c05-1af6-4f94-af03-3f11dcf0a36c",
+    "subject": "Thiết kế UI/UX",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "e850cf19-c4be-4f20-804c-7acf3c759fcb",
+    "user_id": "fa399c05-1af6-4f94-af03-3f11dcf0a36c",
+    "subject": "Tiếng Anh chuyên ngành",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "e33953d1-72d4-43cd-9926-97e827510893",
+    "user_id": "3e950507-71ac-4113-a92b-ab1a53d15e08",
+    "subject": "Vật lý đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "13701bdd-c7bd-4ea0-8217-968f59542496",
+    "user_id": "3e950507-71ac-4113-a92b-ab1a53d15e08",
+    "subject": "Toán đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "4b65c6d0-0c35-4a6e-b01a-432a7de67ec0",
+    "user_id": "3e950507-71ac-4113-a92b-ab1a53d15e08",
+    "subject": "Kinh tế chính trị Mác - Lênin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "b553fcb0-f40f-45e3-8f52-7b0f58c5348b",
+    "user_id": "3e950507-71ac-4113-a92b-ab1a53d15e08",
+    "subject": "Quản lý dự án",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "eecd845b-a9e8-43ee-8b15-ed45b002e7e0",
+    "user_id": "3e950507-71ac-4113-a92b-ab1a53d15e08",
+    "subject": "Kiến trúc máy tính",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "2ca83f5b-071d-462c-a7aa-d50d487570a4",
+    "user_id": "81a7855d-9961-490a-b090-5427f6cb5beb",
+    "subject": "An toàn và bảo mật hệ thống thông tin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "8c3c6eaf-6808-48d8-9dea-8801108653d3",
+    "user_id": "81a7855d-9961-490a-b090-5427f6cb5beb",
+    "subject": "Lập trình hướng đối tượng C++",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "4a6cbe94-5398-476c-a7dd-8ccbfb08fb93",
+    "user_id": "81a7855d-9961-490a-b090-5427f6cb5beb",
+    "subject": "Kỹ thuật và công nghệ dữ liệu lớn",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "a2c45bf0-2912-4ce5-aa52-df0a6cef976c",
+    "user_id": "0c28d32c-6876-4f4a-82a1-27c2d087dfea",
+    "subject": "Toán học rời rạc",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "08634353-8af8-41f2-abe2-3acbf0de301f",
+    "user_id": "0c28d32c-6876-4f4a-82a1-27c2d087dfea",
+    "subject": "Triết học Mác - Lênin",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "8a0390c3-1974-4174-bfd1-5cbf7b8d1be7",
+    "user_id": "0e6138f2-4ec3-4cc3-806d-975cd7d46096",
+    "subject": "Tiếng Anh nâng cao",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "4582af10-36b9-4544-998f-b5fb428cc913",
+    "user_id": "0e6138f2-4ec3-4cc3-806d-975cd7d46096",
+    "subject": "Toán học rời rạc",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "315f300a-104d-4197-8076-22935560669d",
+    "user_id": "0e6138f2-4ec3-4cc3-806d-975cd7d46096",
+    "subject": "Nhập môn Cơ sở dữ liệu",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "7e5eaccf-ae2b-4fdd-8933-5a74eaddeb07",
+    "user_id": "0e6138f2-4ec3-4cc3-806d-975cd7d46096",
+    "subject": "Công nghệ phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "141cb153-bc28-48d2-a660-919bad9b1975",
+    "user_id": "f9051a50-2dfe-44dc-b6e7-3ca807661294",
+    "subject": "Ngôn ngữ lập trình C",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "d2275036-bc43-4bd2-a184-5f72d6aa7739",
+    "user_id": "f9051a50-2dfe-44dc-b6e7-3ca807661294",
+    "subject": "Quản lý dự án",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "d41228e7-7ae0-4c67-8604-aa976a6ef2b1",
+    "user_id": "f9051a50-2dfe-44dc-b6e7-3ca807661294",
+    "subject": "Tiếng Anh nâng cao",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "deb6f153-61df-4190-8f62-34f568f1681b",
+    "user_id": "f9051a50-2dfe-44dc-b6e7-3ca807661294",
+    "subject": "Quản lý dự án phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "f1a3ba8a-ab61-4c8c-a82e-469bc9bd17a2",
+    "user_id": "f9051a50-2dfe-44dc-b6e7-3ca807661294",
+    "subject": "Thiết kế UI/UX",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "6449ce7a-89ab-4849-b66b-6b41a13cddaa",
+    "user_id": "f9051a50-2dfe-44dc-b6e7-3ca807661294",
+    "subject": "Học máy (Machine Learning)",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "87c89de1-da98-408d-b632-f94c571587b7",
+    "user_id": "5b6c7833-36e3-4197-b60e-d4d3901dd382",
+    "subject": "Cấu trúc dữ liệu và giải thuật",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "93773e67-4111-426d-b667-293a8761990e",
+    "user_id": "5b6c7833-36e3-4197-b60e-d4d3901dd382",
+    "subject": "Ngôn ngữ lập trình C",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "4fefe716-6347-4f0e-aca0-c6e42c704ca8",
+    "user_id": "5b6c7833-36e3-4197-b60e-d4d3901dd382",
+    "subject": "Toán chuyên ngành",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "bf210548-a3cc-43a5-bf76-32c91a3c74a7",
+    "user_id": "5b6c7833-36e3-4197-b60e-d4d3901dd382",
+    "subject": "Công nghệ phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "c6eedcab-6635-4afa-a7fb-0fad26393a3d",
+    "user_id": "5b6c7833-36e3-4197-b60e-d4d3901dd382",
+    "subject": "Kỹ thuật và công nghệ dữ liệu lớn",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "c2fa1be3-cf1e-4ce5-872f-a7780af4d282",
+    "user_id": "5b6c7833-36e3-4197-b60e-d4d3901dd382",
+    "subject": "Toán học rời rạc",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "b2d65aa1-e580-4460-9575-9f9a4b1045c6",
+    "user_id": "bf7eae81-294f-424a-bcee-d09d742c56c0",
+    "subject": "Kinh tế chính trị Mác - Lênin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "ae06a5eb-6153-4c55-91c5-ac67f61d7440",
+    "user_id": "bf7eae81-294f-424a-bcee-d09d742c56c0",
+    "subject": "Ngôn ngữ lập trình C",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "5e4bb19a-3324-43d3-bf10-3f464d21ebdd",
+    "user_id": "bf7eae81-294f-424a-bcee-d09d742c56c0",
+    "subject": "Lập trình di động",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "652308a8-4eca-4a3a-bbb2-05d418b73b49",
+    "user_id": "1fa12168-d3eb-4703-b06c-bef54b83de4d",
+    "subject": "Ngôn ngữ lập trình C",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "39627fce-0629-47d9-bd48-aa123d3ed40f",
+    "user_id": "1fa12168-d3eb-4703-b06c-bef54b83de4d",
+    "subject": "Nhập môn mạng máy tính",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "87e7f73b-e7d0-4ddb-a7eb-52bd24daa0d4",
+    "user_id": "1fa12168-d3eb-4703-b06c-bef54b83de4d",
+    "subject": "Nhập môn Cơ sở dữ liệu",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "a42d3017-101a-4c2c-a417-f9ffbb2dda6d",
+    "user_id": "1fa12168-d3eb-4703-b06c-bef54b83de4d",
+    "subject": "Kiến trúc và thiết kế phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "c5a0400b-b5de-4083-b109-ae62f0d2a962",
+    "user_id": "730313e4-cc2d-410b-91b7-3bb61ed70c04",
+    "subject": "Tư tưởng Hồ Chí Minh",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "5efa46d5-118d-44b0-a410-d3e469f91f47",
+    "user_id": "730313e4-cc2d-410b-91b7-3bb61ed70c04",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "67842424-29ff-461c-96e2-e09864578f68",
+    "user_id": "730313e4-cc2d-410b-91b7-3bb61ed70c04",
+    "subject": "Lập trình trực quan C#",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "d790bb3f-810b-4576-a6a8-df4637b91f68",
+    "user_id": "730313e4-cc2d-410b-91b7-3bb61ed70c04",
+    "subject": "Lịch sử Đảng cộng sản Việt Nam",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "330688a5-62a1-4354-b786-c2a7afd9f257",
+    "user_id": "730313e4-cc2d-410b-91b7-3bb61ed70c04",
+    "subject": "Tin học",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "7dd410e9-6d4b-4f99-bd4b-a44829aff6cd",
+    "user_id": "730313e4-cc2d-410b-91b7-3bb61ed70c04",
+    "subject": "Nhập môn Cơ sở dữ liệu",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "3efa0856-8f9a-4f4d-b7e1-ff0c42439094",
+    "user_id": "3184092e-1883-486b-a4d6-7c94e17b7dba",
+    "subject": "Tiếng Anh chuyên ngành",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "a7ac5b1a-b029-4970-bce3-0358eb9c91af",
+    "user_id": "3184092e-1883-486b-a4d6-7c94e17b7dba",
+    "subject": "Khoa học dữ liệu và trí tuệ nhân tạo",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "3f281f19-277b-4b4c-b813-4ccd821acd50",
+    "user_id": "3184092e-1883-486b-a4d6-7c94e17b7dba",
+    "subject": "An toàn và bảo mật hệ thống thông tin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "6de564c9-2ff2-42c6-ab23-f1012131826f",
+    "user_id": "3184092e-1883-486b-a4d6-7c94e17b7dba",
+    "subject": "Thiết kế UI/UX",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "af28f322-e524-412a-8792-ce3dacc7d63b",
+    "user_id": "3184092e-1883-486b-a4d6-7c94e17b7dba",
+    "subject": "Nhập môn mạng máy tính",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "2d4ec9a6-790c-4369-9934-c3509d490eb2",
+    "user_id": "3184092e-1883-486b-a4d6-7c94e17b7dba",
+    "subject": "Tin học",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "99b7efd7-48fe-46ee-8a30-50779024e1ac",
+    "user_id": "c64bd051-adc4-4b76-a233-dbf3215413c7",
+    "subject": "Tiếng Anh cơ bản",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "d9cb89c2-9a55-4304-bacf-8534461dccd2",
+    "user_id": "c64bd051-adc4-4b76-a233-dbf3215413c7",
+    "subject": "Hệ trợ giúp quyết định",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "d60f6e6d-6e5f-43a3-9b83-96e8717cef6e",
+    "user_id": "c64bd051-adc4-4b76-a233-dbf3215413c7",
+    "subject": "Lập trình Java",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "e45600bc-bbd1-4c6d-80e9-2066d4fb0579",
+    "user_id": "c64bd051-adc4-4b76-a233-dbf3215413c7",
+    "subject": "Trí tuệ nhân tạo",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "553dc0e5-d709-444a-a70f-fc543ee22b3e",
+    "user_id": "c64bd051-adc4-4b76-a233-dbf3215413c7",
+    "subject": "Lập trình hướng đối tượng C++",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "3a0501e1-4223-4a09-af34-2f49fe9dc37d",
+    "user_id": "61ebfb48-578b-41a3-a690-5870b5dbc4a5",
+    "subject": "Quản lý dự án phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "1e08dce6-c887-4c9e-83e7-46097b495cad",
+    "user_id": "61ebfb48-578b-41a3-a690-5870b5dbc4a5",
+    "subject": "Kinh tế chính trị Mác - Lênin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "f3e990be-37e5-41d8-83e6-24d39ad1f1ff",
+    "user_id": "61ebfb48-578b-41a3-a690-5870b5dbc4a5",
+    "subject": "Lịch sử Đảng cộng sản Việt Nam",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "f3f3e330-3951-47ad-8dcb-6477442474ff",
+    "user_id": "61ebfb48-578b-41a3-a690-5870b5dbc4a5",
+    "subject": "Ngôn ngữ lập trình C",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "80b2b147-f8b9-41d6-b521-09749ebf6e5a",
+    "user_id": "61ebfb48-578b-41a3-a690-5870b5dbc4a5",
+    "subject": "Công nghệ phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "08c1370c-65c4-4d62-84d4-8a932b7cbc84",
+    "user_id": "61ebfb48-578b-41a3-a690-5870b5dbc4a5",
+    "subject": "Thiết kế UI/UX",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "14ae330f-8fcd-4937-a817-e26df7878a61",
+    "user_id": "9ab06fd5-b8a7-4750-b469-17dcd21a7617",
+    "subject": "Kỹ năng mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "63800345-d8a0-4f9d-a962-4a1bd0e6c1ec",
+    "user_id": "9ab06fd5-b8a7-4750-b469-17dcd21a7617",
+    "subject": "Vật lý đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "d55db68f-119e-4067-92c5-fca34cc377fd",
+    "user_id": "3f3e6cd4-85ab-4724-be2f-fff077b80ffb",
+    "subject": "Lập trình trực quan C#",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "d22715d2-c1d4-453c-9de4-079466ba049e",
+    "user_id": "3f3e6cd4-85ab-4724-be2f-fff077b80ffb",
+    "subject": "Thiết kế UI/UX",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "bc1c7936-4f2c-48ad-a937-873e86007137",
+    "user_id": "3f3e6cd4-85ab-4724-be2f-fff077b80ffb",
+    "subject": "Toán đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "de1f8a76-a0b9-4731-85d9-d8b7461c41d7",
+    "user_id": "3f3e6cd4-85ab-4724-be2f-fff077b80ffb",
+    "subject": "Kỹ thuật và công nghệ dữ liệu lớn",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "187d23c0-7b32-4f88-bc10-be4b0a24072c",
+    "user_id": "202130f3-7a5e-4396-94b7-12037778c220",
+    "subject": "Quản lý dự án phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "bbf18e16-d615-44e0-9268-c2c7c6967b18",
+    "user_id": "202130f3-7a5e-4396-94b7-12037778c220",
+    "subject": "Kiến trúc và thiết kế phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "b5e5b554-0361-47e3-8969-fb18c8d4a63e",
+    "user_id": "f9e08024-0a96-47c6-bb76-fdcc8199a24e",
+    "subject": "Vật lý đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "05581d7e-60d7-4b93-968d-6a5577a50317",
+    "user_id": "f9e08024-0a96-47c6-bb76-fdcc8199a24e",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "f7f70967-2930-4c35-81fe-81ba3b781efa",
+    "user_id": "f9e08024-0a96-47c6-bb76-fdcc8199a24e",
+    "subject": "Quản lý dự án",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "d99a91cf-5711-46e4-a704-f6b54430696a",
+    "user_id": "f9e08024-0a96-47c6-bb76-fdcc8199a24e",
+    "subject": "Tiếng Anh cơ bản",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "810c7dea-ce69-4231-817b-4cdf15e96e9c",
+    "user_id": "5a2bc4af-9606-4211-b5a0-c0de09f4a84b",
+    "subject": "Hệ trợ giúp quyết định",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "30ff76b2-e473-421a-999f-a617bf8b50fd",
+    "user_id": "5a2bc4af-9606-4211-b5a0-c0de09f4a84b",
+    "subject": "Nhập môn tìm hiểu ngành Công nghệ thông tin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "3eca0a44-8060-4cf2-8417-49d0701a34bc",
+    "user_id": "5a2bc4af-9606-4211-b5a0-c0de09f4a84b",
+    "subject": "Lập trình trực quan C#",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "7648188d-7676-442f-9cef-c345825bd764",
+    "user_id": "5a2bc4af-9606-4211-b5a0-c0de09f4a84b",
+    "subject": "Tư duy hệ thống",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "7cb126c7-bb87-47dd-b3e1-d08f0686151f",
+    "user_id": "53f5cf7f-1f56-4958-82d6-fd8c7110974e",
+    "subject": "Kiến trúc và thiết kế phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "1df01b53-5111-41a7-94f5-af39d5d0fdba",
+    "user_id": "53f5cf7f-1f56-4958-82d6-fd8c7110974e",
+    "subject": "Kinh tế chính trị Mác - Lênin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "9f3ec262-610d-43ad-bf82-6869c4c18a93",
+    "user_id": "53f5cf7f-1f56-4958-82d6-fd8c7110974e",
+    "subject": "Kỹ năng mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "90cbf17c-9ff5-4188-a4d1-8ff55b66fc91",
+    "user_id": "53f5cf7f-1f56-4958-82d6-fd8c7110974e",
+    "subject": "Hệ quản trị Cơ sở dữ liệu",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "5674b358-950f-496b-8911-a360dd6ca5e4",
+    "user_id": "53f5cf7f-1f56-4958-82d6-fd8c7110974e",
+    "subject": "Lịch sử Đảng cộng sản Việt Nam",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "f484e9da-ad33-44c8-b5a0-33a8612ac038",
+    "user_id": "08c17075-deb4-49d0-b595-8e0eaec58787",
+    "subject": "Lập trình di động",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "c5981c1b-378e-4252-80f1-9be2adfde010",
+    "user_id": "08c17075-deb4-49d0-b595-8e0eaec58787",
+    "subject": "Toán đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "a341481f-b3fc-4850-b44b-b415f2d7277a",
+    "user_id": "08c17075-deb4-49d0-b595-8e0eaec58787",
+    "subject": "Toán chuyên ngành",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "0f0a5847-8be5-4861-8f76-35d5609e117b",
+    "user_id": "08c17075-deb4-49d0-b595-8e0eaec58787",
+    "subject": "Triết học Mác - Lênin",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "6f790232-fa02-4ff9-8958-6e0ed33b860f",
+    "user_id": "57aee974-4a14-44a4-92d3-c3b7d9d9c6e4",
+    "subject": "Thiết kế UI/UX",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "dc25301e-c452-4d11-9658-a6e105a89e47",
+    "user_id": "57aee974-4a14-44a4-92d3-c3b7d9d9c6e4",
+    "subject": "Vật lý đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "f5fa3c5b-988e-430a-82f5-2baa94f6296b",
+    "user_id": "57aee974-4a14-44a4-92d3-c3b7d9d9c6e4",
+    "subject": "Quản lý dự án phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "9c3d870b-19e6-4cfa-bf5f-e43b99289675",
+    "user_id": "57aee974-4a14-44a4-92d3-c3b7d9d9c6e4",
+    "subject": "Trí tuệ nhân tạo",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "293d95c1-0516-41e8-8ade-20bb1fe58da6",
+    "user_id": "57aee974-4a14-44a4-92d3-c3b7d9d9c6e4",
+    "subject": "Kinh tế chính trị Mác - Lênin",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "8ad9f0ab-d26a-4f3b-900f-e4cd21e397bb",
+    "user_id": "b815dc66-97c8-47df-a2fd-856cc60b48e2",
+    "subject": "Lập trình Java",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "f320da3a-23c3-4678-8567-fd2809ae3de1",
+    "user_id": "b815dc66-97c8-47df-a2fd-856cc60b48e2",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "67e54833-550f-4973-8df1-32b724b9757e",
+    "user_id": "b815dc66-97c8-47df-a2fd-856cc60b48e2",
+    "subject": "Tiếng Anh chuyên ngành",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "54d9037b-243a-4b2f-aca8-c51469183da1",
+    "user_id": "b815dc66-97c8-47df-a2fd-856cc60b48e2",
+    "subject": "Kiến trúc và thiết kế phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "7e129221-721a-4bbb-b90b-73d69113d7e9",
+    "user_id": "b815dc66-97c8-47df-a2fd-856cc60b48e2",
+    "subject": "Lập trình trên môi trường Web",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "527bc499-db6b-4a68-aede-eb16ba26e986",
+    "user_id": "49c02f6e-48d3-4a4a-936e-195fe95e42b8",
+    "subject": "Phân tích và thiết kế hệ thống thông tin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "4af7a324-4981-40a3-b6ff-7018a20de407",
+    "user_id": "49c02f6e-48d3-4a4a-936e-195fe95e42b8",
+    "subject": "Chủ nghĩa xã hội khoa học",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "61ec8f11-ca01-4602-a0ce-a2970905a54a",
+    "user_id": "49c02f6e-48d3-4a4a-936e-195fe95e42b8",
+    "subject": "Kiến trúc và thiết kế phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "9f996cec-61c1-4af7-85d6-069fb424ce76",
+    "user_id": "49c02f6e-48d3-4a4a-936e-195fe95e42b8",
+    "subject": "Kỹ năng mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "5d0cac05-d036-4d06-983e-b19141047905",
+    "user_id": "49c02f6e-48d3-4a4a-936e-195fe95e42b8",
+    "subject": "Quản lý dự án",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "701d7aa5-fc04-402d-a90f-34b3fceccfdf",
+    "user_id": "5068dc44-2413-46e5-880b-61f61e31f566",
+    "subject": "Thiết kế UI/UX",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "c21bf498-403d-4c54-b1a2-6cd50d1f4232",
+    "user_id": "5068dc44-2413-46e5-880b-61f61e31f566",
+    "subject": "Lập trình trên môi trường Web",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "85c9e954-7bb3-4c4b-ae94-e5c19d053631",
+    "user_id": "5068dc44-2413-46e5-880b-61f61e31f566",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "85e3d28f-ac73-4dc5-ac08-6f8f1ce5cab4",
+    "user_id": "5068dc44-2413-46e5-880b-61f61e31f566",
+    "subject": "Kinh tế chính trị Mác - Lênin",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "71b4329d-0b78-44ec-971b-31513516d686",
+    "user_id": "d578220c-95a3-4dc3-847f-85e7b81f48aa",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "df412071-1356-42f3-97a5-af641e8719dc",
+    "user_id": "d578220c-95a3-4dc3-847f-85e7b81f48aa",
+    "subject": "Lập trình di động",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "886a5923-cec6-402f-adbb-35bafea7a773",
+    "user_id": "d578220c-95a3-4dc3-847f-85e7b81f48aa",
+    "subject": "Xác suất thống kê",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "f1739d88-0514-44bd-bda0-e9f594cd76e5",
+    "user_id": "e57cc506-12da-4ac4-a5b7-ebd5f1191e6e",
+    "subject": "Kỹ thuật và công nghệ dữ liệu lớn",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "e392e5bc-4693-48b4-b848-4cfc4be06b5c",
+    "user_id": "e57cc506-12da-4ac4-a5b7-ebd5f1191e6e",
+    "subject": "Quản lý dự án phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "66b84b8b-647b-408d-92f6-38e484ea221d",
+    "user_id": "e57cc506-12da-4ac4-a5b7-ebd5f1191e6e",
+    "subject": "Điện toán đám mây",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "53f2751e-1502-4799-8388-cd92687deb63",
+    "user_id": "e57cc506-12da-4ac4-a5b7-ebd5f1191e6e",
+    "subject": "Toán đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "49e14bb0-c2d6-4220-b845-69a45d5d952c",
+    "user_id": "e65b7c7a-4704-4edc-b0ee-cf2d8b359476",
+    "subject": "Toán đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "1c582d4e-6371-45b3-a6f4-4d74c61f272c",
+    "user_id": "e65b7c7a-4704-4edc-b0ee-cf2d8b359476",
+    "subject": "Nhập môn Xử lý ảnh",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "923ee734-0d40-40a5-b1db-171791bd9f63",
+    "user_id": "e65b7c7a-4704-4edc-b0ee-cf2d8b359476",
+    "subject": "Kiến trúc và thiết kế phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "38285815-285a-457d-9688-616bf5388d8c",
+    "user_id": "e65b7c7a-4704-4edc-b0ee-cf2d8b359476",
+    "subject": "Trí tuệ nhân tạo",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "182e8a72-0435-4576-9c48-86411e9ff621",
+    "user_id": "4e9636d5-f6a5-4cc6-90fe-680a159e0d81",
+    "subject": "Lập trình hướng đối tượng C++",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "bc7abea0-4855-48dc-80b5-669737027e1a",
+    "user_id": "4e9636d5-f6a5-4cc6-90fe-680a159e0d81",
+    "subject": "Kỹ năng mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "4d2f28c0-e912-41ec-b5c3-b5d1a3db994a",
+    "user_id": "4e9636d5-f6a5-4cc6-90fe-680a159e0d81",
+    "subject": "Toán chuyên ngành",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "fa262fd0-11f3-4f91-a57d-489773c1872e",
+    "user_id": "5e356bee-7304-4a16-addb-4377049ea059",
+    "subject": "Toán đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "8f164d6b-8c0f-4f6d-9cd5-ddd8c294f2af",
+    "user_id": "5e356bee-7304-4a16-addb-4377049ea059",
+    "subject": "Công nghệ phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "ec4309e9-c14e-47dc-aecf-42e710776a49",
+    "user_id": "5e356bee-7304-4a16-addb-4377049ea059",
+    "subject": "Toán học rời rạc",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "8cfc0b90-b0d6-492d-906b-ab6817ab0cf1",
+    "user_id": "5e356bee-7304-4a16-addb-4377049ea059",
+    "subject": "Cấu trúc dữ liệu và giải thuật",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "6e87ed4c-0a2c-4f60-89ca-664d4145ac6c",
+    "user_id": "5e356bee-7304-4a16-addb-4377049ea059",
+    "subject": "Ngôn ngữ lập trình C",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "8c771964-2cc3-4624-b0f8-62b32bcc454d",
+    "user_id": "5e356bee-7304-4a16-addb-4377049ea059",
+    "subject": "Khoa học dữ liệu và trí tuệ nhân tạo",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "4393ca3a-ed9c-441b-b407-5669c4251f04",
+    "user_id": "7c628bd4-f03d-4de7-ad64-500ca2a65f06",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "c420e47f-170f-4484-bad7-e361388caa08",
+    "user_id": "7c628bd4-f03d-4de7-ad64-500ca2a65f06",
+    "subject": "Điện toán đám mây",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "0b840bf1-8ba6-48eb-9844-fc3404c8a45e",
+    "user_id": "7c628bd4-f03d-4de7-ad64-500ca2a65f06",
+    "subject": "Khoa học dữ liệu và trí tuệ nhân tạo",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "4f22c5af-81ff-4d54-922b-a8fb351fc223",
+    "user_id": "c0eaffc7-96cf-4400-9d36-d64763e236c6",
+    "subject": "Tiếng Anh chuyên ngành",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "217e6fef-27e5-4ed5-bdd2-73b704ec6909",
+    "user_id": "c0eaffc7-96cf-4400-9d36-d64763e236c6",
+    "subject": "Lập trình trực quan C#",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "52a15868-6447-4abc-a428-d3e117ee2cd3",
+    "user_id": "c0eaffc7-96cf-4400-9d36-d64763e236c6",
+    "subject": "Tiếng Anh cơ bản",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "89008b0f-277b-4ed7-acc6-fb1856e4cd46",
+    "user_id": "c0eaffc7-96cf-4400-9d36-d64763e236c6",
+    "subject": "Quản lý dự án",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "76f8c596-2bc0-4121-8864-d266a0204c9d",
+    "user_id": "46397baa-8068-4888-8bd1-4a409e590c60",
+    "subject": "Phân tích và thiết kế hệ thống thông tin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "5ea8d72c-a49d-4d0b-aa32-5f022fcb4638",
+    "user_id": "46397baa-8068-4888-8bd1-4a409e590c60",
+    "subject": "Vật lý đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "d1701ab0-7910-46d9-b87d-3ca6f18e625e",
+    "user_id": "46397baa-8068-4888-8bd1-4a409e590c60",
+    "subject": "Nhập môn Xử lý ảnh",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "90a1d22d-71a8-4633-b0bc-21409becb737",
+    "user_id": "b40e86c1-790a-4a91-afbc-f8d4ffa734fc",
+    "subject": "Trí tuệ nhân tạo",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "f59fec52-b94e-45ee-8b86-493582b85818",
+    "user_id": "b40e86c1-790a-4a91-afbc-f8d4ffa734fc",
+    "subject": "Tiếng Anh cơ bản",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "67fe4edd-a95a-4aa8-89cb-301caf1d0a2e",
+    "user_id": "b40e86c1-790a-4a91-afbc-f8d4ffa734fc",
+    "subject": "Tư tưởng Hồ Chí Minh",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "3e02a2c1-4911-4538-a09f-18d4d0045157",
+    "user_id": "b40e86c1-790a-4a91-afbc-f8d4ffa734fc",
+    "subject": "Hệ trợ giúp quyết định",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "90e95d4b-e37c-47fe-be75-991992466f21",
+    "user_id": "b40e86c1-790a-4a91-afbc-f8d4ffa734fc",
+    "subject": "Xác suất thống kê",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "82f8f150-0020-49ba-9459-0885507ab8d7",
+    "user_id": "b40e86c1-790a-4a91-afbc-f8d4ffa734fc",
+    "subject": "Lập trình di động",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "eb44440f-5cf2-4666-8035-d24499b7bf0a",
+    "user_id": "23fdb73c-cae6-4467-b68c-a5724630ee81",
+    "subject": "Toán học rời rạc",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "5e65cce6-a7f2-47f1-8b5e-00cccd1f9b31",
+    "user_id": "23fdb73c-cae6-4467-b68c-a5724630ee81",
+    "subject": "Lập trình trên môi trường Web",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "00103b1b-0723-4b86-9143-df9f7587373a",
+    "user_id": "23fdb73c-cae6-4467-b68c-a5724630ee81",
+    "subject": "Vật lý đại cương",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "bc022987-dada-4f81-a9e7-220c392cffed",
+    "user_id": "23fdb73c-cae6-4467-b68c-a5724630ee81",
+    "subject": "Học máy (Machine Learning)",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "b55cdff1-0f7e-4822-8597-4e7be25bc763",
+    "user_id": "23fdb73c-cae6-4467-b68c-a5724630ee81",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "a64c0287-7013-45d6-900e-f5b10c8b67f2",
+    "user_id": "23fdb73c-cae6-4467-b68c-a5724630ee81",
+    "subject": "Lập trình di động",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "e29f1c32-53fd-4bef-989c-dffa98d43f6b",
+    "user_id": "a32362cf-5e5b-4a70-9024-77ac8ede1855",
+    "subject": "Kinh tế chính trị Mác - Lênin",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "cb18a5a2-36e1-4af9-b828-da6a2599f4d7",
+    "user_id": "a32362cf-5e5b-4a70-9024-77ac8ede1855",
+    "subject": "Phân tích và thiết kế hệ thống thông tin",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "3f126b1d-af18-4409-aa3e-c5ba15265382",
+    "user_id": "a32362cf-5e5b-4a70-9024-77ac8ede1855",
+    "subject": "An toàn và bảo mật hệ thống thông tin",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "9d269746-ef79-4606-9659-3c31fccba372",
+    "user_id": "a32362cf-5e5b-4a70-9024-77ac8ede1855",
+    "subject": "Pháp luật Việt Nam đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "46942a05-76d4-490c-83d5-807536792a6f",
+    "user_id": "2f2f5b24-8635-4b18-8251-b2c4984fefad",
+    "subject": "Tư tưởng Hồ Chí Minh",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "fe296cc7-ad36-41cd-9e62-78a98c2b4191",
+    "user_id": "2f2f5b24-8635-4b18-8251-b2c4984fefad",
+    "subject": "Lập trình trực quan C#",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "d27bd2dd-13c9-4613-875a-4445df1771ba",
+    "user_id": "2f2f5b24-8635-4b18-8251-b2c4984fefad",
+    "subject": "Hệ quản trị Cơ sở dữ liệu",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "0e1b1398-fb8d-426a-88eb-4b883479605f",
+    "user_id": "2f2f5b24-8635-4b18-8251-b2c4984fefad",
+    "subject": "Cấu trúc dữ liệu và giải thuật",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "b52dfaa4-f9c2-4cb7-83f2-ca1b6e2c55ca",
+    "user_id": "2f2f5b24-8635-4b18-8251-b2c4984fefad",
+    "subject": "Tiếng Anh chuyên ngành",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "f9d55871-0c64-46e4-b71c-7a9bbdf3dccc",
+    "user_id": "70b58118-ad20-4af5-bb3a-311f559ddd69",
+    "subject": "Chủ nghĩa xã hội khoa học",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "c10ba369-7292-458b-affe-8faf84fd286e",
+    "user_id": "70b58118-ad20-4af5-bb3a-311f559ddd69",
+    "subject": "Cấu trúc dữ liệu và giải thuật",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "c254f5bb-af63-48ca-8bfa-f37ec36ce0a6",
+    "user_id": "70b58118-ad20-4af5-bb3a-311f559ddd69",
+    "subject": "Toán chuyên ngành",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "c276d07f-27b9-48db-bed3-7e5791a28736",
+    "user_id": "70b58118-ad20-4af5-bb3a-311f559ddd69",
+    "subject": "Nhập môn mạng máy tính",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "d2fcfcf8-0439-468f-a574-9b23a630fce0",
+    "user_id": "70b58118-ad20-4af5-bb3a-311f559ddd69",
+    "subject": "Toán đại cương",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.550Z"
+  },
+  {
+    "id": "971267c5-3425-4aed-b13e-4bbc452df457",
+    "user_id": "48a28651-327d-4c8d-9e83-c47040bac10f",
+    "subject": "Toán học rời rạc",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "ddff23c3-7be8-4e22-bea9-2b6c979a4401",
+    "user_id": "48a28651-327d-4c8d-9e83-c47040bac10f",
+    "subject": "Thiết kế UI/UX",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "b1354b4b-24ad-4483-be84-4b914c214483",
+    "user_id": "48a28651-327d-4c8d-9e83-c47040bac10f",
+    "subject": "Tư duy hệ thống",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "21e0bfa1-e2a8-4a26-807c-9dc295682c49",
+    "user_id": "d3093c1c-5982-411a-97c0-3993e96ac91a",
+    "subject": "Tiếng Anh nâng cao",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "7a9e2114-432d-4bda-8242-2b03997e55ce",
+    "user_id": "d3093c1c-5982-411a-97c0-3993e96ac91a",
+    "subject": "Xác suất thống kê",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "9a49d61a-46f4-4021-b741-e7b89c50b40d",
+    "user_id": "d3093c1c-5982-411a-97c0-3993e96ac91a",
+    "subject": "Ngôn ngữ lập trình C",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "d0e97a58-80e5-4b50-8afe-f46710d32a50",
+    "user_id": "d3093c1c-5982-411a-97c0-3993e96ac91a",
+    "subject": "Kiểm thử phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "9ea29e2f-5264-4942-a3d9-9058277b8729",
+    "user_id": "d3093c1c-5982-411a-97c0-3993e96ac91a",
+    "subject": "Kiến trúc và thiết kế phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "e142ea27-62ff-429b-8ded-06fc7d8eb921",
+    "user_id": "70b91e9b-3a3e-45f2-b5a3-26910b48b76c",
+    "subject": "Kỹ năng mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "e0f42c85-d416-4b16-81a6-3f7675185b18",
+    "user_id": "70b91e9b-3a3e-45f2-b5a3-26910b48b76c",
+    "subject": "Lập trình trên môi trường Web",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "9f6a18ea-cfdc-40a7-b5f8-97937bf5a5e8",
+    "user_id": "70b91e9b-3a3e-45f2-b5a3-26910b48b76c",
+    "subject": "Khoa học dữ liệu và trí tuệ nhân tạo",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "28150941-a9e1-49c0-b3a2-ea4200320af3",
+    "user_id": "70b91e9b-3a3e-45f2-b5a3-26910b48b76c",
+    "subject": "Nhập môn Cơ sở dữ liệu",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "acb46818-487b-4a39-8655-8819755203c8",
+    "user_id": "0748a553-b20f-46ae-96b2-6fdffe272f87",
+    "subject": "Kiểm thử phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "9dd60ffc-2b75-404c-b342-0e5044351d8c",
+    "user_id": "0748a553-b20f-46ae-96b2-6fdffe272f87",
+    "subject": "Nhập môn Xử lý ảnh",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "6586384f-990d-4000-a304-178cafb73006",
+    "user_id": "0748a553-b20f-46ae-96b2-6fdffe272f87",
+    "subject": "Xác suất thống kê",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "4e22047a-7199-4383-9f2c-5beee2d8cb52",
+    "user_id": "0748a553-b20f-46ae-96b2-6fdffe272f87",
+    "subject": "Lịch sử Đảng cộng sản Việt Nam",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "9b8113f3-5087-4e8a-90b9-2c449c802952",
+    "user_id": "0748a553-b20f-46ae-96b2-6fdffe272f87",
+    "subject": "Quản lý dự án phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "34c19a8e-b070-4619-a899-c4a6f6b14e4e",
+    "user_id": "604d8985-b6f4-4556-99ae-4e30cbb43f86",
+    "subject": "Chủ nghĩa xã hội khoa học",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "6fb6682b-2eef-46fc-b515-fd26bcf7346a",
+    "user_id": "604d8985-b6f4-4556-99ae-4e30cbb43f86",
+    "subject": "Ngôn ngữ lập trình C",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "f6261401-bed0-4cf8-b1c9-e17eb7b3a417",
+    "user_id": "604d8985-b6f4-4556-99ae-4e30cbb43f86",
+    "subject": "Tiếng Anh cơ bản",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "6186c7ae-785b-44ea-b688-d5c3321a7ada",
+    "user_id": "604d8985-b6f4-4556-99ae-4e30cbb43f86",
+    "subject": "Kiến trúc và thiết kế phần mềm",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "c5cad6e0-1a77-4ce7-9e5b-8cf7907f4e63",
+    "user_id": "5fc47660-0c5c-4c77-a238-1c77071a7e59",
+    "subject": "Kỹ năng mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "739f88d9-d60f-45d7-a22e-c38bdca0d2e9",
+    "user_id": "5fc47660-0c5c-4c77-a238-1c77071a7e59",
+    "subject": "Quản lý dự án phần mềm",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "aa035489-b130-41ac-8329-78da2494b2d6",
+    "user_id": "5fc47660-0c5c-4c77-a238-1c77071a7e59",
+    "subject": "Nhập môn Xử lý ảnh",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "965ec7a0-3bc3-4a03-86dd-2bff87925f88",
+    "user_id": "5fc47660-0c5c-4c77-a238-1c77071a7e59",
+    "subject": "Toán học rời rạc",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "36ae663b-f562-424b-a16a-966b17e09cb6",
+    "user_id": "03e7da35-c39f-444f-a08e-dc3575ca4692",
+    "subject": "Chủ nghĩa xã hội khoa học",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "64563b9d-ab24-44de-acc9-8e5c50ab1661",
+    "user_id": "03e7da35-c39f-444f-a08e-dc3575ca4692",
+    "subject": "Ngôn ngữ lập trình C",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "29f493ca-e7e3-4b58-9127-ec66ddbadab7",
+    "user_id": "03e7da35-c39f-444f-a08e-dc3575ca4692",
+    "subject": "Trí tuệ nhân tạo",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "1bc14f5c-39bf-4168-9f85-6bb7a5de3a22",
+    "user_id": "03e7da35-c39f-444f-a08e-dc3575ca4692",
+    "subject": "Cấu trúc dữ liệu và giải thuật",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "227aab75-e144-42cc-9f96-28dd28f1b9f4",
+    "user_id": "5524a7fc-bea7-4b3c-9cb8-362b6efe18a9",
+    "subject": "Toán chuyên ngành",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "02a8d798-b925-403f-860d-85dd19a24001",
+    "user_id": "5524a7fc-bea7-4b3c-9cb8-362b6efe18a9",
+    "subject": "Nhập môn Xử lý ảnh",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "1d6a07fa-f96a-427a-9b17-5fecc5662c0a",
+    "user_id": "5524a7fc-bea7-4b3c-9cb8-362b6efe18a9",
+    "subject": "Lập trình Game",
+    "type": "teach",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "f8d32db6-8447-46ed-af8b-20e018215227",
+    "user_id": "5524a7fc-bea7-4b3c-9cb8-362b6efe18a9",
+    "subject": "Tư duy hệ thống",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.551Z"
+  },
+  {
+    "id": "6ee5f7ef-8960-43ed-85bc-7509d6c1b803",
+    "user_id": "5524a7fc-bea7-4b3c-9cb8-362b6efe18a9",
+    "subject": "Tiếng Anh cơ bản",
+    "type": "learn",
+    "created_at": "2026-06-22T13:21:05.551Z"
   }
 ]
