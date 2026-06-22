@@ -178,8 +178,10 @@ async function init() {
       receiver_id VARCHAR(50),
       content TEXT,
       is_read BOOLEAN,
-      created_at TIMESTAMP
+      created_at TIMESTAMP,
+      updated_at TIMESTAMP
     );
+    ALTER TABLE messages ADD COLUMN IF NOT EXISTS updated_at TIMESTAMP;
 
     CREATE TABLE IF NOT EXISTS notifications (
       id VARCHAR(50) PRIMARY KEY,
