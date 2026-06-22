@@ -39,25 +39,14 @@ body{display:flex;align-items:center;justify-content:center;min-height:100vh}
       <div class="auth-tab" id="tab-register" onclick="switchTab('register')">Đăng ký</div>
     </div>
 
-    <!-- LOGIN -->
     <div id="form-login">
-      <div class="demo-box">
-        <strong>🎭 Tài khoản demo</strong> — mật khẩu: <strong>123456</strong>
-        <div class="demo-row">
-          <div class="demo-item" onclick="fillLogin('admin@studymatch.vn')">🛡️ Admin</div>
-          <div class="demo-item" onclick="fillLogin('mod@studymatch.vn')">🔰 Moderator</div>
-          <div class="demo-item" onclick="fillLogin('an@sv.edu.vn')">🎓 Sinh viên A</div>
-          <div class="demo-item" onclick="fillLogin('binh@sv.edu.vn')">🙋 TNV Bình</div>
-          <div class="demo-item" onclick="fillLogin('dung@sv.edu.vn')">🙋 TNV Dung</div>
-        </div>
-      </div>
       <div class="form-group">
         <label class="form-label">Email</label>
-        <input type="email" id="l-email" class="form-control" placeholder="email@example.com" value="an@sv.edu.vn">
+        <input type="email" id="l-email" class="form-control" placeholder="email@example.com">
       </div>
       <div class="form-group">
         <label class="form-label">Mật khẩu</label>
-        <input type="password" id="l-pass" class="form-control" placeholder="••••••••" value="123456">
+        <input type="password" id="l-pass" class="form-control" placeholder="••••••••">
       </div>
       <button class="btn btn-primary btn-full" onclick="doLogin()">Đăng nhập →</button>
     </div>

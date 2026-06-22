@@ -24,10 +24,10 @@ app.use('/api', require('./routes/comms'));
 app.use('/api/admin', require('./routes/admin'));
 
 app.get('/api/subjects', (req, res) => res.json(SUBJECTS));
-app.get('/api/stats-public', (req, res) => res.json({
-  total_users: db.users.count(),
-  completed_pairs: db.pairs.find({ status: 'completed' }).length,
-  volunteers: db.users.find({ is_volunteer: true }).length,
+app.get('/api/stats-public', async (req, res) => res.json({
+  total_users: await db.users.count(),
+  completed_pairs: (await db.pairs.find({ status: 'completed' })).length,
+  volunteers: (await db.users.find({ is_volunteer: true })).length,
 }));
 
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, '../frontend/index.html')));
@@ -45,18 +45,21 @@ io.on('connection', socket => {
   socket.join(`user_${uid}`);
   socket.broadcast.emit('user_online', { userId: uid });
 
-  socket.on('send_message', ({ receiver_id, content }) => {
+  socket.on('send_message', async ({ receiver_id, content }) => {
     if (!content?.trim() || !receiver_id) return;
-    const msg = db.messages.insert({ id: v4(), sender_id: uid, receiver_id, content: content.trim(), is_read: false });
-    const sender = db.users.findById(uid);
+    const msg = await db.messages.insert({ id: v4(), sender_id: uid, receiver_id, content: content.trim(), is_read: false });
+    const sender = await db.users.findById(uid);
     const full = { ...msg, sender: { full_name: sender?.full_name, avatar: sender?.avatar } };
     io.to(`user_${receiver_id}`).emit('new_message', full);
     socket.emit('message_sent', full);
   });
 
-  socket.on('mark_read', ({ sender_id }) => {
-    db.messages.all().filter(m => m.sender_id === sender_id && m.receiver_id === uid && !m.is_read)
-      .forEach(m => db.messages.update(m.id, { is_read: true }));
+  socket.on('mark_read', async ({ sender_id }) => {
+    const msgs = await db.messages.all();
+    const toUpdate = msgs.filter(m => m.sender_id === sender_id && m.receiver_id === uid && !m.is_read);
+    for (const m of toUpdate) {
+      await db.messages.update(m.id, { is_read: true });
+    }
     io.to(`user_${sender_id}`).emit('messages_read', { by: uid });
   });
 
@@ -68,7 +71,8 @@ io.on('connection', socket => {
 
 // ── SEED DATA ──
 async function seed() {
-  if (db.users.count() > 0) return;
+  await db.init();
+  if (await db.users.count() > 0) return;
   const bcrypt = require('bcryptjs');
   const hash = await bcrypt.hash('123456', 10);
 
@@ -83,19 +87,19 @@ async function seed() {
   ];
 
   const skillMap = {
-    'Trần Văn An':   { teach: ['Lập trình Java', 'Lập trình hướng đối tượng C++', 'Cấu trúc dữ liệu và giải thuật'], learn: ['Học máy (Machine Learning)', 'Khoa học dữ liệu và trí tuệ nhân tạo'] },
-    'Lê Thị Bình':   { teach: ['Toán đại cương', 'Xác suất thống kê', 'Toán học rời rạc'], learn: ['Lập trình trên môi trường Web', 'Khoa học dữ liệu và trí tuệ nhân tạo'] },
+    'Trần Văn An': { teach: ['Lập trình Java', 'Lập trình hướng đối tượng C++', 'Cấu trúc dữ liệu và giải thuật'], learn: ['Học máy (Machine Learning)', 'Khoa học dữ liệu và trí tuệ nhân tạo'] },
+    'Lê Thị Bình': { teach: ['Toán đại cương', 'Xác suất thống kê', 'Toán học rời rạc'], learn: ['Lập trình trên môi trường Web', 'Khoa học dữ liệu và trí tuệ nhân tạo'] },
     'Phạm Văn Cường': { teach: ['Ngôn ngữ lập trình C', 'Nhập môn Cơ sở dữ liệu'], learn: ['Lập trình hướng đối tượng C++', 'Hệ quản trị Cơ sở dữ liệu', 'Kiến trúc máy tính'] },
     'Hoàng Thị Dung': { teach: ['Học máy (Machine Learning)', 'Trí tuệ nhân tạo', 'Khoa học dữ liệu và trí tuệ nhân tạo', 'Kỹ thuật và công nghệ dữ liệu lớn'], learn: ['Lập trình trên môi trường Web'] },
-    'Vũ Minh Em':    { teach: [], learn: ['Toán đại cương', 'Vật lý đại cương', 'Ngôn ngữ lập trình C', 'Tư tưởng Hồ Chí Minh'] },
+    'Vũ Minh Em': { teach: [], learn: ['Toán đại cương', 'Vật lý đại cương', 'Ngôn ngữ lập trình C', 'Tư tưởng Hồ Chí Minh'] },
   };
 
   for (const u of users) {
-    db.users.insert({ ...u, avatar: null, created_at: new Date().toISOString() });
+    await db.users.insert({ ...u, avatar: null, created_at: new Date().toISOString() });
     const smap = skillMap[u.full_name];
     if (smap) {
-      smap.teach.forEach(s => db.skills.insert({ id: v4(), user_id: u.id, subject: s, type: 'teach' }));
-      smap.learn.forEach(s => db.skills.insert({ id: v4(), user_id: u.id, subject: s, type: 'learn' }));
+      for (const s of smap.teach) await db.skills.insert({ id: v4(), user_id: u.id, subject: s, type: 'teach' });
+      for (const s of smap.learn) await db.skills.insert({ id: v4(), user_id: u.id, subject: s, type: 'learn' });
     }
   }
 
@@ -106,17 +110,17 @@ async function seed() {
   const dung = users.find(u => u.full_name === 'Hoàng Thị Dung');
 
   if (an && binh) {
-    db.pairs.insert({ id: v4(), requester_id: an.id, target_id: binh.id, status: 'completed', message: 'Mình muốn ghép cặp học Toán với bạn!', requester_confirmed: true, target_confirmed: true, completed_at: new Date().toISOString() });
+    await db.pairs.insert({ id: v4(), requester_id: an.id, target_id: binh.id, status: 'completed', message: 'Mình muốn ghép cặp học Toán với bạn!', requester_confirmed: true, target_confirmed: true, completed_at: new Date().toISOString() });
   }
   if (an && dung) {
-    db.pairs.insert({ id: v4(), requester_id: dung.id, target_id: an.id, status: 'active', message: 'Mình dạy ML, bạn dạy Java nhé!', requester_confirmed: false, target_confirmed: false, completed_at: null });
+    await db.pairs.insert({ id: v4(), requester_id: dung.id, target_id: an.id, status: 'active', message: 'Mình dạy ML, bạn dạy Java nhé!', requester_confirmed: false, target_confirmed: false, completed_at: null });
   }
   if (cuong && binh) {
-    db.pairs.insert({ id: v4(), requester_id: cuong.id, target_id: binh.id, status: 'pending', message: 'Bạn có thể dạy mình Toán được không?', requester_confirmed: false, target_confirmed: false, completed_at: null });
+    await db.pairs.insert({ id: v4(), requester_id: cuong.id, target_id: binh.id, status: 'pending', message: 'Bạn có thể dạy mình Toán được không?', requester_confirmed: false, target_confirmed: false, completed_at: null });
   }
 
   // Demo thông báo
-  db.announcements.insert({ id: v4(), title: '🎉 Chào mừng đến StudyMatch!', body: 'Nền tảng kết nối sinh viên học tập cùng nhau. Hãy cập nhật hồ sơ và bắt đầu ghép cặp!', type: 'success', author_id: users[0].id });
+  await db.announcements.insert({ id: v4(), title: '🎉 Chào mừng đến StudyMatch!', body: 'Nền tảng kết nối sinh viên học tập cùng nhau. Hãy cập nhật hồ sơ và bắt đầu ghép cặp!', type: 'success', author_id: users[0].id });
 
   console.log('✅ Seed data OK!');
   console.log('━━━ Tài khoản demo ━━━');
@@ -130,25 +134,25 @@ async function seed() {
 }
 
 const SUBJECTS = [
-  'Chủ nghĩa xã hội khoa học','Kinh tế chính trị Mác - Lênin','Lịch sử Đảng cộng sản Việt Nam',
-  'Triết học Mác - Lênin','Tư tưởng Hồ Chí Minh','Pháp luật Việt Nam đại cương',
-  'Tiếng Anh cơ bản','Tiếng Anh nâng cao','Tiếng Anh chuyên ngành',
-  'Toán đại cương','Toán chuyên ngành','Toán học rời rạc','Xác suất thống kê',
-  'Vật lý đại cương','Tin học','Khoa học dữ liệu và trí tuệ nhân tạo',
-  'Tư duy hệ thống','Kỹ năng mềm','Nhập môn tìm hiểu ngành Công nghệ thông tin',
-  'Ngôn ngữ lập trình C','Lập trình hướng đối tượng C++','Nhập môn Cơ sở dữ liệu',
-  'Hệ quản trị Cơ sở dữ liệu','Nhập môn mạng máy tính','Kiến trúc máy tính',
-  'Cấu trúc dữ liệu và giải thuật','Quản lý dự án','Công nghệ phần mềm',
-  'Kiến trúc và thiết kế phần mềm','Phân tích và thiết kế hệ thống thông tin',
-  'Kiểm thử phần mềm','Quản lý dự án phần mềm','Lập trình trên môi trường Web',
-  'Lập trình Java','Lập trình trực quan C#','Lập trình di động','Lập trình Game',
-  'Thiết kế UI/UX','Trí tuệ nhân tạo','Học máy (Machine Learning)',
-  'Kỹ thuật và công nghệ dữ liệu lớn','Nhập môn Xử lý ảnh','Điện toán đám mây',
-  'An toàn và bảo mật hệ thống thông tin','Hệ trợ giúp quyết định',
-  'Hệ thống thông tin địa lý (GIS)','Hệ thống hoạch định nguồn lực doanh nghiệp (ERP)',
-  'Automat và ngôn ngữ hình thức','Phương pháp nghiên cứu khoa học',
-  'Kỹ năng viết báo cáo và trình bày','Văn hóa kinh doanh và tinh thần khởi nghiệp',
-  'Mô hình, mô phỏng, thực tế ảo','Tâm lý học'
+  'Chủ nghĩa xã hội khoa học', 'Kinh tế chính trị Mác - Lênin', 'Lịch sử Đảng cộng sản Việt Nam',
+  'Triết học Mác - Lênin', 'Tư tưởng Hồ Chí Minh', 'Pháp luật Việt Nam đại cương',
+  'Tiếng Anh cơ bản', 'Tiếng Anh nâng cao', 'Tiếng Anh chuyên ngành',
+  'Toán đại cương', 'Toán chuyên ngành', 'Toán học rời rạc', 'Xác suất thống kê',
+  'Vật lý đại cương', 'Tin học', 'Khoa học dữ liệu và trí tuệ nhân tạo',
+  'Tư duy hệ thống', 'Kỹ năng mềm', 'Nhập môn tìm hiểu ngành Công nghệ thông tin',
+  'Ngôn ngữ lập trình C', 'Lập trình hướng đối tượng C++', 'Nhập môn Cơ sở dữ liệu',
+  'Hệ quản trị Cơ sở dữ liệu', 'Nhập môn mạng máy tính', 'Kiến trúc máy tính',
+  'Cấu trúc dữ liệu và giải thuật', 'Quản lý dự án', 'Công nghệ phần mềm',
+  'Kiến trúc và thiết kế phần mềm', 'Phân tích và thiết kế hệ thống thông tin',
+  'Kiểm thử phần mềm', 'Quản lý dự án phần mềm', 'Lập trình trên môi trường Web',
+  'Lập trình Java', 'Lập trình trực quan C#', 'Lập trình di động', 'Lập trình Game',
+  'Thiết kế UI/UX', 'Trí tuệ nhân tạo', 'Học máy (Machine Learning)',
+  'Kỹ thuật và công nghệ dữ liệu lớn', 'Nhập môn Xử lý ảnh', 'Điện toán đám mây',
+  'An toàn và bảo mật hệ thống thông tin', 'Hệ trợ giúp quyết định',
+  'Hệ thống thông tin địa lý (GIS)', 'Hệ thống hoạch định nguồn lực doanh nghiệp (ERP)',
+  'Automat và ngôn ngữ hình thức', 'Phương pháp nghiên cứu khoa học',
+  'Kỹ năng viết báo cáo và trình bày', 'Văn hóa kinh doanh và tinh thần khởi nghiệp',
+  'Mô hình, mô phỏng, thực tế ảo', 'Tâm lý học'
 ];
 
 const PORT = process.env.PORT || 3000;
