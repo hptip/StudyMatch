@@ -1,7 +1,7 @@
 services:
   - type: web
     name: studymatch-web
-    region: sin
+    region: singapore
     env: node
     plan: free
     rootDir: backend
@@ -19,6 +19,6 @@ services:
 
 databases:
   - name: studymatch-db
-    region: sin
+    region: singapore
     plan: free
     postgresMajorVersion: "15"
