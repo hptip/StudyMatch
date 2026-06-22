@@ -65,7 +65,7 @@ const ME = Auth.user();
 let socket, activePartner = null, allConvs = [], typingTimer;
 
 function initSocket() {
-  socket = io({ auth: { token: Auth.token() } });
+  socket = io({ auth: { token: Auth.token() }, transports: ['websocket'] });
   socket.on('new_message', msg => {
     loadConvs();
     if (activePartner && (msg.sender_id === activePartner.id || msg.receiver_id === activePartner.id)) {

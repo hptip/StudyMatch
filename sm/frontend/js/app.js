@@ -174,7 +174,7 @@ let _socket = null;
 function getSocket() {
   if (_socket) return _socket;
   if (!window.io) return null;
-  _socket = io({ auth: { token: Auth.token() } });
+  _socket = io({ auth: { token: Auth.token() }, transports: ['websocket'] });
   _socket.on('notification', notif => {
     Toast.info(notif.title);
     // Update badge
