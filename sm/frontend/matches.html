@@ -13,6 +13,7 @@
 .vol-tag{display:inline-flex;align-items:center;gap:4px;font-size:10px;padding:2px 7px;border-radius:10px;background:rgba(124,58,237,.2);border:1px solid rgba(124,58,237,.4);color:#a78bfa;font-weight:700}
 .times-badge{display:inline-flex;align-items:center;gap:3px;font-size:10px;color:#a78bfa;margin-top:4px}
 </style>
+<script src="/js/theme.js"></script>
 </head>
 <body>
 <div class="bg-grad"><div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div></div>
@@ -21,7 +22,7 @@
   <div class="main">
     <div class="topbar">
       <div><div class="topbar-title">🔗 Ghép cặp thông minh</div><div class="topbar-sub">Tìm bạn học phù hợp nhất</div></div>
-      <div class="topbar-actions">
+      <div class="topbar-actions"><button class="btn btn-icon theme-toggle-btn" title="Toggle Theme" style="margin-left:8px;">🌙</button>
         <select id="filter-fac" class="form-control" style="width:160px" onchange="applyFilter()">
           <option value="">Tất cả khoa</option>
           <option>Khoa CNTT</option><option>Khoa Toán - Lý</option>

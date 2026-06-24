@@ -2,6 +2,7 @@
 <html lang="vi">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Admin – Người dùng</title><link rel="stylesheet" href="/css/style.css">
+<script src="/js/theme.js"></script>
 </head>
 <body>
 <div class="bg-grad"><div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div></div>
@@ -10,7 +11,7 @@
   <div class="main">
     <div class="topbar">
       <div><div class="topbar-title">👥 Quản lý người dùng</div></div>
-      <div class="topbar-actions">
+      <div class="topbar-actions"><button class="btn btn-icon theme-toggle-btn" title="Toggle Theme" style="margin-left:8px;">🌙</button>
         <div class="search-bar" style="width:220px"><span>🔍</span><input id="search" placeholder="Tìm tên, email, MSSV..." oninput="applyFilter()"></div>
         <select id="filter-role" class="form-control" style="width:130px" onchange="applyFilter()">
           <option value="">Tất cả role</option>

@@ -13,6 +13,7 @@
 .ld{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.15);cursor:pointer;transition:background .15s}
 .ld.on{background:currentColor}
 </style>
+<script src="/js/theme.js"></script>
 </head>
 <body>
 <div class="bg-grad"><div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div></div>
@@ -21,7 +22,7 @@
   <div class="main">
     <div class="topbar">
       <div><div class="topbar-title">👤 Hồ sơ của tôi</div><div class="topbar-sub">Cập nhật thông tin và kỹ năng</div></div>
-      <div class="topbar-actions"><button class="btn btn-primary" onclick="saveAll()">💾 Lưu tất cả</button></div>
+      <div class="topbar-actions"><button class="btn btn-icon theme-toggle-btn" title="Toggle Theme" style="margin-left:8px;">🌙</button><button class="btn btn-primary" onclick="saveAll()">💾 Lưu tất cả</button></div>
     </div>
     <div class="content">
       <div id="setup-banner" style="display:none" class="ann-banner ann-info" style="margin-bottom:16px">
