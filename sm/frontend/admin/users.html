@@ -140,7 +140,7 @@ if (!Auth.guardAdmin()) {} else {
       let warningBanner = '';
       if (!canOperate) {
         const msg = u.id === currentUser?.id ? 'Đây là tài khoản của bạn — không thể tự thao tác' : 'Tài khoản Admin — không thể thao tác';
-        warningBanner = '<div style="font-size:12px;color:var(--muted);background:rgba(255,255,255,.04);padding:8px 12px;border-radius:6px;margin-bottom:12px">⚠️ ' + msg + '</div>';
+        warningBanner = '<div style="font-size:12px;color:var(--muted);background:var(--white-04);padding:8px 12px;border-radius:6px;margin-bottom:12px">⚠️ ' + msg + '</div>';
       }
 
       let teachHtml = '';
@@ -162,9 +162,9 @@ if (!Auth.guardAdmin()) {} else {
 
       document.getElementById('modal-body').innerHTML =
         '<div class="grid g3" style="margin-bottom:16px;text-align:center">'
-        + '<div style="background:rgba(255,255,255,.05);border-radius:8px;padding:10px"><div style="font-size:18px;font-weight:800">' + (u.reputation_score || 50) + '</div><div style="font-size:10px;color:var(--muted)">Uy tín</div></div>'
-        + '<div style="background:rgba(255,255,255,.05);border-radius:8px;padding:10px"><div style="font-size:18px;font-weight:800">' + (u.total_pairs || 0) + '</div><div style="font-size:10px;color:var(--muted)">Cặp đôi</div></div>'
-        + '<div style="background:rgba(255,255,255,.05);border-radius:8px;padding:10px"><div style="font-size:18px;font-weight:800">' + parseFloat(u.teaching_rating || 0).toFixed(1) + '★</div><div style="font-size:10px;color:var(--muted)">Rating</div></div>'
+        + '<div style="background:var(--white-05);border-radius:8px;padding:10px"><div style="font-size:18px;font-weight:800">' + (u.reputation_score || 50) + '</div><div style="font-size:10px;color:var(--muted)">Uy tín</div></div>'
+        + '<div style="background:var(--white-05);border-radius:8px;padding:10px"><div style="font-size:18px;font-weight:800">' + (u.total_pairs || 0) + '</div><div style="font-size:10px;color:var(--muted)">Cặp đôi</div></div>'
+        + '<div style="background:var(--white-05);border-radius:8px;padding:10px"><div style="font-size:18px;font-weight:800">' + parseFloat(u.teaching_rating || 0).toFixed(1) + '★</div><div style="font-size:10px;color:var(--muted)">Rating</div></div>'
         + '</div>'
         + '<div style="font-size:12px;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px">'
         + '<div><span style="color:var(--muted)">Email:</span> ' + escHtml(u.email) + '</div>'
@@ -174,7 +174,7 @@ if (!Auth.guardAdmin()) {} else {
         + '<div><span style="color:var(--muted)">Role:</span> ' + u.role + '</div>'
         + '<div><span style="color:var(--muted)">Đăng ký:</span> ' + fmt(u.created_at) + '</div>'
         + '</div>'
-        + (u.bio ? '<div style="font-size:12px;color:var(--muted);background:rgba(255,255,255,.04);padding:8px;border-radius:6px;margin-bottom:14px">' + escHtml(u.bio) + '</div>' : '')
+        + (u.bio ? '<div style="font-size:12px;color:var(--muted);background:var(--white-04);padding:8px;border-radius:6px;margin-bottom:14px">' + escHtml(u.bio) + '</div>' : '')
         + teachHtml + learnHtml + banBanner + warningBanner
         + '<div style="display:flex;gap:8px;flex-wrap:wrap">' + modalActions + '</div>';
     } catch(e) {

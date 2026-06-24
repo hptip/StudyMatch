@@ -76,13 +76,13 @@ if (!Auth.guardAdmin()) {} else {
 
     const logs = s.recent_logs || [];
     document.getElementById('recent-logs').innerHTML = logs.length ? logs.slice(0,10).map(l=>`
-      <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04)">
+      <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--white-04)">
         <span style="font-size:16px">${logAction[l.action]?.split(' ')[0]||'📝'}</span>
         <div style="flex:1;min-width:0">
           <div style="font-size:12px;font-weight:600">${logAction[l.action]||l.action}</div>
           <div style="font-size:11px;color:var(--muted)">${escHtml(l.user?.full_name||'System')} · ${escHtml(l.detail||'')}</div>
         </div>
-        <div style="font-size:10px;color:rgba(255,255,255,.25);flex-shrink:0">${timeAgo(l.created_at)}</div>
+        <div style="font-size:10px;color:var(--white-25);flex-shrink:0">${timeAgo(l.created_at)}</div>
       </div>`).join('') : '<div style="color:var(--muted);font-size:13px">Chưa có hoạt động</div>';
   }
   window.load = load;

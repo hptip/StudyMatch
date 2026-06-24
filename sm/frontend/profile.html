@@ -4,13 +4,13 @@
 <title>StudyMatch – Hồ sơ</title><link rel="stylesheet" href="/css/style.css">
 <style>
 .prof-avatar{width:80px;height:80px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;border:3px solid rgba(124,58,237,.5);margin:0 auto 12px}
-.rep-bar{height:8px;background:rgba(255,255,255,.08);border-radius:4px;overflow:hidden;margin-top:6px}
+.rep-bar{height:8px;background:var(--white-08);border-radius:4px;overflow:hidden;margin-top:6px}
 .rep-fill{height:100%;background:var(--grad);border-radius:4px;transition:width .6s}
 .skill-chip{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:20px;font-size:12px;font-weight:500;margin:3px}
 .skill-chip .rm{cursor:pointer;opacity:.5;margin-left:2px;font-size:14px;line-height:1}
 .skill-chip .rm:hover{opacity:1}
 .level-dots{display:flex;gap:3px;margin-left:4px}
-.ld{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.15);cursor:pointer;transition:background .15s}
+.ld{width:8px;height:8px;border-radius:50%;background:var(--white-15);cursor:pointer;transition:background .15s}
 .ld.on{background:currentColor}
 </style>
 <script src="/js/theme.js"></script>
@@ -171,10 +171,10 @@ async function load() {
   // Stats
   const pairs = await api.get('/pairs/my/all');
   document.getElementById('stats-mini').innerHTML = `
-    <div style="text-align:center;background:rgba(255,255,255,.04);border-radius:8px;padding:12px"><div style="font-size:22px;font-weight:800">${pairs.filter(p=>p.status==='active').length}</div><div style="font-size:11px;color:var(--muted)">Đang học</div></div>
-    <div style="text-align:center;background:rgba(255,255,255,.04);border-radius:8px;padding:12px"><div style="font-size:22px;font-weight:800">${pairs.filter(p=>p.status==='completed').length}</div><div style="font-size:11px;color:var(--muted)">Hoàn thành</div></div>
-    <div style="text-align:center;background:rgba(255,255,255,.04);border-radius:8px;padding:12px"><div style="font-size:22px;font-weight:800">${parseFloat(me.teaching_rating||0).toFixed(1)}★</div><div style="font-size:11px;color:var(--muted)">Rating</div></div>
-    <div style="text-align:center;background:rgba(255,255,255,.04);border-radius:8px;padding:12px"><div style="font-size:22px;font-weight:800">${me.profile_views||0}</div><div style="font-size:11px;color:var(--muted)">Lượt xem HĐ</div></div>
+    <div style="text-align:center;background:var(--white-04);border-radius:8px;padding:12px"><div style="font-size:22px;font-weight:800">${pairs.filter(p=>p.status==='active').length}</div><div style="font-size:11px;color:var(--muted)">Đang học</div></div>
+    <div style="text-align:center;background:var(--white-04);border-radius:8px;padding:12px"><div style="font-size:22px;font-weight:800">${pairs.filter(p=>p.status==='completed').length}</div><div style="font-size:11px;color:var(--muted)">Hoàn thành</div></div>
+    <div style="text-align:center;background:var(--white-04);border-radius:8px;padding:12px"><div style="font-size:22px;font-weight:800">${parseFloat(me.teaching_rating||0).toFixed(1)}★</div><div style="font-size:11px;color:var(--muted)">Rating</div></div>
+    <div style="text-align:center;background:var(--white-04);border-radius:8px;padding:12px"><div style="font-size:22px;font-weight:800">${me.profile_views||0}</div><div style="font-size:11px;color:var(--muted)">Lượt xem HĐ</div></div>
   `;
 
   // Skills

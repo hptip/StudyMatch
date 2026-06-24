@@ -134,8 +134,8 @@ async function load() {
   const teach = (me.skills||[]).filter(s=>s.type==='teach');
   const learn = (me.skills||[]).filter(s=>s.type==='learn');
   sw.innerHTML = (teach.length||learn.length) ? `
-    ${teach.length?`<div style="margin-bottom:12px"><div style="font-size:11px;color:var(--muted);margin-bottom:6px;font-weight:600">✅ Tôi có thể dạy</div><div style="display:flex;flex-wrap:wrap;gap:5px">${teach.slice(0,4).map(s=>`<span class="tag tag-teach">${escHtml(s.subject)}</span>`).join('')}${teach.length>4?`<span class="tag" style="background:rgba(255,255,255,.06)">+${teach.length-4}</span>`:''}</div></div>`:''}
-    ${learn.length&&!me.is_volunteer?`<div><div style="font-size:11px;color:var(--muted);margin-bottom:6px;font-weight:600">📖 Tôi muốn học</div><div style="display:flex;flex-wrap:wrap;gap:5px">${learn.slice(0,4).map(s=>`<span class="tag tag-learn">${escHtml(s.subject)}</span>`).join('')}${learn.length>4?`<span class="tag" style="background:rgba(255,255,255,.06)">+${learn.length-4}</span>`:''}</div></div>`:''}
+    ${teach.length?`<div style="margin-bottom:12px"><div style="font-size:11px;color:var(--muted);margin-bottom:6px;font-weight:600">✅ Tôi có thể dạy</div><div style="display:flex;flex-wrap:wrap;gap:5px">${teach.slice(0,4).map(s=>`<span class="tag tag-teach">${escHtml(s.subject)}</span>`).join('')}${teach.length>4?`<span class="tag" style="background:var(--white-06)">+${teach.length-4}</span>`:''}</div></div>`:''}
+    ${learn.length&&!me.is_volunteer?`<div><div style="font-size:11px;color:var(--muted);margin-bottom:6px;font-weight:600">📖 Tôi muốn học</div><div style="display:flex;flex-wrap:wrap;gap:5px">${learn.slice(0,4).map(s=>`<span class="tag tag-learn">${escHtml(s.subject)}</span>`).join('')}${learn.length>4?`<span class="tag" style="background:var(--white-06)">+${learn.length-4}</span>`:''}</div></div>`:''}
   ` : '<div class="empty" style="padding:20px"><div class="empty-icon">📋</div><p>Chưa có kỹ năng nào</p><a href="/profile.html" class="btn btn-primary btn-sm" style="margin-top:10px">Cập nhật ngay</a></div>';
 }
 
