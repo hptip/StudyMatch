@@ -10,8 +10,8 @@
 .score-ring{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;position:relative;background:conic-gradient(var(--purple) var(--p,0%),var(--white-08) 0%)}
 .score-ring::before{content:'';position:absolute;inset:8px;border-radius:50%;background:var(--card)}
 .score-ring span{position:relative;z-index:1}
-.vol-tag{display:inline-flex;align-items:center;gap:4px;font-size:10px;padding:2px 7px;border-radius:10px;background:rgba(124,58,237,.2);border:1px solid rgba(124,58,237,.4);color:#a78bfa;font-weight:700}
-.times-badge{display:inline-flex;align-items:center;gap:3px;font-size:10px;color:#a78bfa;margin-top:4px}
+.vol-tag{display:inline-flex;align-items:center;gap:4px;font-size:10px;padding:2px 7px;border-radius:10px;background:rgba(124,58,237,.2);border:1px solid rgba(124,58,237,.4);color:var(--purple);font-weight:700}
+.times-badge{display:inline-flex;align-items:center;gap:3px;font-size:10px;color:var(--purple);margin-top:4px}
 </style>
 <script src="/js/theme.js"></script>
 </head>
@@ -67,8 +67,8 @@
       <div class="modal-title">🤝 Gửi yêu cầu ghép cặp</div>
       <button class="modal-close" onclick="hideModal('req-modal')">✕</button>
     </div>
-    <div style="margin-bottom:16px;font-size:13px;color:var(--muted)">Gửi lời mời đến <strong id="req-name" style="color:#fff"></strong></div>
-    <div id="req-times-info" style="display:none;margin-bottom:12px;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.3);border-radius:8px;padding:8px 12px;font-size:12px;color:#a78bfa"></div>
+    <div style="margin-bottom:16px;font-size:13px;color:var(--muted)">Gửi lời mời đến <strong id="req-name" style="color:var(--text)"></strong></div>
+    <div id="req-times-info" style="display:none;margin-bottom:12px;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.3);border-radius:8px;padding:8px 12px;font-size:12px;color:var(--purple)"></div>
     <div class="form-group">
       <label class="form-label">Lời nhắn (tùy chọn)</label>
       <textarea id="req-msg" class="form-control" rows="3" placeholder="Giới thiệu bản thân hoặc môn học muốn trao đổi..."></textarea>
@@ -194,7 +194,7 @@ async function showDetail(id) {
     var timesInfo = '';
     if (tc > 0) {
       timesInfo = '<div style="background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.3);border-radius:8px;padding:10px 14px;font-size:12px;margin-bottom:16px;text-align:center">'
-        + '🔁 Bạn đã ghép cặp thành công với người này <strong style="color:#a78bfa">' + tc + ' lần</strong> trước đây'
+        + '🔁 Bạn đã ghép cặp thành công với người này <strong style="color:var(--purple)">' + tc + ' lần</strong> trước đây'
         + '</div>';
     }
 
@@ -235,7 +235,7 @@ async function showDetail(id) {
       + '<div style="font-size:18px;font-weight:700">' + escHtml(u.full_name) + '</div>'
       + '<div style="font-size:12px;color:var(--muted);margin-top:4px">' + escHtml(u.faculty||'') + (u.year_of_study ? ' · Năm '+u.year_of_study : '') + '</div>'
       + (u.is_volunteer ? '<span class="vol-tag" style="margin-top:6px">🙋 Tình nguyện viên</span>' : '')
-      + (u.bio ? '<p style="font-size:12px;color:var(--white-55);margin-top:10px;line-height:1.6">' + escHtml(u.bio) + '</p>' : '')
+      + (u.bio ? '<p style="font-size:12px;color:var(--muted);margin-top:10px;line-height:1.6">' + escHtml(u.bio) + '</p>' : '')
       + '</div>'
       + '<div class="grid g3" style="margin-bottom:18px;text-align:center">'
       + '<div style="background:var(--white-05);border-radius:10px;padding:12px"><div style="font-size:20px;font-weight:800">' + parseFloat(u.teaching_rating||0).toFixed(1) + '</div><div style="font-size:10px;color:var(--muted)">Rating</div></div>'

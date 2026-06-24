@@ -40,7 +40,7 @@ async function load() {
           <div style="font-size:${i<3?'26px':'16px'};font-weight:900;width:36px;text-align:center;color:${i===0?'#fbbf24':i===1?'#d1d5db':i===2?'#d97706':'var(--muted)'}">${i<3?medals[i]:i+1}</div>
           <div class="av" style="width:44px;height:44px;font-size:15px;border-radius:50%;flex-shrink:0">${initials(u.full_name)}</div>
           <div style="flex:1;min-width:0">
-            <div style="font-size:14px;font-weight:700">${escHtml(u.full_name)} ${u.id===ME?.id?'<span style="font-size:10px;color:#a78bfa">(Bạn)</span>':''}</div>
+            <div style="font-size:14px;font-weight:700">${escHtml(u.full_name)} ${u.id===ME?.id?'<span style="font-size:10px;color:var(--purple)">(Bạn)</span>':''}</div>
             <div style="font-size:12px;color:var(--muted);margin-top:2px">${escHtml(u.faculty||'Chưa cập nhật')} ${u.is_volunteer?'· 🙋 TNV':''}</div>
             <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:5px">${(u.badge_ids||[]).slice(0,3).map(b=>`<span style="font-size:10px">${{first_pair:'🤝',five_pairs:'⭐',top_rated:'🏆',volunteer:'🙋',rep_300:'💎',rep_1000:'🏅',complete_10:'📚'}[b]||'🎖️'}</span>`).join('')}</div>
           </div>
