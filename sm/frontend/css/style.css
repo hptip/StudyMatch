@@ -304,5 +304,9 @@ textarea.form-control{resize:vertical;min-height:80px}
   .g2, .g3, .g4 { grid-template-columns: 1fr; }
   .content { padding: 16px; }
   .mobile-menu-btn { display: block; }
+  .topbar { padding: 12px 16px; flex-wrap: wrap; gap: 10px; }
+  .topbar > div:first-child { flex: 1; min-width: 150px; }
+  .topbar-title { font-size: 15px; }
+  .topbar-actions { gap: 6px; }
   .topbar-actions .btn { padding: 6px 10px; font-size: 12px; }
 }

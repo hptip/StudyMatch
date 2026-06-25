@@ -41,6 +41,22 @@ body{overflow:hidden}
 .bottom-dots{display:flex;justify-content:center;gap:7px;padding-bottom:28px}
 .bdot{width:5px;height:5px;border-radius:50%;background:var(--white-20);cursor:pointer;transition:all .3s}
 .bdot.a{width:20px;border-radius:3px;background:var(--purple)}
+
+@media(max-width:768px){
+  body { overflow: auto; }
+  .landing { height: auto; min-height: 100vh; }
+  .lnav { padding: 16px 20px; }
+  .lnav-links { display: none; }
+  .lnav-actions { gap: 6px; }
+  .lnav-actions .btn { padding: 6px 10px; font-size: 11px; }
+  .hero { flex-direction: column; padding: 40px 20px; gap: 40px; text-align: center; }
+  .hero-eyebrow { justify-content: center; }
+  .hero-desc { margin: 0 auto 32px auto; }
+  .hero-btns { justify-content: center; }
+  .hero-stats { justify-content: center; flex-wrap: wrap; }
+  .hero-h1 { font-size: 42px; }
+  .preview-card { width: 100%; max-width: 320px; }
+}
 </style>
 <script src="/js/theme.js"></script>
 </head>
