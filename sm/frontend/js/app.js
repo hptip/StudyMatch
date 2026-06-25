@@ -101,6 +101,28 @@ function escHtml(s) { return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').
 async function renderSidebar(active) {
   const sb = document.querySelector('.sidebar');
   if (!sb) return;
+
+  if (!document.querySelector('.sidebar-overlay')) {
+    const overlay = document.createElement('div');
+    overlay.className = 'sidebar-overlay';
+    overlay.onclick = () => { sb.classList.remove('show'); overlay.classList.remove('show'); };
+    document.body.appendChild(overlay);
+  }
+
+  const topbar = document.querySelector('.topbar');
+  if (topbar && !document.querySelector('.mobile-menu-btn')) {
+    const btn = document.createElement('button');
+    btn.className = 'mobile-menu-btn';
+    btn.innerHTML = '☰';
+    btn.onclick = () => { sb.classList.add('show'); document.querySelector('.sidebar-overlay').classList.add('show'); };
+    const titleDiv = topbar.firstElementChild;
+    if (titleDiv) {
+      titleDiv.style.display = 'flex';
+      titleDiv.style.alignItems = 'center';
+      titleDiv.insertBefore(btn, titleDiv.firstChild);
+    }
+  }
+
   const user = Auth.user();
   if (!user) return;
   let me; try { me = await api.get('/auth/me'); } catch { me = user; }

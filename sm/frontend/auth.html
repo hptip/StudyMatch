@@ -42,6 +42,14 @@ body{display:flex;align-items:center;justify-content:center;min-height:100vh}
     </div>
 
     <div id="form-login">
+      <div class="demo-box">
+        <strong>Tài khoản dùng thử (Mật khẩu: 123456):</strong>
+        <div class="demo-row">
+          <div class="demo-item" onclick="fillLogin('admin@studymatch.vn')">🛡️ Admin</div>
+          <div class="demo-item" onclick="fillLogin('an@sv.edu.vn')">🎓 Sinh viên</div>
+          <div class="demo-item" onclick="fillLogin('binh@sv.edu.vn')">🙋 Tình nguyện viên</div>
+        </div>
+      </div>
       <div class="form-group">
         <label class="form-label">Email</label>
         <input type="email" id="l-email" class="form-control" placeholder="email@example.com">
