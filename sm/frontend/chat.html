@@ -26,6 +26,20 @@
 .msg-input:focus{border-color:var(--purple)}
 .msg-input::placeholder{color:var(--white-25)}
 .chat-welcome{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--muted)}
+.back-btn{display:none;background:none;border:none;color:var(--text);font-size:20px;cursor:pointer;padding:0 12px 0 0;}
+@media(max-width:768px){
+  .chat-layout{position:relative}
+  .conv-list{width:100%;min-width:100%;transition:transform .3s ease}
+  .msg-area{position:absolute;top:0;left:0;width:100%;height:100%;background:var(--topbar-bg, #fff);transform:translateX(100%);transition:transform .3s ease;z-index:10}
+  .chat-layout.chat-open .conv-list{transform:translateX(-30%)}
+  .chat-layout.chat-open .msg-area{transform:translateX(0)}
+  .back-btn{display:block}
+  .hide-text-mobile{font-size:0 !important;padding:6px !important}
+  .hide-text-mobile::before{font-size:14px}
+  .hide-text-mobile span{display:none}
+  .msg-header{padding:10px 14px}
+  .msg-input-bar{padding:10px 14px;background:inherit}
+}
 </style>
 <script src="/js/theme.js"></script>
 </head>
@@ -132,15 +146,17 @@ async function openChat(partner) {
   document.querySelectorAll('.conv-item').forEach(el => el.classList.remove('active'));
   socket?.emit('mark_read', { sender_id: partner.id });
 
+  document.querySelector('.chat-layout').classList.add('chat-open');
   document.getElementById('msg-area').innerHTML = `
     <div class="msg-header">
+      <button class="back-btn" onclick="closeChat()" title="Trở lại">←</button>
       <div class="av" style="width:38px;height:38px;font-size:13px;border-radius:50%">${initials(partner.full_name)}</div>
-      <div style="flex:1">
-        <div style="font-size:14px;font-weight:700">${escHtml(partner.full_name)}</div>
-        <div style="font-size:11px;color:var(--muted)">${escHtml(partner.faculty||'')}</div>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:14px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${escHtml(partner.full_name)}</div>
+        <div style="font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${escHtml(partner.faculty||'')}</div>
       </div>
-      <a href="/matches.html" class="btn btn-secondary btn-sm" onclick="event.preventDefault();showProfile('${partner.id}')">👤 Hồ sơ</a>
-      <a href="/pairs.html" class="btn btn-ghost btn-sm">🤝 Cặp đôi</a>
+      <a href="/matches.html" class="btn btn-secondary btn-sm hide-text-mobile" onclick="event.preventDefault();showProfile('${partner.id}')">👤 <span>Hồ sơ</span></a>
+      <a href="/pairs.html" class="btn btn-ghost btn-sm hide-text-mobile">🤝 <span>Cặp đôi</span></a>
     </div>
     <div class="msg-list" id="msg-list"><div class="spinner"></div></div>
     <div class="typing-tip" id="typing-tip"></div>
@@ -178,6 +194,12 @@ function appendMsg(msg, isMe) {
   list.insertAdjacentHTML('beforeend', msgHtml(msg, isMe));
   list.scrollTop = list.scrollHeight;
   loadConvs();
+}
+
+function closeChat() {
+  document.querySelector('.chat-layout').classList.remove('chat-open');
+  activePartner = null;
+  document.querySelectorAll('.conv-item').forEach(el => el.classList.remove('active'));
 }
 
 function sendMsg() {
