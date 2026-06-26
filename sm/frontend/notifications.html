@@ -29,7 +29,7 @@ async function load() {
   const el = document.getElementById('notif-list');
   if (!list.length) { el.innerHTML = `<div class="empty"><div class="empty-icon">🔔</div><h3>Chưa có thông báo</h3><p>Hoạt động và nhận thông báo tại đây</p></div>`; return; }
   el.innerHTML = list.map(n=>`
-    <div style="display:flex;gap:12px;padding:14px 16px;border-radius:10px;background:${n.is_read?'var(--white-03)':'rgba(124,58,237,.08)'};border:1px solid ${n.is_read?'var(--border)':'rgba(124,58,237,.25)'};margin-bottom:8px;cursor:pointer;transition:all .2s"
+    <div style="display:flex;gap:12px;padding:14px 16px;border-radius:10px;background:${n.is_read?'var(--white-03)':'rgba(var(--purple-rgb),.08)'};border:1px solid ${n.is_read?'var(--border)':'rgba(var(--purple-rgb),.25)'};margin-bottom:8px;cursor:pointer;transition:all .2s"
       onclick="goNotif('${n.id}','${links[n.type]||'#'}')">
       <div style="font-size:22px;flex-shrink:0;margin-top:2px">${icons[n.type]||'🔔'}</div>
       <div style="flex:1;min-width:0">

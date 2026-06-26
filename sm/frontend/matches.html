@@ -10,7 +10,7 @@
 .score-ring{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;position:relative;background:conic-gradient(var(--purple) var(--p,0%),var(--white-08) 0%)}
 .score-ring::before{content:'';position:absolute;inset:8px;border-radius:50%;background:var(--card)}
 .score-ring span{position:relative;z-index:1}
-.vol-tag{display:inline-flex;align-items:center;gap:4px;font-size:10px;padding:2px 7px;border-radius:10px;background:rgba(124,58,237,.2);border:1px solid rgba(124,58,237,.4);color:var(--purple);font-weight:700}
+.vol-tag{display:inline-flex;align-items:center;gap:4px;font-size:10px;padding:2px 7px;border-radius:10px;background:rgba(var(--purple-rgb),.2);border:1px solid rgba(var(--purple-rgb),.4);color:var(--purple);font-weight:700}
 .times-badge{display:inline-flex;align-items:center;gap:3px;font-size:10px;color:var(--purple);margin-top:4px}
 </style>
 <script src="/js/theme.js"></script>
@@ -68,7 +68,7 @@
       <button class="modal-close" onclick="hideModal('req-modal')">✕</button>
     </div>
     <div style="margin-bottom:16px;font-size:13px;color:var(--muted)">Gửi lời mời đến <strong id="req-name" style="color:var(--text)"></strong></div>
-    <div id="req-times-info" style="display:none;margin-bottom:12px;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.3);border-radius:8px;padding:8px 12px;font-size:12px;color:var(--purple)"></div>
+    <div id="req-times-info" style="display:none;margin-bottom:12px;background:rgba(var(--purple-rgb),.1);border:1px solid rgba(var(--purple-rgb),.3);border-radius:8px;padding:8px 12px;font-size:12px;color:var(--purple)"></div>
     <div class="form-group">
       <label class="form-label">Lời nhắn (tùy chọn)</label>
       <textarea id="req-msg" class="form-control" rows="3" placeholder="Giới thiệu bản thân hoặc môn học muốn trao đổi..."></textarea>
@@ -193,7 +193,7 @@ async function showDetail(id) {
 
     var timesInfo = '';
     if (tc > 0) {
-      timesInfo = '<div style="background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.3);border-radius:8px;padding:10px 14px;font-size:12px;margin-bottom:16px;text-align:center">'
+      timesInfo = '<div style="background:rgba(var(--purple-rgb),.1);border:1px solid rgba(var(--purple-rgb),.3);border-radius:8px;padding:10px 14px;font-size:12px;margin-bottom:16px;text-align:center">'
         + '🔁 Bạn đã ghép cặp thành công với người này <strong style="color:var(--purple)">' + tc + ' lần</strong> trước đây'
         + '</div>';
     }
